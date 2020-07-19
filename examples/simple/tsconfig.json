@@ -1,0 +1,41 @@
+{
+  "include": ["./typings/*.d.ts"],
+  "files": ["./src/main.tsx", "./src/main.hot.tsx"],
+
+  "compilerOptions": {
+    "outDir": "./dist",
+    "target": "esnext",
+    "declaration": true,
+    "sourceMap": true,
+
+    // Strict type-checking
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+
+    // Additional checks
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+
+    // Module resolution
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+
+    // JSX
+    "jsx": "react",
+
+    "baseUrl": "./src",
+    "paths": {
+      "pte": ["../packages/pte/src"],
+      "react-pte": ["../packages/react-pte/src"]
+    }
+  }
+}

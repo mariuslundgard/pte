@@ -1,0 +1,37 @@
+{
+  "private": true,
+  "name": "pte-root",
+  "version": "1.0.0",
+  "author": "Marius Lundgård <studio@mariuslundgard.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "lerna run build",
+    "dev": "lerna run --parallel dev",
+    "lint": "lerna run --stream --parallel lint",
+    "test": "lerna run --stream --parallel test",
+    "type-check": "lerna run --stream --parallel type-check"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.22",
+    "@typescript-eslint/eslint-plugin": "^4.21.0",
+    "@typescript-eslint/parser": "^4.21.0",
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.23.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "jest": "^26.6.3",
+    "lerna": "^4.0.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.5.4",
+    "typescript": "^4.2.4"
+  },
+  "workspaces": [
+    "examples/*",
+    "packages/*"
+  ]
+}
