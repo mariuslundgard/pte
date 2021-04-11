@@ -79,8 +79,6 @@ export function getTextChunks(nodeSelections: TextSelection[], text: string): Te
 
   indexes.sort((a, b) => a - b)
 
-  // console.log(indexes)
-
   for (let i = 0; i < indexes.length - 1; i += 1) {
     const fromIndex = indexes[i]
     const toIndex = indexes[i + 1]

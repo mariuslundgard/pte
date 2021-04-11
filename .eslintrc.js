@@ -43,6 +43,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn', // Checks effect dependencies
     'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
     'react/no-unescaped-entities': 'off',
+    'react/prop-types': 'off',
   },
   settings: {react: {version: 'detect'}},
   parserOptions: {

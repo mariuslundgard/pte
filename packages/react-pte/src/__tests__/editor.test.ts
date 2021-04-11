@@ -17,7 +17,7 @@ afterAll(async () => {
   await browser.close()
 })
 
-test('should ...', async () => {
+test('should insert and remove text', async () => {
   const page = await browser.newPage()
 
   await page.goto('http://localhost:8080')

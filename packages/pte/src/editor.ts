@@ -1,5 +1,5 @@
 import {getDOMNodeAtOffset, getDOMSelection, isCollapsed} from './helpers'
-import {reduce} from './reduce'
+import {reducer} from './reducer'
 import {Editor, Node, Op, SelectionMap, State} from './types'
 
 interface EditorOpts {
@@ -24,11 +24,13 @@ export function createEditor(opts: EditorOpts = {}): Editor {
 
   let isApplying = false
 
+  let applyTimeout: NodeJS.Timeout | null = null
+
   function apply(...ops: Op[]) {
     const prevState = state
 
     for (const op of ops) {
-      state = reduce(state, op)
+      state = reducer(state, op)
 
       if (onOperation) {
         onOperation(op)
@@ -80,7 +82,11 @@ export function createEditor(opts: EditorOpts = {}): Editor {
     // set initial value
     if (initialValue) {
       setTimeout(() => {
-        apply({type: 'setValue', value: initialValue, userId})
+        apply({
+          type: 'setValue',
+          value: initialValue,
+          userId,
+        })
       }, 0)
     }
   }
@@ -92,18 +98,23 @@ export function createEditor(opts: EditorOpts = {}): Editor {
 
     event.preventDefault()
 
+    if (applyTimeout) {
+      clearTimeout(applyTimeout)
+      applyTimeout = null
+    }
+
     isApplying = true
 
     _handleInput(event.inputType, event.data)
     _updateDOMSelection()
 
-    setTimeout(() => {
+    applyTimeout = setTimeout(() => {
       isApplying = false
     }, 0)
   }
 
   function _handleBlur() {
-    console.log('blur')
+    // console.log('blur')
 
     apply({type: 'unsetSelection', userId})
 
@@ -111,13 +122,13 @@ export function createEditor(opts: EditorOpts = {}): Editor {
   }
 
   function _handleFocus() {
-    console.log('focus')
+    // console.log('focus')
 
     document.addEventListener('selectionchange', _handleSelectionChange)
   }
 
   function _handleInput(type: string, data: string | null) {
-    console.log('input', type, data, JSON.stringify(state.selections[userId]))
+    // console.log('input', type, data, JSON.stringify(state.selections[userId]))
 
     if (type === 'insertText') {
       if (data) {
@@ -165,21 +176,26 @@ export function createEditor(opts: EditorOpts = {}): Editor {
   function _handleSelectionChange() {
     if (isApplying) return
 
-    console.log('selectionchange')
-
     const sel = getDOMSelection()
 
-    isApplying = true
-
     if (sel) {
+      if (applyTimeout) {
+        clearTimeout(applyTimeout)
+        applyTimeout = null
+      }
+
+      isApplying = true
+
+      // console.log('selectionchange', JSON.stringify([sel.anchor, sel.focus]))
+
       apply({type: 'select', ...sel, userId})
+
+      _updateDOMSelection()
+
+      applyTimeout = setTimeout(() => {
+        isApplying = false
+      }, 0)
     }
-
-    _updateDOMSelection()
-
-    setTimeout(() => {
-      isApplying = false
-    }, 0)
   }
 
   function _updateDOMSelection() {
