@@ -1,20 +1,20 @@
-import {Block, createEditor, Editor as EditorType, Node, Op, SelectionMap} from 'pte'
+import {PTBlock, createEditor, PTEditor, PTNode, PTOp, SelectionMap} from 'pte'
 import React, {useEffect, useRef, useState, forwardRef, useCallback} from 'react'
 import {Children} from './children'
 
 export interface EditorProps {
   className?: string
-  editorRef?: React.Ref<EditorType>
-  onChange?: (value: Node[]) => void
-  onOperation?: (op: Op) => void
+  editorRef?: React.Ref<PTEditor>
+  onChange?: (value: PTNode[]) => void
+  onOperation?: (op: PTOp) => void
   onSelections?: (selections: SelectionMap) => void
   readOnly?: boolean
   renderBlock?: (
-    node: Block,
+    node: PTBlock,
     props: React.PropsWithoutRef<Record<string, unknown>>,
     children: React.ReactNode
   ) => React.ReactElement
-  value?: Node[]
+  value?: PTNode[]
   style?: React.CSSProperties
   userId?: string
 }
@@ -48,10 +48,10 @@ export const Editor = forwardRef(
     } = props
 
     const rootRef = useRef<HTMLDivElement | null>(null)
-    const valueRef = useRef<Node[]>(valueProp || [])
-    const [value, setValue] = useState<Node[]>(valueRef.current)
+    const valueRef = useRef<PTNode[]>(valueProp || [])
+    const [value, setValue] = useState<PTNode[]>(valueRef.current)
     const [selections, setSelections] = useState<SelectionMap>({})
-    const editorRef = useRef<EditorType | null>(null)
+    const editorRef = useRef<PTEditor | null>(null)
 
     const handleSelections = useCallback(
       (nextSelections: SelectionMap) => {
@@ -64,7 +64,7 @@ export const Editor = forwardRef(
     useEffect(() => {
       const element = rootRef.current
 
-      const handleValue = (newValue: Node[]) => {
+      const handleValue = (newValue: PTNode[]) => {
         if (newValue !== valueRef.current) {
           valueRef.current = newValue
           setValue(newValue)
@@ -83,14 +83,14 @@ export const Editor = forwardRef(
           userId,
         })
 
-        if (editorRefProp) setRef<EditorType>(editorRefProp, editorRef.current)
+        if (editorRefProp) setRef<PTEditor>(editorRefProp, editorRef.current)
       }
 
       return () => {
         if (editorRef.current) {
           editorRef.current.destroy()
           editorRef.current = null
-          if (editorRefProp) setRef<EditorType>(editorRefProp, editorRef.current)
+          if (editorRefProp) setRef<PTEditor>(editorRefProp, editorRef.current)
         }
       }
     }, [editorRefProp, handleSelections, onChange, onOperation, readOnly, userId])

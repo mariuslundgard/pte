@@ -1,6 +1,7 @@
 import {Box, Card, Code, Flex, Heading, Stack, Text} from '@sanity/ui'
 import {Block, Editor as EditorType, Node, Op, SelectionMap} from 'pte'
 import React, {useRef, useState, useEffect, useCallback, createElement} from 'react'
+import {Dummy} from './components/dummy'
 import {INITIAL_VALUE} from './constants'
 import {Editor} from './editor'
 
@@ -101,6 +102,12 @@ export function App() {
 
   return (
     <Card height="fill">
+      <Box padding={4}>
+        <Text>
+          <Dummy />
+        </Text>
+      </Box>
+
       <Flex height="fill">
         <Card flex={1} overflow="auto">
           <Box padding={4}>

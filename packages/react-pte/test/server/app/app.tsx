@@ -1,5 +1,5 @@
 import {Box, Card, Code, studioTheme, Text, Theme, ThemeProvider} from '@sanity/ui'
-import {Block, Editor as EditorType, Node, SelectionMap} from 'pte'
+import {PTBlock, PTEditor, PTNode, SelectionMap} from 'pte'
 import React, {createElement, useCallback, useRef, useState} from 'react'
 import {Editor} from 'react-pte'
 import styled, {createGlobalStyle, css} from 'styled-components'
@@ -61,20 +61,22 @@ const Root = styled(Card)`
 `
 
 export function App() {
-  const editor1Ref = useRef<EditorType | null>(null)
-  const [value, setValue] = useState<Node[]>(INITIAL_VALUE)
+  const editor1Ref = useRef<PTEditor | null>(null)
+  const [value, setValue] = useState<PTNode[]>(INITIAL_VALUE)
   const [selections, setSelections] = useState<SelectionMap | null>(null)
 
   const renderBlock = useCallback(
     (
-      node: Block,
+      node: PTBlock,
       props: React.PropsWithoutRef<Record<string, unknown>>,
       children: React.ReactNode
     ) => {
       if (node.name === 'p') {
         return (
           <Box {...props} marginY={4}>
-            <Text as="p">{children}</Text>
+            <Text as="p" style={{whiteSpace: 'pre-wrap'}}>
+              {children}
+            </Text>
           </Box>
         )
       }

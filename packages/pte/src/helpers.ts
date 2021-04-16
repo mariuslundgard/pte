@@ -1,13 +1,13 @@
-import {Node, NodeMetadata, Location, Selection} from './types'
+import {PTNode, NodeMetadata, Location, PTSelection} from './types'
 
-export function buildTree(nodes: NodeMetadata[], depth = 0): Node[] {
-  const tree: Node[] = []
+export function buildTree(nodes: NodeMetadata[], depth = 0): PTNode[] {
+  const tree: PTNode[] = []
 
   for (let i = 0; i < nodes.length; i += 1) {
     const node = nodes[i]
 
     if (node.depth === depth) {
-      const newNode: Node =
+      const newNode: PTNode =
         node.type === 'span'
           ? {
               type: 'span',
@@ -32,13 +32,13 @@ export function buildTree(nodes: NodeMetadata[], depth = 0): Node[] {
   return tree
 }
 
-export function getNodeSize(node: Node): number {
+export function getNodeSize(node: PTNode): number {
   if (node.type === 'span') return 0
 
   return node.children.reduce((acc, x) => acc + getNodeSize(x), node.children.length)
 }
 
-export function getTreeMetadata(treeNodes: Node[], depth = 0): NodeMetadata[] {
+export function getTreeMetadata(treeNodes: PTNode[], depth = 0): NodeMetadata[] {
   return treeNodes.reduce((acc: NodeMetadata[], node) => {
     if (node.type === 'span') {
       const {type, text, ...data} = node
@@ -55,7 +55,7 @@ export function getTreeMetadata(treeNodes: Node[], depth = 0): NodeMetadata[] {
   }, [])
 }
 
-export function sortSelection(sel: Selection): [Location, Location] {
+export function sortSelection(sel: PTSelection): [Location, Location] {
   if (
     sel.anchor[0] > sel.focus[0] ||
     (sel.anchor[0] === sel.focus[0] && sel.anchor[1] > sel.focus[1])
@@ -66,28 +66,35 @@ export function sortSelection(sel: Selection): [Location, Location] {
   return [sel.anchor, sel.focus]
 }
 
-export function isDOMElement(node: globalThis.Node): node is Element {
-  if (node.nodeType === Node.ELEMENT_NODE) return true
-
-  return false
+export function isDOMElement(value: unknown): value is Element {
+  return value instanceof Node && value.nodeType === Node.ELEMENT_NODE
 }
 
-export function getDOMSelection(): Selection | null {
+export function getDOMSelection(): PTSelection | null {
   const sel = window.getSelection()
 
   if (!sel) return null
 
-  const anchorNode = sel.anchorNode && sel.anchorNode.parentNode
-  const focusNode = sel.focusNode && sel.focusNode.parentNode
+  let anchorNode = sel.anchorNode
 
-  if (!anchorNode || !focusNode || !isDOMElement(anchorNode) || !isDOMElement(focusNode)) {
+  if (anchorNode && anchorNode.nodeType === Node.TEXT_NODE) {
+    anchorNode = anchorNode.parentNode
+  }
+
+  let focusNode = sel.focusNode
+
+  if (focusNode && focusNode.nodeType === Node.TEXT_NODE) {
+    focusNode = focusNode.parentNode
+  }
+
+  if (!isDOMElement(anchorNode) || !isDOMElement(focusNode)) {
     return null
   }
 
-  const anchorOffset = Number(anchorNode.getAttribute('data-offset'))
-  const anchorChunkOffset = Number(anchorNode.getAttribute('data-chunk-offset') || 0)
-  const focusOffset = Number(focusNode.getAttribute('data-offset'))
-  const focusChunkOffset = Number(focusNode.getAttribute('data-chunk-offset') || 0)
+  const anchorOffset = Number(anchorNode.getAttribute('data-offset')) || 0
+  const anchorChunkOffset = Number(anchorNode.getAttribute('data-chunk-offset')) || 0
+  const focusOffset = Number(focusNode.getAttribute('data-offset')) || 0
+  const focusChunkOffset = Number(anchorNode.getAttribute('data-chunk-offset')) || 0
 
   return {
     anchor: [anchorOffset, anchorChunkOffset + sel.anchorOffset],
@@ -96,28 +103,30 @@ export function getDOMSelection(): Selection | null {
 }
 
 export function getDOMNodeAtOffset(el: Element, loc: Location): [globalThis.Element, number] {
-  const matches = Array.from(el.querySelectorAll(`[data-offset="${loc[0]}"]`)).map((node) => {
-    const chunkOffset = Number(node.getAttribute('data-chunk-offset') || -1)
+  console.log('getDOMNodeAtOffset', loc)
+
+  const textSpans = Array.from(el.querySelectorAll(`[data-type="text"][data-offset="${loc[0]}"]`))
+
+  const metadataArr = textSpans.map((textSpan) => {
+    const chunkOffset = Number(textSpan.getAttribute('data-chunk-offset') || -1)
+    const chunkLength = Number(textSpan.getAttribute('data-chunk-length') || -1)
 
     return {
-      node,
+      node: textSpan,
+      chunkLength,
       chunkOffset,
-      length:
-        chunkOffset === -1
-          ? -1
-          : (node.firstChild && node.firstChild.nodeValue && node.firstChild.nodeValue.length) || 0,
     }
   })
 
-  const match = matches.find((m) => {
-    return m.chunkOffset === loc[1]
-  })
+  if (metadataArr.length > 0) {
+    const m = metadataArr[0]
 
-  if (!match) throw new Error('not found')
+    return [m.node, loc[1] - m.chunkOffset]
+  }
 
-  return [match.node, loc[1] - match.chunkOffset]
+  throw new Error('not found')
 }
 
-export function isCollapsed(sel: Selection): boolean {
+export function isCollapsed(sel: PTSelection): boolean {
   return sel.anchor[0] === sel.focus[0] && sel.anchor[1] === sel.focus[1]
 }

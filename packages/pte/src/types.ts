@@ -1,17 +1,17 @@
-export interface Block {
+export interface PTBlock {
   type: 'block'
   name: string
-  children: Node[]
+  children: PTNode[]
   [key: string]: unknown
 }
 
-export interface Span {
+export interface PTSpan {
   type: 'span'
   text: string
   [key: string]: unknown
 }
 
-export type Node = Block | Span
+export type PTNode = PTBlock | PTSpan
 
 export interface BlockNodeMetadata {
   type: 'block'
@@ -35,24 +35,24 @@ export type NodePosition = number
 export type TextOffset = number
 export type Location = [NodePosition, TextOffset]
 
-export interface Selection {
+export interface PTSelection {
   anchor: Location
   focus: Location
 }
 
 export interface SelectionMap {
-  [userId: string]: Selection | undefined
+  [userId: string]: PTSelection | undefined
 }
 
 export interface State {
-  value: Node[]
+  value: PTNode[]
   nodes: NodeMetadata[]
   selections: SelectionMap
 }
 
 export interface SetValueOp {
   type: 'setValue'
-  value: Node[]
+  value: PTNode[]
   userId: string
 }
 
@@ -84,13 +84,19 @@ export interface InsertBlockOp {
   userId: string
 }
 
-export type Op = SetValueOp | SelectOp | UnsetSelectionOp | DeleteOp | InsertTextOp | InsertBlockOp
+export type PTOp =
+  | SetValueOp
+  | SelectOp
+  | UnsetSelectionOp
+  | DeleteOp
+  | InsertTextOp
+  | InsertBlockOp
 
 export type Subscriber = (state: State) => void
 
-export interface Editor {
-  apply: (...ops: Op[]) => void
+export interface PTEditor {
+  apply: (...ops: PTOp[]) => void
   destroy: () => void
   getState: () => State
-  setValue: (value: Node[]) => void
+  setValue: (value: PTNode[]) => void
 }

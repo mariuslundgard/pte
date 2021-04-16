@@ -1,4 +1,4 @@
-import {Op, State} from '../types'
+import {PTOp, State} from '../types'
 import {_delete} from './delete'
 import {insertBlock} from './insertBlock'
 import {insertText} from './insertText'
@@ -6,7 +6,7 @@ import {select} from './select'
 import {setValue} from './setValue'
 import {unsetSelection} from './unsetSelection'
 
-export function reducer(state: State, op: Op): State {
+export function reducer(state: State, op: PTOp): State {
   if (op.type === 'setValue') {
     return setValue(state, op)
   }

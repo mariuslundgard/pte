@@ -1,8 +1,10 @@
 {
   "extends": "../../tsconfig",
-  "include": ["./src", "./typings/*.d.ts"],
+  "include": ["./src", "./typings"],
   "compilerOptions": {
     "outDir": "./dist/",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "jsx": "react",
+    "jsxFactory": "h"
   }
 }

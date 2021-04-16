@@ -3,6 +3,10 @@ declare module 'hypp' {
     name: string,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     props: Record<string, any>,
-    ...children: Node[]
+    ...children: Array<Node | string>
   ) => HTMLElement
+}
+
+declare namespace JSX {
+  interface Element extends HTMLElement {}
 }

@@ -1,18 +1,18 @@
 import {getDOMNodeAtOffset, getDOMSelection, isCollapsed} from './helpers'
 import {reducer} from './reducer'
-import {Editor, Node, Op, SelectionMap, State} from './types'
+import {PTEditor, PTNode, PTOp, SelectionMap, State} from './types'
 
 interface EditorOpts {
   element?: Element
-  initialValue?: Node[]
-  onOperation?: (op: Op) => void
+  initialValue?: PTNode[]
+  onOperation?: (op: PTOp) => void
   onSelections?: (sel: SelectionMap) => void
-  onValue?: (value: Node[]) => void
+  onValue?: (value: PTNode[]) => void
   readOnly?: boolean
   userId?: string
 }
 
-export function createEditor(opts: EditorOpts = {}): Editor {
+export function createEditor(opts: EditorOpts = {}): PTEditor {
   const {element, initialValue, onOperation, onSelections, onValue, readOnly} = opts
   const userId = opts.userId || '@'
 
@@ -26,7 +26,7 @@ export function createEditor(opts: EditorOpts = {}): Editor {
 
   let applyTimeout: NodeJS.Timeout | null = null
 
-  function apply(...ops: Op[]) {
+  function apply(...ops: PTOp[]) {
     const prevState = state
 
     for (const op of ops) {
@@ -62,13 +62,15 @@ export function createEditor(opts: EditorOpts = {}): Editor {
     return state
   }
 
-  function setValue(newValue: Node[]) {
+  function setValue(newValue: PTNode[]) {
     apply({type: 'setValue', value: newValue, userId})
   }
 
   __init()
 
-  return {apply, destroy, getState, setValue}
+  const editor = {apply, destroy, getState, setValue}
+
+  return editor
 
   // private methods
 
@@ -106,9 +108,9 @@ export function createEditor(opts: EditorOpts = {}): Editor {
     isApplying = true
 
     _handleInput(event.inputType, event.data)
-    _updateDOMSelection()
 
     applyTimeout = setTimeout(() => {
+      _updateDOMSelection()
       isApplying = false
     }, 0)
   }
@@ -116,7 +118,7 @@ export function createEditor(opts: EditorOpts = {}): Editor {
   function _handleBlur() {
     // console.log('blur')
 
-    apply({type: 'unsetSelection', userId})
+    // apply({type: 'unsetSelection', userId})
 
     document.removeEventListener('selectionchange', _handleSelectionChange)
   }
@@ -179,6 +181,8 @@ export function createEditor(opts: EditorOpts = {}): Editor {
     const sel = getDOMSelection()
 
     if (sel) {
+      console.log('[dom] -> select', JSON.stringify([sel.anchor, sel.focus]))
+
       if (applyTimeout) {
         clearTimeout(applyTimeout)
         applyTimeout = null
@@ -199,21 +203,50 @@ export function createEditor(opts: EditorOpts = {}): Editor {
   }
 
   function _updateDOMSelection() {
-    const sel = state.selections[userId]
+    try {
+      const sel = state.selections[userId]
 
-    if (!sel) return
+      if (!sel) return
 
-    const winSel = window.getSelection()
+      const winSel = window.getSelection()
 
-    if (element && winSel && sel.anchor) {
-      winSel.removeAllRanges()
+      if (element && winSel && sel.anchor) {
+        const start = getDOMNodeAtOffset(element, sel.anchor)
+        const end = getDOMNodeAtOffset(element, sel.focus)
 
-      const range = document.createRange()
+        if (start[0].firstChild instanceof Node && end[0].firstChild instanceof Node) {
+          winSel.removeAllRanges()
 
-      range.setStart(...getDOMNodeAtOffset(element, sel.anchor))
-      range.setEnd(...getDOMNodeAtOffset(element, sel.focus))
+          const range = document.createRange()
 
-      winSel.addRange(range)
+          if (start[0].firstChild instanceof Node) {
+            range.setStart(start[0].firstChild, start[1])
+          }
+
+          if (end[0].firstChild instanceof Node) {
+            range.setEnd(end[0].firstChild, end[1])
+          }
+
+          winSel.addRange(range)
+
+          console.log(
+            '[dom] <- select',
+            JSON.stringify([
+              [sel.anchor[0], start[1]],
+              [sel.focus[0], end[1]],
+            ])
+          )
+
+          return
+        }
+
+        console.warn('unexpected node start or end node', {
+          start: start[0].firstChild,
+          end: end[0].firstChild,
+        })
+      }
+    } catch (err) {
+      console.error(err)
     }
   }
 }

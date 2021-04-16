@@ -4,15 +4,19 @@ import {defineConfig} from 'vite'
 
 export default defineConfig({
   plugins: [reactRefresh()],
+  root: path.resolve(__dirname, 'src'),
+  server: {
+    port: 3333,
+  },
   resolve: {
     alias: [
       {
         find: 'pte',
-        replacement: path.resolve(__dirname, '../../../pte/src'),
+        replacement: path.resolve(__dirname, '../../packages/pte/src'),
       },
       {
         find: 'react-pte',
-        replacement: path.resolve(__dirname, '../../src'),
+        replacement: path.resolve(__dirname, '../../packages/react-pte/src'),
       },
     ],
   },

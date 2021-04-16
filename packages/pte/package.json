@@ -8,14 +8,15 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "run-p build-*",
-    "build-cjs": "tsc --baseUrl . --module CommonJS --outDir dist/cjs --project tsconfig.dist.json --rootDir src --target ES5",
-    "build-es": "tsc --baseUrl . --module ES6 --outDir dist/es --project tsconfig.dist.json --rootDir src --target ES6",
-    "dev": "tsc -w --baseUrl . --module ES6 --outDir dist/es --project tsconfig.dist.json --rootDir src --target ES6",
+    "build": "run-p build:*",
+    "build:cjs": "tsc --baseUrl . --module CommonJS --outDir dist/cjs --project tsconfig.dist.json --rootDir src --target ES5",
+    "build:es": "tsc --baseUrl . --module ES6 --outDir dist/es --project tsconfig.dist.json --rootDir src --target ES6",
     "lint": "eslint . --ext .js,.jsx,.mjs,.ts,.tsx",
     "prebuild": "rimraf dist",
     "test": "jest",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "watch": "run-p watch:*",
+    "watch:es": "tsc -w --baseUrl . --module ES6 --outDir dist/es --project tsconfig.dist.json --rootDir src --target ES6"
   },
   "devDependencies": {
     "hypp": "^0.0.4"

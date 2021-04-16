@@ -1,12 +1,12 @@
 import puppeteer, {Browser} from 'puppeteer'
 import {ViteDevServer} from 'vite'
-import {createDevServer} from '../../test/server/start'
+import {createDevServer} from '../test/server/start'
 
 let server: ViteDevServer
 let browser: Browser
 
 beforeAll(async () => {
-  server = await createDevServer()
+  server = await createDevServer({silent: true})
   server.listen()
 
   browser = await puppeteer.launch()
@@ -31,7 +31,9 @@ test('should insert and remove text', async () => {
 
   // Select text
   await documentHandle.evaluate((document: Document) => {
-    const spanEl = document.querySelector('[data-type="text"][data-chunk="0"]')
+    const spanEl = document.querySelector(
+      '[data-type="text"][data-offset="1"][data-chunk-offset="0"]'
+    )
 
     if (spanEl && spanEl.firstChild) {
       const selection = document.getSelection()
@@ -59,7 +61,7 @@ test('should insert and remove text', async () => {
     )
   })
 
-  const spanHandle = await page.$('[data-type="text"][data-chunk="0"]')
+  const spanHandle = await page.$('[data-type="text"][data-offset="1"][data-chunk-offset="0"]')
 
   const text1 = await spanHandle?.evaluate((el) => el.innerHTML)
 

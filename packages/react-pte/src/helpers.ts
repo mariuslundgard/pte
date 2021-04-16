@@ -113,3 +113,23 @@ export function getTextChunks(nodeSelections: TextSelection[], text: string): Te
 
   return ret
 }
+
+const EMPTY_SELECTIONS: SelectionMap = {}
+
+export function getSpanSelections(selectionsProp: SelectionMap, nodeOffset: number): SelectionMap {
+  const entries = Object.entries(selectionsProp)
+  const ret: SelectionMap = {}
+
+  let match = false
+
+  for (const [userId, sel] of entries) {
+    if (sel && sel.anchor[0] <= nodeOffset && sel.focus[0] >= nodeOffset) {
+      ret[userId] = sel
+      match = true
+    }
+  }
+
+  if (!match) return EMPTY_SELECTIONS
+
+  return ret
+}
