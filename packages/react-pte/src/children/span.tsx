@@ -1,71 +1,69 @@
 import {SelectionMap, PTSpan} from 'pte'
-import React, {useMemo} from 'react'
-import {getTextChunks, getNodeSelections} from '../helpers'
-import {getSpanSelections} from '../helpers'
+import React, {memo, useMemo} from 'react'
+import {getUserChunks} from '../getUserChunks'
+import {Features} from '../types'
 
-export function Span({
-  node,
-  nodeOffset,
-  selections: selectionsProp,
-}: {
+export interface SpanProps {
+  features: Features
   node: PTSpan
   nodeOffset: number
   selections: SelectionMap
-}): React.ReactElement {
+}
+
+export const Span = memo(function Span(props: SpanProps) {
+  const {features, node, nodeOffset, selections} = props
   const text = node.text
   const currTextLength = text.length
 
-  const selections = useMemo(() => getSpanSelections(selectionsProp, nodeOffset), [
-    nodeOffset,
-    selectionsProp,
-  ])
-
-  const nodeSelections = useMemo(() => getNodeSelections(selections, nodeOffset, text), [
+  const userChunks = useMemo(() => getUserChunks(selections, nodeOffset, node.text), [
+    node,
     nodeOffset,
     selections,
-    text,
   ])
 
-  const chunks = useMemo(() => getTextChunks(nodeSelections, text), [nodeSelections, text])
-
-  // useEffect(() => console.log('Span.text'), [text])
-  // useEffect(() => console.log('Span.nodeOffset'), [nodeOffset])
-  // useEffect(() => console.log('Span.selections'), [selections])
-
-  // console.log('Span', nodeOffset, selections)
-
   return useMemo(() => {
-    let textOffset = 0
+    let chunkOffset = 0
+
+    if (!features.userSelection) {
+      return (
+        <span
+          dangerouslySetInnerHTML={{__html: node.text === '' ? '<br>' : node.text}}
+          data-text=""
+          data-key={node.key}
+          data-offset={nodeOffset}
+          data-chunk-offset={0}
+          data-chunk-length={node.text.length}
+        />
+      )
+    }
 
     return (
       <>
-        <span contentEditable="false" suppressContentEditableWarning>
-          <code>{nodeOffset}:</code>
-          <span> </span>
-        </span>
+        {userChunks.map((chunk, chunkIndex) => {
+          if (chunk.type === 'cursor') {
+            return <span data-cursor="" data-users={chunk.userIds.join(',')} key={chunkIndex} />
+          }
 
-        <>
-          {chunks.map((chunk, chunkIndex) => {
-            const currTextOffset = textOffset
-            const currChunkLength = chunk.text.length
-            const __html = chunkIndex === 0 && currTextLength === 0 ? '<br />' : chunk.text
+          const currChunkOffset = chunkOffset
+          const currChunkLength = chunk.text.length
+          const __html = chunkIndex === 0 && currTextLength === 0 ? '<br />' : chunk.text
 
-            textOffset += currChunkLength
+          chunkOffset += currChunkLength
 
-            return (
-              <span
-                dangerouslySetInnerHTML={{__html}}
-                data-type="text"
-                data-offset={nodeOffset}
-                data-users={chunk.users.join(',')}
-                data-chunk-offset={currTextOffset}
-                data-chunk-length={currChunkLength}
-                key={chunkIndex}
-              />
-            )
-          })}
-        </>
+          return (
+            <span
+              dangerouslySetInnerHTML={{__html}}
+              data-text=""
+              data-key={node.key}
+              data-offset={nodeOffset}
+              data-users={chunk.userIds.join(',')}
+              data-chunk-offset={currChunkOffset}
+              data-chunk-length={currChunkLength}
+              key={chunkIndex}
+            />
+          )
+        })}
       </>
     )
-  }, [chunks, currTextLength, nodeOffset])
-}
+  }, [currTextLength, features, node, nodeOffset, userChunks])
+})

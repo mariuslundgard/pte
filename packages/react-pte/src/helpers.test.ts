@@ -1,37 +1,22 @@
 import {SelectionMap} from 'pte'
-
-function getUserChunks(selections: SelectionMap, nodeOffset: number, text: string) {
-  const ret: any = []
-  const textLength = text.length
-  const textOffsets: number[] = [0]
-  const selectionEntries = Object.entries(selections)
-
-  for (const [, selection] of selectionEntries) {
-    if (selection) {
-      const startOffset = selection.anchor[0] === nodeOffset && selection.anchor[1]
-      const endOffset = selection.focus[0] === nodeOffset && selection.focus[1]
-
-      if (typeof startOffset === 'number' && !textOffsets.includes(startOffset)) {
-        textOffsets.push(startOffset)
-      }
-
-      if (typeof endOffset === 'number' && !textOffsets.includes(endOffset)) {
-        textOffsets.push(endOffset)
-      }
-    }
-  }
-
-  if (!textOffsets.includes(textLength)) {
-    textOffsets.push(textLength)
-  }
-
-  textOffsets.sort((a, b) => a - b)
-
-  return ret
-}
+import {getUserChunks} from './getUserChunks'
 
 describe('getUserChunks', () => {
-  it('should', () => {
+  it('should (1)', () => {
+    const selections: SelectionMap = {
+      foo: {anchor: [0, 0], focus: [0, 10]},
+    }
+
+    const userChunks = getUserChunks(selections, 0, 'Hello, world')
+
+    expect(userChunks).toEqual([
+      {type: 'text', text: 'Hello, wor', userIds: ['foo']},
+      {type: 'cursor', userIds: ['foo']},
+      {type: 'text', text: 'ld', userIds: []},
+    ])
+  })
+
+  it('should (2)', () => {
     const selections: SelectionMap = {
       foo: {anchor: [0, 0], focus: [0, 10]},
       bar: {anchor: [0, 2], focus: [0, 12]},
@@ -39,13 +24,61 @@ describe('getUserChunks', () => {
 
     const userChunks = getUserChunks(selections, 0, 'Hello, world')
 
-    console.log(userChunks)
+    expect(userChunks).toEqual([
+      {type: 'text', text: 'He', userIds: ['foo']},
+      {type: 'text', text: 'llo, wor', userIds: ['foo', 'bar']},
+      {type: 'cursor', userIds: ['foo']},
+      {type: 'text', text: 'ld', userIds: ['bar']},
+      {type: 'cursor', userIds: ['bar']},
+    ])
+  })
 
-    // expect(userChunks).toEqual([
-    //   {type: 'text', text: 'Hello, wor', userIds: ['foo']},
-    //   {type: 'cursor', userIds: ['foo']},
-    //   {type: 'text', text: 'ld', userIds: []},
-    // ])
+  it('should (3)', () => {
+    const selections: SelectionMap = {
+      foo: {anchor: [0, 0], focus: [0, 0]},
+    }
+
+    const userChunks = getUserChunks(selections, 0, 'Hello, world')
+
+    // console.log(userChunks)
+
+    expect(userChunks).toEqual([
+      {type: 'cursor', userIds: ['foo']},
+      {type: 'text', text: 'Hello, world', userIds: []},
+    ])
+  })
+
+  it('should (4)', () => {
+    const selections: SelectionMap = {
+      foo: {anchor: [0, 0], focus: [0, 0]},
+      bar: {anchor: [0, 10], focus: [0, 10]},
+      baz: {anchor: [0, 12], focus: [0, 12]},
+    }
+
+    const userChunks = getUserChunks(selections, 0, 'Hello, world')
+
+    // console.log(userChunks)
+
+    expect(userChunks).toEqual([
+      {type: 'cursor', userIds: ['foo']},
+      {type: 'text', text: 'Hello, wor', userIds: []},
+      {type: 'cursor', userIds: ['bar']},
+      {type: 'text', text: 'ld', userIds: []},
+      {type: 'cursor', userIds: ['baz']},
+    ])
+  })
+
+  it('should (5)', () => {
+    const selections: SelectionMap = {
+      // foo: {anchor: [0, 0], focus: [0, 0]},
+    }
+
+    const userChunks = getUserChunks(selections, 0, '')
+
+    expect(userChunks).toEqual([
+      // {type: 'cursor', userIds: ['foo']},
+      {type: 'text', text: '', userIds: []},
+    ])
   })
 })
 

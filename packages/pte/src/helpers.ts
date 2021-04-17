@@ -1,5 +1,17 @@
 import {PTNode, NodeMetadata, Location, PTSelection} from './types'
 
+export function createId(): string {
+  // I generate the UID from two parts here
+  // to ensure the random number provide enough bits.
+  let firstPart = ((Math.random() * 46656) | 0).toString(36)
+  let secondPart = ((Math.random() * 46656) | 0).toString(36)
+
+  firstPart = ('000' + firstPart).slice(-3)
+  secondPart = ('000' + secondPart).slice(-3)
+
+  return firstPart + secondPart
+}
+
 export function buildTree(nodes: NodeMetadata[], depth = 0): PTNode[] {
   const tree: PTNode[] = []
 
@@ -10,13 +22,15 @@ export function buildTree(nodes: NodeMetadata[], depth = 0): PTNode[] {
       const newNode: PTNode =
         node.type === 'span'
           ? {
-              type: 'span',
               ...node.data,
+              type: 'span',
+              key: node.key || '',
               text: node.text,
             }
           : {
-              type: 'block',
               ...node.data,
+              type: 'block',
+              key: node.key || '',
               name: node.name,
               children: buildTree(nodes.slice(i + 1), depth + 1),
             }
@@ -41,18 +55,24 @@ export function getNodeSize(node: PTNode): number {
 export function getTreeMetadata(treeNodes: PTNode[], depth = 0): NodeMetadata[] {
   return treeNodes.reduce((acc: NodeMetadata[], node) => {
     if (node.type === 'span') {
-      const {type, text, ...data} = node
+      const {type, key, text, ...data} = node
 
-      return acc.concat([{type, data, depth, size: getNodeSize(node), text}])
+      return acc.concat([{type, key, data, depth, size: getNodeSize(node), text}])
+    } else {
+      const {type, key, name, children, ...data} = node
+
+      return acc.concat(
+        [{type, key, name, data, depth, size: getNodeSize(node)}],
+        ...getTreeMetadata(children, depth + 1)
+      )
     }
-
-    const {type, name, children, ...data} = node
-
-    return acc.concat(
-      [{type, name, data, depth, size: getNodeSize(node)}],
-      ...getTreeMetadata(children, depth + 1)
-    )
   }, [])
+}
+
+export function isBackwardSelection(sel: PTSelection): boolean {
+  return (
+    sel.focus[0] < sel.anchor[0] || (sel.focus[0] === sel.anchor[0] && sel.focus[1] < sel.anchor[1])
+  )
 }
 
 export function sortSelection(sel: PTSelection): [Location, Location] {
@@ -70,18 +90,18 @@ export function isDOMElement(value: unknown): value is Element {
   return value instanceof Node && value.nodeType === Node.ELEMENT_NODE
 }
 
-export function getDOMSelection(): PTSelection | null {
-  const sel = window.getSelection()
+export function getDOMSelection(domSelection: Selection | null): PTSelection | null {
+  // const sel = window.getSelection()
 
-  if (!sel) return null
+  if (!domSelection) return null
 
-  let anchorNode = sel.anchorNode
+  let anchorNode = domSelection.anchorNode
 
   if (anchorNode && anchorNode.nodeType === Node.TEXT_NODE) {
     anchorNode = anchorNode.parentNode
   }
 
-  let focusNode = sel.focusNode
+  let focusNode = domSelection.focusNode
 
   if (focusNode && focusNode.nodeType === Node.TEXT_NODE) {
     focusNode = focusNode.parentNode
@@ -97,36 +117,49 @@ export function getDOMSelection(): PTSelection | null {
   const focusChunkOffset = Number(anchorNode.getAttribute('data-chunk-offset')) || 0
 
   return {
-    anchor: [anchorOffset, anchorChunkOffset + sel.anchorOffset],
-    focus: [focusOffset, focusChunkOffset + sel.focusOffset],
+    anchor: [anchorOffset, anchorChunkOffset + domSelection.anchorOffset],
+    focus: [focusOffset, focusChunkOffset + domSelection.focusOffset],
   }
 }
 
-export function getDOMNodeAtOffset(el: Element, loc: Location): [globalThis.Element, number] {
-  console.log('getDOMNodeAtOffset', loc)
+export function getDOMNodeAtOffset(el: Element, loc: Location): {node: Element; offset: number} {
+  const [nodeOffset, offset] = loc
+  const textSpans = Array.from(el.querySelectorAll(`[data-text][data-offset="${nodeOffset}"]`))
 
-  const textSpans = Array.from(el.querySelectorAll(`[data-type="text"][data-offset="${loc[0]}"]`))
+  textSpans.reverse()
 
-  const metadataArr = textSpans.map((textSpan) => {
-    const chunkOffset = Number(textSpan.getAttribute('data-chunk-offset') || -1)
-    const chunkLength = Number(textSpan.getAttribute('data-chunk-length') || -1)
+  for (const node of textSpans) {
+    const chunkOffset = Number(node.getAttribute('data-chunk-offset') || -1)
+    const chunkLength = Number(node.getAttribute('data-chunk-length') || -1)
 
-    return {
-      node: textSpan,
-      chunkLength,
-      chunkOffset,
+    const start = chunkOffset
+    const end = chunkOffset + chunkLength
+
+    if (start <= offset && offset <= end) {
+      return {node, offset: offset - chunkOffset}
     }
-  })
-
-  if (metadataArr.length > 0) {
-    const m = metadataArr[0]
-
-    return [m.node, loc[1] - m.chunkOffset]
   }
 
-  throw new Error('not found')
+  throw new Error(`not found: ${JSON.stringify(loc)}`)
 }
 
 export function isCollapsed(sel: PTSelection): boolean {
   return sel.anchor[0] === sel.focus[0] && sel.anchor[1] === sel.focus[1]
+}
+
+export function setDOMSelection(
+  domSelection: Selection,
+  start: {node: Node; offset: number},
+  end: {node: Node; offset: number}
+): boolean {
+  const startNode = start.node.firstChild
+  const endNode = end.node.firstChild
+
+  if (startNode instanceof Node && endNode instanceof Node) {
+    domSelection.setBaseAndExtent(startNode, start.offset, endNode, end.offset)
+
+    return true
+  }
+
+  return false
 }

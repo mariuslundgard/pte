@@ -6,8 +6,8 @@ test('should set value', () => {
   editor.apply({
     type: 'setValue',
     value: [
-      {type: 'block', name: 'p', children: [{type: 'span', text: 'hello'}]},
-      {type: 'block', name: 'p', children: [{type: 'span', text: 'world'}]},
+      {type: 'block', key: '0', name: 'p', children: [{type: 'span', key: '1', text: 'hello'}]},
+      {type: 'block', key: '2', name: 'p', children: [{type: 'span', key: '3', text: 'world'}]},
     ],
     userId: '@',
   })
@@ -15,14 +15,14 @@ test('should set value', () => {
   const state = editor.getState()
 
   expect(state.nodes).toEqual([
-    {type: 'block', name: 'p', data: {}, depth: 0, size: 1},
-    {type: 'span', data: {}, depth: 1, size: 0, text: 'hello'},
-    {type: 'block', name: 'p', data: {}, depth: 0, size: 1},
-    {type: 'span', data: {}, depth: 1, size: 0, text: 'world'},
+    {type: 'block', key: '0', name: 'p', data: {}, depth: 0, size: 1},
+    {type: 'span', key: '1', data: {}, depth: 1, size: 0, text: 'hello'},
+    {type: 'block', key: '2', name: 'p', data: {}, depth: 0, size: 1},
+    {type: 'span', key: '3', data: {}, depth: 1, size: 0, text: 'world'},
   ])
   expect(state.value).toEqual([
-    {type: 'block', name: 'p', children: [{type: 'span', text: 'hello'}]},
-    {type: 'block', name: 'p', children: [{type: 'span', text: 'world'}]},
+    {type: 'block', key: '0', name: 'p', children: [{type: 'span', key: '1', text: 'hello'}]},
+    {type: 'block', key: '2', name: 'p', children: [{type: 'span', key: '3', text: 'world'}]},
   ])
 })
 
@@ -45,8 +45,8 @@ test('should delete', () => {
     {
       type: 'setValue',
       value: [
-        {type: 'block', name: 'p', children: [{type: 'span', text: 'hello'}]},
-        {type: 'block', name: 'p', children: [{type: 'span', text: 'world'}]},
+        {type: 'block', key: '0', name: 'p', children: [{type: 'span', key: '1', text: 'hello'}]},
+        {type: 'block', key: '2', name: 'p', children: [{type: 'span', key: '3', text: 'world'}]},
       ],
       userId: '@',
     },
@@ -57,11 +57,11 @@ test('should delete', () => {
   const state = editor.getState()
 
   expect(state.nodes).toEqual([
-    {type: 'block', name: 'p', data: {}, depth: 0, size: 1},
-    {type: 'span', data: {}, depth: 1, size: 0, text: 'helloworld'},
+    {type: 'block', key: '0', name: 'p', data: {}, depth: 0, size: 1},
+    {type: 'span', key: '1', data: {}, depth: 1, size: 0, text: 'helloworld'},
   ])
   expect(state.value).toEqual([
-    {type: 'block', name: 'p', children: [{type: 'span', text: 'helloworld'}]},
+    {type: 'block', key: '0', name: 'p', children: [{type: 'span', key: '1', text: 'helloworld'}]},
   ])
   expect(state.selections).toEqual({
     '@': {anchor: [1, 5], focus: [1, 5]},
@@ -75,8 +75,8 @@ test('should delete (reverse selection)', () => {
     {
       type: 'setValue',
       value: [
-        {type: 'block', name: 'p', children: [{type: 'span', text: 'hello'}]},
-        {type: 'block', name: 'p', children: [{type: 'span', text: 'world'}]},
+        {type: 'block', key: '0', name: 'p', children: [{type: 'span', key: '1', text: 'hello'}]},
+        {type: 'block', key: '2', name: 'p', children: [{type: 'span', key: '3', text: 'world'}]},
       ],
       userId: '@',
     },
@@ -87,11 +87,11 @@ test('should delete (reverse selection)', () => {
   const state = editor.getState()
 
   expect(state.nodes).toEqual([
-    {type: 'block', name: 'p', data: {}, depth: 0, size: 1},
-    {type: 'span', data: {}, depth: 1, size: 0, text: 'helloworld'},
+    {type: 'block', key: '0', name: 'p', data: {}, depth: 0, size: 1},
+    {type: 'span', key: '1', data: {}, depth: 1, size: 0, text: 'helloworld'},
   ])
   expect(state.value).toEqual([
-    {type: 'block', name: 'p', children: [{type: 'span', text: 'helloworld'}]},
+    {type: 'block', key: '0', name: 'p', children: [{type: 'span', key: '1', text: 'helloworld'}]},
   ])
   expect(state.selections).toEqual({
     '@': {anchor: [1, 5], focus: [1, 5]},
@@ -105,11 +105,19 @@ test('should delete (complex)', () => {
     {
       type: 'setValue',
       value: [
-        {type: 'block', name: 'p', children: [{type: 'span', text: 'hello'}]},
+        {type: 'block', key: '0', name: 'p', children: [{type: 'span', key: '1', text: 'hello'}]},
         {
           type: 'block',
+          key: '2',
           name: 'ul',
-          children: [{type: 'block', name: 'li', children: [{type: 'span', text: 'world'}]}],
+          children: [
+            {
+              type: 'block',
+              key: '3',
+              name: 'li',
+              children: [{type: 'span', key: '4', text: 'world'}],
+            },
+          ],
         },
       ],
       userId: '@',
@@ -139,13 +147,24 @@ test('should delete and keep (complex)', () => {
     {
       type: 'setValue',
       value: [
-        {type: 'block', name: 'p', children: [{type: 'span', text: 'hello'}]},
+        {type: 'block', key: '0', name: 'p', children: [{type: 'span', key: '1', text: 'hello'}]},
         {
           type: 'block',
+          key: '3',
           name: 'ul',
           children: [
-            {type: 'block', name: 'li', children: [{type: 'span', text: 'world'}]},
-            {type: 'block', name: 'li', children: [{type: 'span', text: 'foo'}]},
+            {
+              type: 'block',
+              key: '4',
+              name: 'li',
+              children: [{type: 'span', key: '5', text: 'world'}],
+            },
+            {
+              type: 'block',
+              key: '6',
+              name: 'li',
+              children: [{type: 'span', key: '7', text: 'foo'}],
+            },
           ],
         },
       ],
@@ -184,13 +203,24 @@ test('should insert text', () => {
     {
       type: 'setValue',
       value: [
-        {type: 'block', name: 'p', children: [{type: 'span', text: 'hello'}]},
+        {type: 'block', key: '0', name: 'p', children: [{type: 'span', key: '1', text: 'hello'}]},
         {
           type: 'block',
+          key: '2',
           name: 'ul',
           children: [
-            {type: 'block', name: 'li', children: [{type: 'span', text: 'world'}]},
-            {type: 'block', name: 'li', children: [{type: 'span', text: 'foo'}]},
+            {
+              type: 'block',
+              key: '3',
+              name: 'li',
+              children: [{type: 'span', key: '4', text: 'world'}],
+            },
+            {
+              type: 'block',
+              key: '5',
+              name: 'li',
+              children: [{type: 'span', key: '6', text: 'foo'}],
+            },
           ],
         },
       ],
@@ -222,7 +252,9 @@ test('should insert block', () => {
   editor.apply(
     {
       type: 'setValue',
-      value: [{type: 'block', name: 'p', children: [{type: 'span', text: 'hello'}]}],
+      value: [
+        {type: 'block', key: '0', name: 'p', children: [{type: 'span', key: '1', text: 'hello'}]},
+      ],
       userId: '@',
     },
     {type: 'select', anchor: [1, 2], focus: [1, 3], userId: '@'},

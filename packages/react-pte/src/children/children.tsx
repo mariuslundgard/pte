@@ -1,7 +1,16 @@
 import {PTBlock, getNodeSize, PTNode, SelectionMap} from 'pte'
-import React, {createElement} from 'react'
-import {Block} from './block'
+import React, {createElement, memo} from 'react'
+import {Features} from '../types'
+import {Block, RenderBlockFn} from './block'
 import {Span} from './span'
+
+export interface ChildrenProps {
+  features: Features
+  nodes: PTNode[]
+  offset?: number
+  renderBlock?: RenderBlockFn
+  selections: SelectionMap
+}
 
 function defaultRenderBlock(
   node: PTBlock,
@@ -11,30 +20,31 @@ function defaultRenderBlock(
   return createElement(node.name || 'div', props, children)
 }
 
-export function Children(props: {
-  nodes: PTNode[]
-  offset?: number
-  renderBlock?: (
-    node: PTBlock,
-    props: React.PropsWithoutRef<Record<string, unknown>>,
-    children: React.ReactNode
-  ) => React.ReactElement
-  selections: SelectionMap
-}): React.ReactElement {
-  const {nodes, offset: offsetProp = 0, renderBlock = defaultRenderBlock, selections} = props
+export const Children = memo(function Children(props: ChildrenProps) {
+  const {
+    features,
+    nodes,
+    offset: offsetProp = 0,
+    renderBlock = defaultRenderBlock,
+    selections,
+  } = props
   const children: React.ReactElement[] = []
 
   let offset = offsetProp
-
-  // useEffect(() => console.log('Children.nodes'), [nodes])
-  // useEffect(() => console.log('Children.renderBlock'), [renderBlock])
-  // useEffect(() => console.log('Children.offset'), [offset])
 
   for (let i = 0; i < nodes.length; i += 1) {
     const node = nodes[i]
 
     if (node.type === 'span') {
-      children.push(<Span key={i} node={node} nodeOffset={offset} selections={selections} />)
+      children.push(
+        <Span
+          features={features}
+          key={node.key}
+          node={node}
+          nodeOffset={offset}
+          selections={selections}
+        />
+      )
 
       offset += 1
     } else {
@@ -42,7 +52,8 @@ export function Children(props: {
 
       children.push(
         <Block
-          key={i}
+          features={features}
+          key={node.key}
           node={node}
           nodeOffset={offset}
           nodeSize={nodeSize}
@@ -56,4 +67,4 @@ export function Children(props: {
   }
 
   return <>{children}</>
-}
+})

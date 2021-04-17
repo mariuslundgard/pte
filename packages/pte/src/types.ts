@@ -1,5 +1,6 @@
 export interface PTBlock {
   type: 'block'
+  key: string
   name: string
   children: PTNode[]
   [key: string]: unknown
@@ -7,6 +8,7 @@ export interface PTBlock {
 
 export interface PTSpan {
   type: 'span'
+  key: string
   text: string
   [key: string]: unknown
 }
@@ -19,6 +21,7 @@ export interface BlockNodeMetadata {
   data: Record<string, unknown>
   depth: number
   size: number
+  key: string
 }
 
 export interface SpanNodeMetadata {
@@ -27,6 +30,7 @@ export interface SpanNodeMetadata {
   depth: number
   size: number
   text: string
+  key: string
 }
 
 export type NodeMetadata = BlockNodeMetadata | SpanNodeMetadata
@@ -99,4 +103,5 @@ export interface PTEditor {
   destroy: () => void
   getState: () => State
   setValue: (value: PTNode[]) => void
+  updateDOMSelection: () => void
 }

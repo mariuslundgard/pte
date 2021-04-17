@@ -44,7 +44,7 @@ export function _delete(state: State, op: DeleteOp): State {
     }
   }
 
-  console.log('delete', JSON.stringify([from, to]))
+  // console.log('delete', JSON.stringify([from, to]))
 
   const fromNode = state.nodes[from[0]]
   const toNode = state.nodes[to[0]]

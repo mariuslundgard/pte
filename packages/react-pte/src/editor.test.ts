@@ -31,9 +31,7 @@ test('should insert and remove text', async () => {
 
   // Select text
   await documentHandle.evaluate((document: Document) => {
-    const spanEl = document.querySelector(
-      '[data-type="text"][data-offset="1"][data-chunk-offset="0"]'
-    )
+    const spanEl = document.querySelector('[data-text][data-offset="1"][data-chunk-offset="0"]')
 
     if (spanEl && spanEl.firstChild) {
       const selection = document.getSelection()
@@ -61,7 +59,7 @@ test('should insert and remove text', async () => {
     )
   })
 
-  const spanHandle = await page.$('[data-type="text"][data-offset="1"][data-chunk-offset="0"]')
+  const spanHandle = await page.$('[data-text][data-offset="1"][data-chunk-offset="0"]')
 
   const text1 = await spanHandle?.evaluate((el) => el.innerHTML)
 

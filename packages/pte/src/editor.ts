@@ -1,4 +1,4 @@
-import {getDOMNodeAtOffset, getDOMSelection, isCollapsed} from './helpers'
+import {getDOMNodeAtOffset, getDOMSelection, isCollapsed, setDOMSelection} from './helpers'
 import {reducer} from './reducer'
 import {PTEditor, PTNode, PTOp, SelectionMap, State} from './types'
 
@@ -22,9 +22,7 @@ export function createEditor(opts: EditorOpts = {}): PTEditor {
     value: [],
   }
 
-  let isApplying = false
-
-  let applyTimeout: NodeJS.Timeout | null = null
+  let isSelecting = false
 
   function apply(...ops: PTOp[]) {
     const prevState = state
@@ -68,7 +66,7 @@ export function createEditor(opts: EditorOpts = {}): PTEditor {
 
   __init()
 
-  const editor = {apply, destroy, getState, setValue}
+  const editor = {apply, destroy, getState, setValue, updateDOMSelection}
 
   return editor
 
@@ -96,41 +94,27 @@ export function createEditor(opts: EditorOpts = {}): PTEditor {
   function _handleBeforeInput(_event: Event) {
     const event = _event as InputEvent
 
-    // console.log('beforeinput', event)
-
     event.preventDefault()
 
-    if (applyTimeout) {
-      clearTimeout(applyTimeout)
-      applyTimeout = null
-    }
-
-    isApplying = true
-
     _handleInput(event.inputType, event.data)
-
-    applyTimeout = setTimeout(() => {
-      _updateDOMSelection()
-      isApplying = false
-    }, 0)
   }
 
   function _handleBlur() {
-    // console.log('blur')
+    console.log('blur')
 
-    // apply({type: 'unsetSelection', userId})
+    apply({type: 'unsetSelection', userId})
 
     document.removeEventListener('selectionchange', _handleSelectionChange)
   }
 
   function _handleFocus() {
-    // console.log('focus')
+    console.log('focus')
 
     document.addEventListener('selectionchange', _handleSelectionChange)
   }
 
   function _handleInput(type: string, data: string | null) {
-    // console.log('input', type, data, JSON.stringify(state.selections[userId]))
+    console.log('input')
 
     if (type === 'insertText') {
       if (data) {
@@ -176,77 +160,68 @@ export function createEditor(opts: EditorOpts = {}): PTEditor {
   }
 
   function _handleSelectionChange() {
-    if (isApplying) return
+    if (isSelecting) return
 
-    const sel = getDOMSelection()
+    const domSelection = window.getSelection()
+
+    const sel = getDOMSelection(domSelection)
+
+    console.log('select', JSON.stringify(sel))
 
     if (sel) {
-      console.log('[dom] -> select', JSON.stringify([sel.anchor, sel.focus]))
-
-      if (applyTimeout) {
-        clearTimeout(applyTimeout)
-        applyTimeout = null
-      }
-
-      isApplying = true
-
-      // console.log('selectionchange', JSON.stringify([sel.anchor, sel.focus]))
-
-      apply({type: 'select', ...sel, userId})
-
-      _updateDOMSelection()
-
-      applyTimeout = setTimeout(() => {
-        isApplying = false
+      setTimeout(() => {
+        apply({type: 'select', ...sel, userId})
       }, 0)
     }
   }
 
-  function _updateDOMSelection() {
+  function updateDOMSelection() {
+    const domSelection = window.getSelection()
+    const sel = state.selections[userId]
+
+    if (!element || !domSelection || !sel) return
+
+    console.log('update selection', JSON.stringify(sel))
+
     try {
-      const sel = state.selections[userId]
+      isSelecting = true
 
-      if (!sel) return
+      const start = getDOMNodeAtOffset(element, sel.anchor)
+      const end = getDOMNodeAtOffset(element, sel.focus)
 
-      const winSel = window.getSelection()
+      console.log(
+        '>>>',
+        JSON.stringify(
+          {
+            start: {
+              html: start.node.innerHTML,
+              offset: start.offset,
+            },
+            end: {
+              html: end.node.innerHTML,
+              offset: end.offset,
+            },
+          },
+          null,
+          2
+        )
+      )
 
-      if (element && winSel && sel.anchor) {
-        const start = getDOMNodeAtOffset(element, sel.anchor)
-        const end = getDOMNodeAtOffset(element, sel.focus)
+      // debugger
 
-        if (start[0].firstChild instanceof Node && end[0].firstChild instanceof Node) {
-          winSel.removeAllRanges()
+      if (setDOMSelection(domSelection, start, end)) {
+        setTimeout(() => {
+          isSelecting = false
+        }, 0)
 
-          const range = document.createRange()
-
-          if (start[0].firstChild instanceof Node) {
-            range.setStart(start[0].firstChild, start[1])
-          }
-
-          if (end[0].firstChild instanceof Node) {
-            range.setEnd(end[0].firstChild, end[1])
-          }
-
-          winSel.addRange(range)
-
-          console.log(
-            '[dom] <- select',
-            JSON.stringify([
-              [sel.anchor[0], start[1]],
-              [sel.focus[0], end[1]],
-            ])
-          )
-
-          return
-        }
-
-        console.warn('unexpected node start or end node', {
-          start: start[0].firstChild,
-          end: end[0].firstChild,
-        })
+        return
       }
+
+      console.warn('could not set DOM selection')
     } catch (err) {
       console.error(err)
     }
+
+    isSelecting = false
   }
 }

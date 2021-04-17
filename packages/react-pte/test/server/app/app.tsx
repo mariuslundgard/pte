@@ -1,16 +1,22 @@
 import {Box, Card, Code, studioTheme, Text, Theme, ThemeProvider} from '@sanity/ui'
-import {PTBlock, PTEditor, PTNode, SelectionMap} from 'pte'
+import {createId, PTBlock, PTEditor, PTNode, SelectionMap} from 'pte'
 import React, {createElement, useCallback, useRef, useState} from 'react'
 import {Editor} from 'react-pte'
 import styled, {createGlobalStyle, css} from 'styled-components'
 
-const INITIAL_VALUE: Node[] = [
+const features = {
+  // userSelection: false,
+}
+
+const INITIAL_VALUE: PTNode[] = [
   {
     type: 'block',
+    key: createId(),
     name: 'p',
     children: [
       {
         type: 'span',
+        key: createId(),
         text: 'Hello, world!!',
       },
     ],
@@ -44,18 +50,50 @@ const Root = styled(Card)`
     outline: none;
 
     &:focus {
-      border-color: #03f;
-      outline: 1px solid #03f;
+      border-color: #07f;
+      outline: 1px solid #07f;
     }
 
-    &::selection,
-    & ::selection {
-      background: transparent;
-    }
+    &[data-feature-user-selection='true'] {
+      &::selection,
+      & ::selection {
+        background: transparent;
+      }
 
-    & [data-users='foo'] {
-      background: #def;
-      outline: 1px solid #03f;
+      & [data-cursor] {
+        position: relative;
+
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: -1px;
+          bottom: 0;
+        }
+      }
+
+      & [data-text]:not([data-users='']) {
+        background: #ddd;
+      }
+
+      & [data-cursor]:not([data-users='']) {
+        position: relative;
+
+        &:after {
+          border-left: 2px solid #777;
+        }
+      }
+
+      & [data-text][data-users='foo'] {
+        background: #bdf;
+      }
+
+      & [data-cursor][data-users='foo'] {
+        &:after {
+          border-left: 2px solid #07f;
+        }
+      }
     }
   }
 `
@@ -92,6 +130,7 @@ export function App() {
       <Root padding={4}>
         <Editor
           editorRef={editor1Ref}
+          features={features}
           id="editor"
           onChange={setValue}
           onSelections={setSelections}

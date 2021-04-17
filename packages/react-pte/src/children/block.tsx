@@ -1,68 +1,38 @@
 import {PTBlock, SelectionMap} from 'pte'
-import React, {memo, useMemo} from 'react'
+import React, {memo} from 'react'
+import {Features} from '../types'
 import {Children} from './children'
+import {useBlockSelections} from './useBlockSelections'
 
-const EMPTY_SELECTIONS: SelectionMap = {}
+export type RenderBlockFn = (
+  node: PTBlock,
+  props: React.PropsWithoutRef<Record<string, unknown>>,
+  children: React.ReactNode
+) => React.ReactElement
 
-function useBlockSelections(selectionsProp: SelectionMap, nodeOffset: number, nodeSize: number) {
-  const startOffset = nodeOffset
-  const endOffset = nodeOffset + nodeSize
-
-  return useMemo(() => {
-    const entries = Object.entries(selectionsProp)
-    const ret: SelectionMap = {}
-
-    let match = false
-
-    for (const [userId, sel] of entries) {
-      const startOffsetInSelection =
-        sel && sel.anchor[0] <= startOffset && sel.focus[0] >= startOffset
-      const endOffsetInSelection = sel && sel.anchor[0] <= endOffset && sel.focus[0] >= endOffset
-
-      if (startOffsetInSelection || endOffsetInSelection) {
-        ret[userId] = sel
-        match = true
-      }
-    }
-
-    if (!match) return EMPTY_SELECTIONS
-
-    return ret
-  }, [selectionsProp, startOffset, endOffset])
-}
-
-export const Block = memo(function Block({
-  node,
-  nodeOffset,
-  nodeSize,
-  renderBlock,
-  selections: selectionsProp,
-}: {
+export interface BlockProps {
+  features: Features
   node: PTBlock
   nodeOffset: number
   nodeSize: number
-  renderBlock: (
-    node: PTBlock,
-    props: React.PropsWithoutRef<Record<string, unknown>>,
-    children: React.ReactNode
-  ) => React.ReactElement
+  renderBlock: RenderBlockFn
   selections: SelectionMap
-}) {
-  const selections = useBlockSelections(selectionsProp, nodeOffset, nodeSize)
+}
 
-  // useEffect(() => console.log('Block.node'), [node])
-  // useEffect(() => console.log('Block.nodeOffset'), [nodeOffset])
-  // useEffect(() => console.log('Block.renderBlock'), [renderBlock])
-  // useEffect(() => console.log('Block.selections'), [selections])
+export const Block = memo(function Block(props: BlockProps) {
+  const {features, node, nodeOffset, nodeSize, renderBlock, selections: selectionsProp} = props
+  const selections = useBlockSelections(selectionsProp, nodeOffset, nodeSize)
 
   return renderBlock(
     node,
     {
-      'data-type': 'block',
+      'data-block': '',
+      'data-key': node.key,
       'data-offset': String(nodeOffset),
       'data-size': String(nodeSize),
     },
     <Children
+      features={features}
       nodes={node.children}
       offset={nodeOffset + 1}
       renderBlock={renderBlock}

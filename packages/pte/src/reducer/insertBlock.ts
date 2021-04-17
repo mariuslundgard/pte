@@ -1,4 +1,4 @@
-import {buildTree, isCollapsed, sortSelection} from '../helpers'
+import {buildTree, createId, isCollapsed, sortSelection} from '../helpers'
 import {InsertBlockOp, NodeMetadata, State} from '../types'
 
 export function insertBlock(state: State, op: InsertBlockOp): State {
@@ -37,14 +37,14 @@ export function insertBlock(state: State, op: InsertBlockOp): State {
       }
 
       // duplicate
-      nodes.unshift({...anchorNode, text: anchorNode.text.slice(pos[1])})
+      nodes.unshift({...anchorNode, key: createId(), text: anchorNode.text.slice(pos[1])})
 
       // find closest block
       offset -= 1
       node = state.nodes[offset]
 
       // add anchor's block node
-      nodes.unshift(node)
+      nodes.unshift({...node, key: createId()})
 
       // add anchor node
       nodes.unshift({...anchorNode, text: anchorNode.text.slice(0, pos[1])})

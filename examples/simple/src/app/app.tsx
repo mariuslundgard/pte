@@ -1,12 +1,12 @@
 import {Box, Card, Code, Flex, Heading, Stack, Text} from '@sanity/ui'
-import {Block, Editor as EditorType, Node, Op, SelectionMap} from 'pte'
+import {PTBlock, PTEditor, PTNode, PTOp, SelectionMap} from 'pte'
 import React, {useRef, useState, useEffect, useCallback, createElement} from 'react'
 import {Dummy} from './components/dummy'
 import {INITIAL_VALUE} from './constants'
 import {Editor} from './editor'
 
 function renderBlock(
-  node: Block,
+  node: PTBlock,
   props: React.PropsWithoutRef<Record<string, unknown>>,
   children: React.ReactNode
 ) {
@@ -57,11 +57,11 @@ function renderBlock(
 
 export function App() {
   // editor 1
-  const editor1Ref = useRef<EditorType | null>(null)
+  const editor1Ref = useRef<PTEditor | null>(null)
   const [selections1, setSelections1] = useState<SelectionMap>({})
-  const [value1, setValue1] = useState<Node[]>(INITIAL_VALUE)
+  const [value1, setValue1] = useState<PTNode[]>(INITIAL_VALUE)
 
-  const handleEditor1Operation = useCallback((op: Op) => {
+  const handleEditor1Operation = useCallback((op: PTOp) => {
     if (op.userId !== 'foo') return
     console.log(`${op.userId} => foo`, op)
     setTimeout(() => {
@@ -74,10 +74,10 @@ export function App() {
   }, [])
 
   // editor 2
-  const editor2Ref = useRef<EditorType | null>(null)
-  const [value2, setValue2] = useState<Node[]>(INITIAL_VALUE)
+  const editor2Ref = useRef<PTEditor | null>(null)
+  const [value2, setValue2] = useState<PTNode[]>(INITIAL_VALUE)
 
-  const handleEditor2Operation = useCallback((op: Op) => {
+  const handleEditor2Operation = useCallback((op: PTOp) => {
     if (op.userId !== 'bar') return
     console.log(`${op.userId} => bar`, op)
     setTimeout(() => {

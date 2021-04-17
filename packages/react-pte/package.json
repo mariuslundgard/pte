@@ -19,6 +19,7 @@
     "watch": "tsc -w --baseUrl . --module ES6 --outDir dist/es --project tsconfig.dist.json --rootDir src --target ES6"
   },
   "devDependencies": {
+    "@sanity/color": "^2.0.15",
     "@sanity/ui": "^0.33.13",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
