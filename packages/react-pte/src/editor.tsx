@@ -5,7 +5,7 @@ import {Features} from './types'
 
 export interface EditorProps {
   className?: string
-  editorRef?: React.Ref<PTEditor>
+  editorRef?: React.MutableRefObject<PTEditor | null>
   features?: Partial<Features>
   onChange?: (value: PTNode[]) => void
   onOperation?: (op: PTOp) => void

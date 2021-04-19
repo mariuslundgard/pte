@@ -5,6 +5,7 @@ import {insertText} from './insertText'
 import {select} from './select'
 import {setValue} from './setValue'
 import {unsetSelection} from './unsetSelection'
+import {updateBlock} from './updateBlock'
 
 export function reducer(state: State, op: PTOp): State {
   if (op.type === 'setValue') {
@@ -29,6 +30,10 @@ export function reducer(state: State, op: PTOp): State {
 
   if (op.type === 'insertBlock') {
     return insertBlock(state, op)
+  }
+
+  if (op.type === 'updateBlock') {
+    return updateBlock(state, op)
   }
 
   return state

@@ -1,7 +1,8 @@
 import {hues} from '@sanity/color'
 import {BoldIcon, ItalicIcon} from '@sanity/icons'
-import {Box, Button, Card, Inline} from '@sanity/ui'
-import React from 'react'
+import {Box, Button, Card, Inline, Select} from '@sanity/ui'
+import {BlockNodeMetadata, PTEditor, State} from 'packages/pte/dist/cjs'
+import React, {useCallback, useMemo, useRef, useState} from 'react'
 import {Editor as PTE, EditorProps} from 'react-pte'
 import styled, {css, keyframes} from 'styled-components'
 import {multiply, screen} from './helpers'
@@ -17,11 +18,11 @@ const user2 = hues.magenta
 const blink = keyframes`
   0%,
   49.999% {
-    opacity: 0;
+    opacity: 1;
   }
   50%,
   100% {
-    opacity: 1;
+    opacity: 0;
   }
 `
 
@@ -131,15 +132,84 @@ export const Root = styled(Card)(({theme}) => {
 })
 
 export function Editor(props: PTEProps) {
+  const {editorRef: editorRefProp, onState, userId = '@', ...restProps} = props
+  const [state, setState] = useState<State | null>(null)
+  const editorRef = useRef<PTEditor | null>(null)
+
+  const handleState = useCallback(
+    (newState: State) => {
+      setState(newState)
+      if (onState) onState(newState)
+    },
+    [onState]
+  )
+
+  const selectedBlock = useMemo(() => {
+    if (!state) {
+      return null
+    }
+
+    const userSelection = state.selections[userId]
+
+    if (!userSelection) {
+      return null
+    }
+
+    let nodeOffset = state.keys.indexOf(userSelection.anchor[0])
+
+    while (state.nodes[nodeOffset] && state.nodes[nodeOffset].type !== 'block') {
+      nodeOffset -= 1
+    }
+
+    return state.nodes[nodeOffset] as BlockNodeMetadata
+  }, [state, userId])
+
+  const handleChangeBlockName = useCallback(
+    (event: React.ChangeEvent<HTMLSelectElement>) => {
+      const newBlockName = event.currentTarget.value
+
+      if (editorRef.current) {
+        editorRef.current.updateBlock({name: newBlockName})
+      }
+    },
+    [editorRef]
+  )
+
+  const setEditor = useCallback(
+    (editor: PTEditor | null) => {
+      editorRef.current = editor
+
+      if (editorRefProp) {
+        editorRefProp.current = editor
+      }
+    },
+    [editorRefProp]
+  )
+
   return (
     <Root radius={3}>
       <Box padding={1} style={{borderBottom: '1px solid var(--card-border-color)'}}>
         <Inline space={1}>
+          <Select
+            disabled={!selectedBlock}
+            onChange={handleChangeBlockName}
+            padding={2}
+            radius={2}
+            value={selectedBlock?.name || 'p'}
+          >
+            <option value="p">Paragraph</option>
+            <option value="h1">Heading 1</option>
+            <option value="h2">Heading 2</option>
+            <option value="h3">Heading 3</option>
+            <option value="h4">Heading 4</option>
+            <option value="h5">Heading 5</option>
+            <option value="h6">Heading 6</option>
+          </Select>
           <Button icon={BoldIcon} mode="bleed" padding={2} />
           <Button icon={ItalicIcon} mode="bleed" padding={2} />
         </Inline>
       </Box>
-      <PTE {...props} />
+      <PTE {...restProps} editorRef={setEditor} onState={handleState} userId={userId} />
     </Root>
   )
 }

@@ -90,9 +90,14 @@ export function createEditor(opts: EditorOpts = {}): PTEditor {
     apply({type: 'setValue', value: newValue, userId})
   }
 
+  function updateBlock(data: Record<string, unknown>) {
+    // console.log('update block', data, userId)
+    apply({type: 'updateBlock', data, userId})
+  }
+
   __init()
 
-  const editor = {apply, destroy, getState, setValue, updateDOMSelection}
+  const editor = {apply, destroy, getState, setValue, updateBlock, updateDOMSelection}
 
   return editor
 
@@ -128,7 +133,7 @@ export function createEditor(opts: EditorOpts = {}): PTEditor {
   function _handleBlur() {
     // console.log('blur')
 
-    // apply({type: 'unsetSelection', userId})
+    apply({type: 'unsetSelection', userId})
 
     document.removeEventListener('selectionchange', _handleSelectionChange)
   }

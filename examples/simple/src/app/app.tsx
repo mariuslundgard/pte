@@ -35,6 +35,56 @@ function renderBlock(
     )
   }
 
+  if (node.name === 'h2') {
+    return (
+      <Box {...props} marginY={[4, 5, 6]}>
+        <Heading as="h2" size={[1, 2, 3]}>
+          {children}
+        </Heading>
+      </Box>
+    )
+  }
+
+  if (node.name === 'h3') {
+    return (
+      <Box {...props} marginY={[4, 5, 6]}>
+        <Heading as="h3" size={[0, 1, 2]}>
+          {children}
+        </Heading>
+      </Box>
+    )
+  }
+
+  if (node.name === 'h4') {
+    return (
+      <Box {...props} marginY={[4, 5, 6]}>
+        <Heading as="h4" size={[0, 0, 1]}>
+          {children}
+        </Heading>
+      </Box>
+    )
+  }
+
+  if (node.name === 'h5') {
+    return (
+      <Box {...props} marginY={[4, 5, 6]}>
+        <Heading as="h5" size={[0, 0, 0]}>
+          {children}
+        </Heading>
+      </Box>
+    )
+  }
+
+  if (node.name === 'h6') {
+    return (
+      <Box {...props} marginY={[4, 5, 6]}>
+        <Heading as="h6" muted size={[0, 0, 0]}>
+          {children}
+        </Heading>
+      </Box>
+    )
+  }
+
   if (node.name === 'p') {
     return (
       <Box {...props} marginY={[3, 4, 5]}>

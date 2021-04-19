@@ -93,6 +93,12 @@ export interface InsertBlockOp {
   blockKey: string
 }
 
+export interface UpdateBlockOp {
+  type: 'updateBlock'
+  data: Record<string, unknown>
+  userId: string
+}
+
 export type PTOp =
   | SetValueOp
   | SelectOp
@@ -100,6 +106,7 @@ export type PTOp =
   | DeleteOp
   | InsertTextOp
   | InsertBlockOp
+  | UpdateBlockOp
 
 export type Subscriber = (state: State) => void
 
@@ -109,4 +116,5 @@ export interface PTEditor {
   getState: () => State
   setValue: (value: PTNode[]) => void
   updateDOMSelection: () => void
+  updateBlock: (data: Record<string, unknown>) => void
 }
