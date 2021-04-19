@@ -133,7 +133,7 @@ export function createEditor(opts: EditorOpts = {}): PTEditor {
   function _handleBlur() {
     // console.log('blur')
 
-    apply({type: 'unsetSelection', userId})
+    // apply({type: 'unsetSelection', userId})
 
     document.removeEventListener('selectionchange', _handleSelectionChange)
   }
