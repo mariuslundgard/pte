@@ -3,11 +3,10 @@ import reactRefresh from '@vitejs/plugin-react-refresh'
 import {defineConfig} from 'vite'
 
 export default defineConfig({
-  plugins: [reactRefresh()],
-  root: path.resolve(__dirname, 'src'),
-  server: {
-    port: 3333,
+  build: {
+    outDir: path.resolve(__dirname, 'dist'),
   },
+  plugins: [reactRefresh()],
   resolve: {
     alias: [
       {
@@ -19,5 +18,9 @@ export default defineConfig({
         replacement: path.resolve(__dirname, '../../packages/react-pte/src'),
       },
     ],
+  },
+  root: path.resolve(__dirname, 'src'),
+  server: {
+    port: 3333,
   },
 })
