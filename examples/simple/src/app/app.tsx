@@ -1,7 +1,6 @@
 import {Box, Card, Code, Flex, Heading, Stack, Text} from '@sanity/ui'
-import {PTBlock, PTEditor, PTNode, PTOp, SelectionMap} from 'pte'
+import {PTBlock, PTEditor, PTNode, PTOp, State} from 'pte'
 import React, {useRef, useState, useEffect, useCallback, createElement} from 'react'
-import {Dummy} from './components/dummy'
 import {INITIAL_VALUE} from './constants'
 import {Editor} from './editor'
 
@@ -58,12 +57,12 @@ function renderBlock(
 export function App() {
   // editor 1
   const editor1Ref = useRef<PTEditor | null>(null)
-  const [selections1, setSelections1] = useState<SelectionMap>({})
+  const [state1, setState1] = useState<State | null>(null)
   const [value1, setValue1] = useState<PTNode[]>(INITIAL_VALUE)
 
   const handleEditor1Operation = useCallback((op: PTOp) => {
     if (op.userId !== 'foo') return
-    console.log(`${op.userId} => foo`, op)
+    console.log(`${op.userId} => bar`, op)
     setTimeout(() => {
       const editor = editor2Ref.current
 
@@ -79,7 +78,7 @@ export function App() {
 
   const handleEditor2Operation = useCallback((op: PTOp) => {
     if (op.userId !== 'bar') return
-    console.log(`${op.userId} => bar`, op)
+    console.log(`${op.userId} => foo`, op)
     setTimeout(() => {
       const editor = editor1Ref.current
 
@@ -91,23 +90,24 @@ export function App() {
 
   useEffect(() => {
     // @todo: remove these debugging selections
-    if (editor1Ref.current) {
-      editor1Ref.current.apply({type: 'select', anchor: [1, 0], focus: [1, 5], userId: 'foo'})
-    }
-
-    if (editor2Ref.current) {
-      editor2Ref.current.apply({type: 'select', anchor: [1, 4], focus: [1, 8], userId: 'bar'})
+    if (editor1Ref.current && editor2Ref.current) {
+      editor1Ref.current.apply({
+        type: 'select',
+        anchor: [INITIAL_VALUE[0].children[0].key, 0],
+        focus: [INITIAL_VALUE[0].children[0].key, 5],
+        userId: 'foo',
+      })
+      editor2Ref.current.apply({
+        type: 'select',
+        anchor: [INITIAL_VALUE[0].children[0].key, 4],
+        focus: [INITIAL_VALUE[0].children[0].key, 8],
+        userId: 'bar',
+      })
     }
   }, [])
 
   return (
     <Card height="fill">
-      <Box padding={4}>
-        <Text>
-          <Dummy />
-        </Text>
-      </Box>
-
       <Flex height="fill">
         <Card flex={1} overflow="auto">
           <Box padding={4}>
@@ -115,7 +115,7 @@ export function App() {
               editorRef={editor1Ref}
               onChange={setValue1}
               onOperation={handleEditor1Operation}
-              onSelections={setSelections1}
+              onState={setState1}
               renderBlock={renderBlock}
               value={value1}
               userId="foo"
@@ -139,8 +139,8 @@ export function App() {
             <Code language="json">
               {JSON.stringify(
                 {
-                  selections: selections1,
-                  value: value1,
+                  selections: state1?.selections,
+                  value: state1?.value,
                 },
                 null,
                 2

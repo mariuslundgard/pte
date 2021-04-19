@@ -15,6 +15,7 @@ export interface TextChunk {
  * Return array of selections of a given node
  */
 export function getNodeSelections(
+  keys: string[],
   selections: SelectionMap,
   nodeOffset: number,
   text: string
@@ -27,11 +28,13 @@ export function getNodeSelections(
       continue
     }
 
-    const [from, to] = sortSelection(sel)
+    const [from, to] = sortSelection(keys, sel)
+    const fromOffset = keys.indexOf(from[0])
+    const toOffset = keys.indexOf(to[0])
 
-    if (from[0] <= nodeOffset && nodeOffset <= to[0]) {
-      const start = from[0] === nodeOffset ? from[1] : 0
-      const stop = to[0] === nodeOffset ? to[1] : text.length
+    if (fromOffset <= nodeOffset && nodeOffset <= toOffset) {
+      const start = fromOffset === nodeOffset ? from[1] : 0
+      const stop = toOffset === nodeOffset ? to[1] : text.length
 
       ret.push({start, stop, userId})
     }
@@ -116,16 +119,25 @@ export function getTextChunks(nodeSelections: TextSelection[], text: string): Te
 
 const EMPTY_SELECTIONS: SelectionMap = {}
 
-export function getSpanSelections(selectionsProp: SelectionMap, nodeOffset: number): SelectionMap {
+export function getSpanSelections(
+  keys: string[],
+  selectionsProp: SelectionMap,
+  nodeOffset: number
+): SelectionMap {
   const entries = Object.entries(selectionsProp)
   const ret: SelectionMap = {}
 
   let match = false
 
   for (const [userId, sel] of entries) {
-    if (sel && sel.anchor[0] <= nodeOffset && sel.focus[0] >= nodeOffset) {
-      ret[userId] = sel
-      match = true
+    if (sel) {
+      const anchorOffset = keys.indexOf(sel.anchor[0])
+      const focusOffset = keys.indexOf(sel.focus[0])
+
+      if (anchorOffset <= nodeOffset && focusOffset >= nodeOffset) {
+        ret[userId] = sel
+        match = true
+      }
     }
   }
 

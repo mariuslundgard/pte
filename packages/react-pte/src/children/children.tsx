@@ -6,6 +6,7 @@ import {Span} from './span'
 
 export interface ChildrenProps {
   features: Features
+  keys: string[]
   nodes: PTNode[]
   offset?: number
   renderBlock?: RenderBlockFn
@@ -23,6 +24,7 @@ function defaultRenderBlock(
 export const Children = memo(function Children(props: ChildrenProps) {
   const {
     features,
+    keys,
     nodes,
     offset: offsetProp = 0,
     renderBlock = defaultRenderBlock,
@@ -40,6 +42,7 @@ export const Children = memo(function Children(props: ChildrenProps) {
         <Span
           features={features}
           key={node.key}
+          keys={keys}
           node={node}
           nodeOffset={offset}
           selections={selections}
@@ -54,6 +57,7 @@ export const Children = memo(function Children(props: ChildrenProps) {
         <Block
           features={features}
           key={node.key}
+          keys={keys}
           node={node}
           nodeOffset={offset}
           nodeSize={nodeSize}

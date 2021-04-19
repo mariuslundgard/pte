@@ -1,6 +1,11 @@
 import {isCollapsed, PTSelection, SelectionMap, sortSelection} from 'pte'
 
-export function getUserChunks(selections: SelectionMap, nodeOffset: number, text: string): any[] {
+export function getUserChunks(
+  keys: string[],
+  selections: SelectionMap,
+  nodeKey: string,
+  text: string
+): any[] {
   const ret: any = []
   const textLength = text.length
   const textOffsets: number[] = [0]
@@ -9,9 +14,9 @@ export function getUserChunks(selections: SelectionMap, nodeOffset: number, text
 
   for (const [userId, selection] of selectionEntries) {
     if (selection) {
-      const [anchor, focus] = sortSelection(selection)
-      const startOffset = anchor[0] === nodeOffset && anchor[1]
-      const endOffset = focus[0] === nodeOffset && focus[1]
+      const [anchor, focus] = sortSelection(keys, selection)
+      const startOffset = anchor[0] === nodeKey && anchor[1]
+      const endOffset = focus[0] === nodeKey && focus[1]
 
       users.push({
         id: userId,
@@ -73,7 +78,7 @@ export function getUserChunks(selections: SelectionMap, nodeOffset: number, text
         t.userIds.push(user.id)
       }
 
-      // if (nodeOffset === focus[0] && start === focus[1]) {
+      // if (nodeKey === focus[0] && start === focus[1]) {
       //   startCursor.userIds.push(user.id)
       // }
 

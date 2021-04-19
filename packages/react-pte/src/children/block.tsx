@@ -12,6 +12,7 @@ export type RenderBlockFn = (
 
 export interface BlockProps {
   features: Features
+  keys: string[]
   node: PTBlock
   nodeOffset: number
   nodeSize: number
@@ -20,8 +21,16 @@ export interface BlockProps {
 }
 
 export const Block = memo(function Block(props: BlockProps) {
-  const {features, node, nodeOffset, nodeSize, renderBlock, selections: selectionsProp} = props
-  const selections = useBlockSelections(selectionsProp, nodeOffset, nodeSize)
+  const {
+    features,
+    keys,
+    node,
+    nodeOffset,
+    nodeSize,
+    renderBlock,
+    selections: selectionsProp,
+  } = props
+  const selections = useBlockSelections(keys, selectionsProp, nodeOffset, nodeSize)
 
   return renderBlock(
     node,
@@ -33,6 +42,7 @@ export const Block = memo(function Block(props: BlockProps) {
     },
     <Children
       features={features}
+      keys={keys}
       nodes={node.children}
       offset={nodeOffset + 1}
       renderBlock={renderBlock}

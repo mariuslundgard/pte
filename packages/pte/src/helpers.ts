@@ -75,10 +75,13 @@ export function isBackwardSelection(sel: PTSelection): boolean {
   )
 }
 
-export function sortSelection(sel: PTSelection): [Location, Location] {
+export function sortSelection(keys: string[], sel: PTSelection): [Location, Location] {
+  const anchorOffset = keys.indexOf(sel.anchor[0])
+  const focusOffset = keys.indexOf(sel.focus[0])
+
   if (
-    sel.anchor[0] > sel.focus[0] ||
-    (sel.anchor[0] === sel.focus[0] && sel.anchor[1] > sel.focus[1])
+    anchorOffset > focusOffset ||
+    (anchorOffset === focusOffset && sel.anchor[1] > sel.focus[1])
   ) {
     return [sel.focus, sel.anchor]
   }
@@ -111,20 +114,20 @@ export function getDOMSelection(domSelection: Selection | null): PTSelection | n
     return null
   }
 
-  const anchorOffset = Number(anchorNode.getAttribute('data-offset')) || 0
+  const anchorNodeKey = anchorNode.getAttribute('data-key') || ''
   const anchorChunkOffset = Number(anchorNode.getAttribute('data-chunk-offset')) || 0
-  const focusOffset = Number(focusNode.getAttribute('data-offset')) || 0
-  const focusChunkOffset = Number(anchorNode.getAttribute('data-chunk-offset')) || 0
+  const focusNodeKey = focusNode.getAttribute('data-key') || ''
+  const focusChunkOffset = Number(focusNode.getAttribute('data-chunk-offset')) || 0
 
   return {
-    anchor: [anchorOffset, anchorChunkOffset + domSelection.anchorOffset],
-    focus: [focusOffset, focusChunkOffset + domSelection.focusOffset],
+    anchor: [anchorNodeKey, anchorChunkOffset + domSelection.anchorOffset],
+    focus: [focusNodeKey, focusChunkOffset + domSelection.focusOffset],
   }
 }
 
 export function getDOMNodeAtOffset(el: Element, loc: Location): {node: Element; offset: number} {
-  const [nodeOffset, offset] = loc
-  const textSpans = Array.from(el.querySelectorAll(`[data-text][data-offset="${nodeOffset}"]`))
+  const [nodeKey, offset] = loc
+  const textSpans = Array.from(el.querySelectorAll(`[data-text][data-key="${nodeKey}"]`))
 
   textSpans.reverse()
 

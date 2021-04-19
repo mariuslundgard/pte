@@ -1,22 +1,40 @@
-import {getDOMNodeAtOffset, getDOMSelection, isCollapsed, setDOMSelection} from './helpers'
+import {
+  createId,
+  getDOMNodeAtOffset,
+  getDOMSelection,
+  isCollapsed,
+  setDOMSelection,
+} from './helpers'
 import {reducer} from './reducer'
 import {PTEditor, PTNode, PTOp, SelectionMap, State} from './types'
 
 interface EditorOpts {
   element?: Element
   initialValue?: PTNode[]
+  onKeys?: (keys: string[]) => void
   onOperation?: (op: PTOp) => void
   onSelections?: (sel: SelectionMap) => void
+  onState?: (state: State) => void
   onValue?: (value: PTNode[]) => void
   readOnly?: boolean
   userId?: string
 }
 
 export function createEditor(opts: EditorOpts = {}): PTEditor {
-  const {element, initialValue, onOperation, onSelections, onValue, readOnly} = opts
+  const {
+    element,
+    initialValue,
+    onKeys,
+    onOperation,
+    onSelections,
+    onState,
+    onValue,
+    readOnly,
+  } = opts
   const userId = opts.userId || '@'
 
   let state: State = {
+    keys: [],
     nodes: [],
     selections: {},
     value: [],
@@ -35,12 +53,20 @@ export function createEditor(opts: EditorOpts = {}): PTEditor {
       }
     }
 
+    if (onKeys && prevState.keys !== state.keys) {
+      onKeys(state.keys)
+    }
+
     if (onValue && prevState.value !== state.value) {
       onValue(state.value)
     }
 
     if (onSelections && prevState.selections !== state.selections) {
       onSelections(state.selections)
+    }
+
+    if (onState && prevState !== state) {
+      onState(state)
     }
   }
 
@@ -100,21 +126,21 @@ export function createEditor(opts: EditorOpts = {}): PTEditor {
   }
 
   function _handleBlur() {
-    console.log('blur')
+    // console.log('blur')
 
-    apply({type: 'unsetSelection', userId})
+    // apply({type: 'unsetSelection', userId})
 
     document.removeEventListener('selectionchange', _handleSelectionChange)
   }
 
   function _handleFocus() {
-    console.log('focus')
+    // console.log('focus')
 
     document.addEventListener('selectionchange', _handleSelectionChange)
   }
 
   function _handleInput(type: string, data: string | null) {
-    console.log('input')
+    // console.log('input')
 
     if (type === 'insertText') {
       if (data) {
@@ -145,7 +171,7 @@ export function createEditor(opts: EditorOpts = {}): PTEditor {
         apply({type: 'delete', userId})
       }
 
-      apply({type: 'insertBlock', userId})
+      apply({type: 'insertBlock', userId, blockKey: createId(), spanKey: createId()})
 
       return
     }
@@ -166,12 +192,12 @@ export function createEditor(opts: EditorOpts = {}): PTEditor {
 
     const sel = getDOMSelection(domSelection)
 
-    console.log('select', JSON.stringify(sel))
-
     if (sel) {
-      setTimeout(() => {
-        apply({type: 'select', ...sel, userId})
-      }, 0)
+      // console.log('select', JSON.stringify(sel))
+
+      // setTimeout(() => {
+      apply({type: 'select', ...sel, userId})
+      // }, 0)
     }
   }
 
@@ -181,7 +207,7 @@ export function createEditor(opts: EditorOpts = {}): PTEditor {
 
     if (!element || !domSelection || !sel) return
 
-    console.log('update selection', JSON.stringify(sel))
+    // console.log('update selection', JSON.stringify(sel))
 
     try {
       isSelecting = true
@@ -189,23 +215,23 @@ export function createEditor(opts: EditorOpts = {}): PTEditor {
       const start = getDOMNodeAtOffset(element, sel.anchor)
       const end = getDOMNodeAtOffset(element, sel.focus)
 
-      console.log(
-        '>>>',
-        JSON.stringify(
-          {
-            start: {
-              html: start.node.innerHTML,
-              offset: start.offset,
-            },
-            end: {
-              html: end.node.innerHTML,
-              offset: end.offset,
-            },
-          },
-          null,
-          2
-        )
-      )
+      // console.log(
+      //   '>>>',
+      //   JSON.stringify(
+      //     {
+      //       start: {
+      //         html: start.node.innerHTML,
+      //         offset: start.offset,
+      //       },
+      //       end: {
+      //         html: end.node.innerHTML,
+      //         offset: end.offset,
+      //       },
+      //     },
+      //     null,
+      //     2
+      //   )
+      // )
 
       // debugger
 

@@ -1,4 +1,4 @@
-import {PTBlock, createEditor, PTEditor, PTNode, PTOp, SelectionMap} from 'pte'
+import {PTBlock, createEditor, PTEditor, PTNode, PTOp, SelectionMap, State} from 'pte'
 import React, {useEffect, useRef, useState, forwardRef, useCallback, useMemo} from 'react'
 import {Children} from './children'
 import {Features} from './types'
@@ -10,6 +10,7 @@ export interface EditorProps {
   onChange?: (value: PTNode[]) => void
   onOperation?: (op: PTOp) => void
   onSelections?: (selections: SelectionMap) => void
+  onState?: (state: State) => void
   readOnly?: boolean
   renderBlock?: (
     node: PTBlock,
@@ -52,6 +53,7 @@ export const Editor = forwardRef(function Editor(
     onChange,
     onOperation,
     onSelections,
+    onState,
     readOnly,
     renderBlock,
     value: valueProp,
@@ -61,6 +63,7 @@ export const Editor = forwardRef(function Editor(
   const features = useFeatures(featuresProp)
   const rootRef = useRef<HTMLDivElement | null>(null)
   const valueRef = useRef<PTNode[]>(valueProp || [])
+  const [keys, setKeys] = useState<string[]>([])
   const [value, setValue] = useState<PTNode[]>(valueRef.current)
   const [selections, setSelections] = useState<SelectionMap>({})
   const editorRef = useRef<PTEditor | null>(null)
@@ -89,8 +92,10 @@ export const Editor = forwardRef(function Editor(
       editorRef.current = createEditor({
         element,
         initialValue: valueRef.current,
+        onKeys: setKeys,
         onOperation,
         onSelections: handleSelections,
+        onState,
         onValue: handleValue,
         readOnly,
         userId,
@@ -106,7 +111,7 @@ export const Editor = forwardRef(function Editor(
         if (editorRefProp) setRef<PTEditor>(editorRefProp, editorRef.current)
       }
     }
-  }, [editorRefProp, handleSelections, onChange, onOperation, readOnly, userId])
+  }, [editorRefProp, handleSelections, onChange, onOperation, onState, readOnly, userId])
 
   useEffect(() => {
     if (valueProp && valueProp !== valueRef.current) {
@@ -116,7 +121,7 @@ export const Editor = forwardRef(function Editor(
   }, [valueProp])
 
   useEffect(() => {
-    console.log('userSelection', JSON.stringify(userSelection))
+    // console.log('userSelection', JSON.stringify(userSelection))
     editorRef.current?.updateDOMSelection()
   }, [userSelection])
 
@@ -128,7 +133,7 @@ export const Editor = forwardRef(function Editor(
     [ref]
   )
 
-  console.log('--- RENDER ---')
+  // console.log('--- RENDER ---')
 
   return (
     <div
@@ -141,6 +146,7 @@ export const Editor = forwardRef(function Editor(
     >
       <Children
         features={features}
+        keys={keys}
         nodes={value}
         renderBlock={renderBlock}
         selections={selections}

@@ -1,6 +1,8 @@
+export type PTNodeKey = string
+
 export interface PTBlock {
   type: 'block'
-  key: string
+  key: PTNodeKey
   name: string
   children: PTNode[]
   [key: string]: unknown
@@ -8,7 +10,7 @@ export interface PTBlock {
 
 export interface PTSpan {
   type: 'span'
-  key: string
+  key: PTNodeKey
   text: string
   [key: string]: unknown
 }
@@ -21,7 +23,7 @@ export interface BlockNodeMetadata {
   data: Record<string, unknown>
   depth: number
   size: number
-  key: string
+  key: PTNodeKey
 }
 
 export interface SpanNodeMetadata {
@@ -37,7 +39,7 @@ export type NodeMetadata = BlockNodeMetadata | SpanNodeMetadata
 
 export type NodePosition = number
 export type TextOffset = number
-export type Location = [NodePosition, TextOffset]
+export type Location = [PTNodeKey, TextOffset]
 
 export interface PTSelection {
   anchor: Location
@@ -49,9 +51,10 @@ export interface SelectionMap {
 }
 
 export interface State {
-  value: PTNode[]
+  keys: PTNodeKey[]
   nodes: NodeMetadata[]
   selections: SelectionMap
+  value: PTNode[]
 }
 
 export interface SetValueOp {
@@ -86,6 +89,8 @@ export interface InsertTextOp {
 export interface InsertBlockOp {
   type: 'insertBlock'
   userId: string
+  spanKey: string
+  blockKey: string
 }
 
 export type PTOp =

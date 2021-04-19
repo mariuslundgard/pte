@@ -26,28 +26,32 @@ export function _delete(state: State, op: DeleteOp): State {
     return state
   }
 
-  const [from, to] = sortSelection(sel)
+  const [from, to] = sortSelection(state.keys, sel)
+  let fromOffset = state.keys.indexOf(from[0])
+  let fromTextOffset = from[1]
+  const toOffset = state.keys.indexOf(to[0])
+  const toTextOffset = to[1]
 
   // check if selection is collapsed
   if (isCollapsed(sel)) {
-    if (from[1] === 0) {
-      if (from[0] > 0) {
-        const newFromNode = findPrevSpan(state.nodes, from[0])
+    if (fromTextOffset === 0) {
+      if (fromOffset > 0) {
+        const newFromNode = findPrevSpan(state.nodes, fromOffset)
 
         if (newFromNode) {
-          from[0] = state.nodes.indexOf(newFromNode)
-          from[1] = newFromNode.text.length
+          fromOffset = state.nodes.indexOf(newFromNode)
+          fromTextOffset = newFromNode.text.length
         }
       }
     } else {
-      from[1] -= 1
+      fromTextOffset -= 1
     }
   }
 
   // console.log('delete', JSON.stringify([from, to]))
 
-  const fromNode = state.nodes[from[0]]
-  const toNode = state.nodes[to[0]]
+  const fromNode = state.nodes[fromOffset]
+  const toNode = state.nodes[toOffset]
 
   if (fromNode.type !== 'span' || toNode.type !== 'span') {
     return state
@@ -61,16 +65,16 @@ export function _delete(state: State, op: DeleteOp): State {
   while (offset > -1) {
     let node = state.nodes[offset]
 
-    if (offset < from[0] || offset > to[0]) {
+    if (offset < fromOffset || offset > toOffset) {
       // keep nodes that are not selected
       nodes.unshift(node)
-    } else if (offset === to[0]) {
+    } else if (offset === toOffset) {
       // found focus node
 
       let removedSize = 1
 
       // traverse backwards until there's no immediate parent node
-      while (offset !== from[0]) {
+      while (offset !== fromOffset) {
         offset -= 1
 
         const prevNode = node
@@ -85,28 +89,31 @@ export function _delete(state: State, op: DeleteOp): State {
           }
         } else if (node.depth > prevNode.depth) {
           // skip to end
-          offset = from[0]
+          offset = fromOffset
         }
       }
 
       // replace the selected text node
       nodes.unshift({
         ...fromNode,
-        text: fromNode.text.slice(0, from[1]) + toNode.text.slice(to[1]),
+        text: fromNode.text.slice(0, fromTextOffset) + toNode.text.slice(toTextOffset),
       })
     }
 
     offset -= 1
   }
 
+  const keys = nodes.map((n) => n.key)
+
   return {
     ...state,
+    keys,
     nodes,
     selections: {
       ...state.selections,
       [op.userId]: {
-        anchor: [from[0], from[1]],
-        focus: [from[0], from[1]],
+        anchor: [state.keys[fromOffset], fromTextOffset],
+        focus: [state.keys[fromOffset], fromTextOffset],
       },
     },
     value: buildTree(nodes),

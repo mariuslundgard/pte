@@ -4,6 +4,7 @@ import {useMemo} from 'react'
 const EMPTY_SELECTIONS: SelectionMap = {}
 
 export function useBlockSelections(
+  keys: string[],
   selectionsProp: SelectionMap,
   nodeOffset: number,
   nodeSize: number
@@ -18,18 +19,22 @@ export function useBlockSelections(
     let match = false
 
     for (const [userId, sel] of entries) {
-      const startOffsetInSelection =
-        sel && sel.anchor[0] <= startOffset && sel.focus[0] >= startOffset
-      const endOffsetInSelection = sel && sel.anchor[0] <= endOffset && sel.focus[0] >= endOffset
+      if (sel) {
+        const anchorOffset = keys.indexOf(sel.anchor[0])
+        const focusOffset = keys.indexOf(sel.focus[0])
 
-      if (startOffsetInSelection || endOffsetInSelection) {
-        ret[userId] = sel
-        match = true
+        const startOffsetInSelection = anchorOffset <= startOffset && focusOffset >= startOffset
+        const endOffsetInSelection = anchorOffset <= endOffset && focusOffset >= endOffset
+
+        if (startOffsetInSelection || endOffsetInSelection) {
+          ret[userId] = sel
+          match = true
+        }
       }
     }
 
     if (!match) return EMPTY_SELECTIONS
 
     return ret
-  }, [selectionsProp, startOffset, endOffset])
+  }, [keys, selectionsProp, startOffset, endOffset])
 }

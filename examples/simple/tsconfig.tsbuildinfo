@@ -1327,23 +1327,33 @@
         "affectsGlobalScope": false
       },
       "../../packages/pte/dist/cjs/types.d.ts": {
-        "version": "c404839807659b3ca78fdff6db23bb54f4eb0b9351948c435025a8f656b5d29d",
-        "signature": "c404839807659b3ca78fdff6db23bb54f4eb0b9351948c435025a8f656b5d29d",
+        "version": "e82020b1f6a84ee3d0c4034925091cbc47af58853bf38a4f0cecdd9c02a956e0",
+        "signature": "e82020b1f6a84ee3d0c4034925091cbc47af58853bf38a4f0cecdd9c02a956e0",
         "affectsGlobalScope": false
       },
       "../../packages/pte/dist/cjs/editor.d.ts": {
-        "version": "dc3a3a08e2ec32dbb1109baed7cf3e7d127521e7b4e57f230bbbc9f9d2c343ed",
-        "signature": "dc3a3a08e2ec32dbb1109baed7cf3e7d127521e7b4e57f230bbbc9f9d2c343ed",
+        "version": "bb55badc06e8d31cd535dae1c352d32d7e2b47cba8bc550dc2dfba8a1244b023",
+        "signature": "bb55badc06e8d31cd535dae1c352d32d7e2b47cba8bc550dc2dfba8a1244b023",
         "affectsGlobalScope": false
       },
       "../../packages/pte/dist/cjs/helpers.d.ts": {
-        "version": "7d2ab3cecae73e5b5f28763e53a78919e6378c6bc800cc0ef93cc65630191a17",
-        "signature": "7d2ab3cecae73e5b5f28763e53a78919e6378c6bc800cc0ef93cc65630191a17",
+        "version": "34160492f468e3f48c390fe806fe5dd52d8ef8df06abce42df24cf189b5bc6c7",
+        "signature": "34160492f468e3f48c390fe806fe5dd52d8ef8df06abce42df24cf189b5bc6c7",
         "affectsGlobalScope": false
       },
       "../../packages/pte/dist/cjs/index.d.ts": {
         "version": "8c666556f868f3c693bcd05aaca155851b45ba261f2e84b5a54d5cbb06adfc4f",
         "signature": "8c666556f868f3c693bcd05aaca155851b45ba261f2e84b5a54d5cbb06adfc4f",
+        "affectsGlobalScope": false
+      },
+      "./src/app/helpers.ts": {
+        "version": "f490799ee9f9af77d92559e266a3f3cc9c69178ac23420c1605d2a0a0c9f727e",
+        "signature": "cce60355bb47944346bc75f86e9af0b6645bb69bc2b862edca7e99e189046537",
+        "affectsGlobalScope": false
+      },
+      "./src/app/constants.ts": {
+        "version": "d3744276f70fffa6316944bf82df1a1240aa1bb5e6b7d930a75e1ec16a35a19a",
+        "signature": "ed9da3f275bcf4142dca610b4465255823466c8f08b665532b4de1beaea86bca",
         "affectsGlobalScope": false
       },
       "../../node_modules/@sanity/color/dist/cjs/types.d.ts": {
@@ -1366,19 +1376,709 @@
         "signature": "3fa9bb98cae66d678e8fea43830f6a25f9e569f41b4f60498bfd52b6f2c140c5",
         "affectsGlobalScope": false
       },
-      "./src/app/components/dummy.tsx": {
-        "version": "2132067e31554edfb68f305cb748b5b332e8ac0e5c6b805f5a7a2fb3fa02c4c9",
-        "signature": "d6a26f3a7b9a9e07f31fc9cf9a5e7d684666370be5e36bf7536fda3e2b9b488a",
+      "../../node_modules/@sanity/icons/dist/cjs/types.d.ts": {
+        "version": "7e813e361b115a8790020ce5946038aaf7e536b760a25c9ccb15aebc50b3042a",
+        "signature": "7e813e361b115a8790020ce5946038aaf7e536b760a25c9ccb15aebc50b3042a",
         "affectsGlobalScope": false
       },
-      "./src/app/helpers.ts": {
-        "version": "f490799ee9f9af77d92559e266a3f3cc9c69178ac23420c1605d2a0a0c9f727e",
-        "signature": "cce60355bb47944346bc75f86e9af0b6645bb69bc2b862edca7e99e189046537",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/activityicon.d.ts": {
+        "version": "9da7173bfeaa30d2679c16b177bd40bd9a2a0848932c539abbcc6fff087889d3",
+        "signature": "9da7173bfeaa30d2679c16b177bd40bd9a2a0848932c539abbcc6fff087889d3",
         "affectsGlobalScope": false
       },
-      "./src/app/constants.ts": {
-        "version": "d3744276f70fffa6316944bf82df1a1240aa1bb5e6b7d930a75e1ec16a35a19a",
-        "signature": "ed9da3f275bcf4142dca610b4465255823466c8f08b665532b4de1beaea86bca",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/addcircleicon.d.ts": {
+        "version": "6a522752e6ff6ce4314b4d0088fa0f223e951272fd49086f19b6c00446404e07",
+        "signature": "6a522752e6ff6ce4314b4d0088fa0f223e951272fd49086f19b6c00446404e07",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/addicon.d.ts": {
+        "version": "cfa5e8f051f5ef34a59c40f91fc1ebf90b72209cdad89d193630518a3f69b2b0",
+        "signature": "cfa5e8f051f5ef34a59c40f91fc1ebf90b72209cdad89d193630518a3f69b2b0",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/apiicon.d.ts": {
+        "version": "5d3b11ae46ca73a8a6eff23a7279c9236262f0c1988f0573939f8f3fadc43e9c",
+        "signature": "5d3b11ae46ca73a8a6eff23a7279c9236262f0c1988f0573939f8f3fadc43e9c",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/archiveicon.d.ts": {
+        "version": "3466d8526356ff5de45695499b5ae0ad21f20bb82d770501aeac8a414479ecc7",
+        "signature": "3466d8526356ff5de45695499b5ae0ad21f20bb82d770501aeac8a414479ecc7",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/arrowdownicon.d.ts": {
+        "version": "9ed4611ed61964f837fac936cc7986c3fdef04ecd627d0f02cc102aeff11425c",
+        "signature": "9ed4611ed61964f837fac936cc7986c3fdef04ecd627d0f02cc102aeff11425c",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/arrowlefticon.d.ts": {
+        "version": "466eff09c8104efd83fabd6aa6c9cd97f696ad6987652ad1387723bab13552a3",
+        "signature": "466eff09c8104efd83fabd6aa6c9cd97f696ad6987652ad1387723bab13552a3",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/arrowrighticon.d.ts": {
+        "version": "d3385ceb7cc8e53053f32c3b6376f497b45fda526cd89fc0cc761fd5c56a5b53",
+        "signature": "d3385ceb7cc8e53053f32c3b6376f497b45fda526cd89fc0cc761fd5c56a5b53",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/arrowtoprighticon.d.ts": {
+        "version": "490574da971ad551178268242c6c1fc1a318b34c6e2ec9caaa4c333cc7605e19",
+        "signature": "490574da971ad551178268242c6c1fc1a318b34c6e2ec9caaa4c333cc7605e19",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/arrowupicon.d.ts": {
+        "version": "5ae8b06658fbd495fc93eb3db93f01b1fc7f37cd554237771306ee60ae7a622c",
+        "signature": "5ae8b06658fbd495fc93eb3db93f01b1fc7f37cd554237771306ee60ae7a622c",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/bellicon.d.ts": {
+        "version": "6586b60243e7f83031e3c21c716f1eabb17f6361cbacd718c305fc538289e6d4",
+        "signature": "6586b60243e7f83031e3c21c716f1eabb17f6361cbacd718c305fc538289e6d4",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/billicon.d.ts": {
+        "version": "7ccc5a982edea5a846c4b4263e4c3b5a0b546ae8a458983ae7c9b389e6227b2b",
+        "signature": "7ccc5a982edea5a846c4b4263e4c3b5a0b546ae8a458983ae7c9b389e6227b2b",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/binarydocumenticon.d.ts": {
+        "version": "5a99dfffeb89f2d2f962ca049d57507fbe7b6f00a5c0e7dd17230a20875e52d2",
+        "signature": "5a99dfffeb89f2d2f962ca049d57507fbe7b6f00a5c0e7dd17230a20875e52d2",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/blockelementicon.d.ts": {
+        "version": "d41abcba396eabedd590c9f2f12b43c9c4877ae207f80da4ee6a79155124de21",
+        "signature": "d41abcba396eabedd590c9f2f12b43c9c4877ae207f80da4ee6a79155124de21",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/blockquoteicon.d.ts": {
+        "version": "bdda150cd7424948d16a8eaf0ac2b3907b780c19da9d9c75f8aaf92ebd6065a1",
+        "signature": "bdda150cd7424948d16a8eaf0ac2b3907b780c19da9d9c75f8aaf92ebd6065a1",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/boldicon.d.ts": {
+        "version": "5a35b060c22c80c4d0a110bdbcbc7725fffbd1870a172e806078c3b778ec8bac",
+        "signature": "5a35b060c22c80c4d0a110bdbcbc7725fffbd1870a172e806078c3b778ec8bac",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/bookicon.d.ts": {
+        "version": "6d97149ab66d6c3035ba1e8aebd2f58f6773d3d3a20a3701dddffdec2b03450e",
+        "signature": "6d97149ab66d6c3035ba1e8aebd2f58f6773d3d3a20a3701dddffdec2b03450e",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/bottleicon.d.ts": {
+        "version": "c5ce48320a16f6b910aa17ec7a31f106638fbd456c05642f677f641c5f5bfe58",
+        "signature": "c5ce48320a16f6b910aa17ec7a31f106638fbd456c05642f677f641c5f5bfe58",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/bulbfilledicon.d.ts": {
+        "version": "37534c97672e13e5f536b20228a3d15ceb0748eff86fc992107027f68285751e",
+        "signature": "37534c97672e13e5f536b20228a3d15ceb0748eff86fc992107027f68285751e",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/bulboutlineicon.d.ts": {
+        "version": "3456cd87622d92eca308cf19ef6bbf93b3883543960807501d7c13d60c4ef639",
+        "signature": "3456cd87622d92eca308cf19ef6bbf93b3883543960807501d7c13d60c4ef639",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/calendaricon.d.ts": {
+        "version": "f828280c2001f585cbf62ed6417eb56e5c31077445680a757a425e3aff711bad",
+        "signature": "f828280c2001f585cbf62ed6417eb56e5c31077445680a757a425e3aff711bad",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/chartupwardicon.d.ts": {
+        "version": "5ac2da3d5f160764971e85c02f421a8336453a8a0daf10842752ac41bf6165a1",
+        "signature": "5ac2da3d5f160764971e85c02f421a8336453a8a0daf10842752ac41bf6165a1",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/checkmarkcircleicon.d.ts": {
+        "version": "66bca77092f01bb16a7a6d47fc87e3d1dbd28a6949ff11472576b888041cee42",
+        "signature": "66bca77092f01bb16a7a6d47fc87e3d1dbd28a6949ff11472576b888041cee42",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/checkmarkicon.d.ts": {
+        "version": "c5459b5d79fab4665f1832185150eae885278044fa0898022f021f3d6c64f51d",
+        "signature": "c5459b5d79fab4665f1832185150eae885278044fa0898022f021f3d6c64f51d",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/chevrondownicon.d.ts": {
+        "version": "8e1a892c398fee80639d67bcc6736c94810c3014e02095bf5da5793152a80d49",
+        "signature": "8e1a892c398fee80639d67bcc6736c94810c3014e02095bf5da5793152a80d49",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/chevronlefticon.d.ts": {
+        "version": "0d68abc48b094e345ba1a1f9afc77ec5df1b4780265bba71333c979fd46ad6ed",
+        "signature": "0d68abc48b094e345ba1a1f9afc77ec5df1b4780265bba71333c979fd46ad6ed",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/chevronrighticon.d.ts": {
+        "version": "b3119341e34b497a7b81bcaee55955e13f17e4bc2d8ed5d8f924b53cc2e66ec1",
+        "signature": "b3119341e34b497a7b81bcaee55955e13f17e4bc2d8ed5d8f924b53cc2e66ec1",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/chevronupicon.d.ts": {
+        "version": "61a2d34a084e618a19f94fa197904bd27e79c38e0fee2c8b6b642e1a68023225",
+        "signature": "61a2d34a084e618a19f94fa197904bd27e79c38e0fee2c8b6b642e1a68023225",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/circleicon.d.ts": {
+        "version": "26a01b1d1a5b7acd9a5221514005779955acbaab61e02309c658aacd942d4e3a",
+        "signature": "26a01b1d1a5b7acd9a5221514005779955acbaab61e02309c658aacd942d4e3a",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/clipboardicon.d.ts": {
+        "version": "a3cd134374ee1a788c8164be5102ab50230c10e31548285576d50c01d5a81747",
+        "signature": "a3cd134374ee1a788c8164be5102ab50230c10e31548285576d50c01d5a81747",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/clipboardimageicon.d.ts": {
+        "version": "b52773039a7b54610418be96de45a78a0dff49ecf8b4e95bb006cf8dcef17758",
+        "signature": "b52773039a7b54610418be96de45a78a0dff49ecf8b4e95bb006cf8dcef17758",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/clockicon.d.ts": {
+        "version": "48381f8ecf4603cdd493c24985a44994ae99ddc5c73b664022ba6517241d1681",
+        "signature": "48381f8ecf4603cdd493c24985a44994ae99ddc5c73b664022ba6517241d1681",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/closecircleicon.d.ts": {
+        "version": "e7d01033eefcf0ae8062a44493df1376cc6f7676767fbe8eacff28dc220bd25c",
+        "signature": "e7d01033eefcf0ae8062a44493df1376cc6f7676767fbe8eacff28dc220bd25c",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/closeicon.d.ts": {
+        "version": "62ce1577f0a4537db30cf5bd255b3d2db38da0fa48f753afa96a3429bd022868",
+        "signature": "62ce1577f0a4537db30cf5bd255b3d2db38da0fa48f753afa96a3429bd022868",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/codeblockicon.d.ts": {
+        "version": "fd1d4efe2e34ffcd7a1609fe299df78d74f64fbc4f4c72c169857a1d89b66792",
+        "signature": "fd1d4efe2e34ffcd7a1609fe299df78d74f64fbc4f4c72c169857a1d89b66792",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/codeicon.d.ts": {
+        "version": "dc7d92df672334b0b45d4b8d8ac8988f4bc546c411bc267a35e061c4927c8668",
+        "signature": "dc7d92df672334b0b45d4b8d8ac8988f4bc546c411bc267a35e061c4927c8668",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/cogicon.d.ts": {
+        "version": "b6b7c36ead7065e3f30f25759447e4efe34ca5bc75ca2e9248f512c86596b773",
+        "signature": "b6b7c36ead7065e3f30f25759447e4efe34ca5bc75ca2e9248f512c86596b773",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/collapseicon.d.ts": {
+        "version": "7a273da486370e343b94e05f7b4d263b9a247f04c2cf86547e952f1e5dcf5584",
+        "signature": "7a273da486370e343b94e05f7b4d263b9a247f04c2cf86547e952f1e5dcf5584",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/commenticon.d.ts": {
+        "version": "af205e8a2bebfb22f11dcd3e1def73afa1eef70a14868d8b0000c3ae97a2c301",
+        "signature": "af205e8a2bebfb22f11dcd3e1def73afa1eef70a14868d8b0000c3ae97a2c301",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/componenticon.d.ts": {
+        "version": "3e31cf18f3ccc5ab81baea3c9966e8345051b509da937b89a667d3555e411657",
+        "signature": "3e31cf18f3ccc5ab81baea3c9966e8345051b509da937b89a667d3555e411657",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/composeicon.d.ts": {
+        "version": "a3a51693812ab6ea1552680a7f95510151e02cc54b53e79c8677a6d47b11f011",
+        "signature": "a3a51693812ab6ea1552680a7f95510151e02cc54b53e79c8677a6d47b11f011",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/controlsicon.d.ts": {
+        "version": "26d6e9be1b4e39a5cdbb28353f7db240807805daa434e5bfefaa4acc627f1ddd",
+        "signature": "26d6e9be1b4e39a5cdbb28353f7db240807805daa434e5bfefaa4acc627f1ddd",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/copyicon.d.ts": {
+        "version": "85721cc89cf61b5d3c10b004e1aec65e7301c4018d849cbf454d1820d853a115",
+        "signature": "85721cc89cf61b5d3c10b004e1aec65e7301c4018d849cbf454d1820d853a115",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/dashboardicon.d.ts": {
+        "version": "2fb3e8f53c327055ac5b4272ed9de4f01f09f8ea6309d441f1473d0fd0ae3372",
+        "signature": "2fb3e8f53c327055ac5b4272ed9de4f01f09f8ea6309d441f1473d0fd0ae3372",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/databaseicon.d.ts": {
+        "version": "0e9ede05d607518fd7f8d21ae1f798c7a1c657e9c5b88a2ff29e1066e66697c8",
+        "signature": "0e9ede05d607518fd7f8d21ae1f798c7a1c657e9c5b88a2ff29e1066e66697c8",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/documenticon.d.ts": {
+        "version": "39376132ddd1eddf9876b7bf36678c10edd71f281f546f1bb5c12fa108d727cb",
+        "signature": "39376132ddd1eddf9876b7bf36678c10edd71f281f546f1bb5c12fa108d727cb",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/documentremoveicon.d.ts": {
+        "version": "57155555981db110f542a0f3199033e2da2e9ee63c47bb3e563e407549cd047c",
+        "signature": "57155555981db110f542a0f3199033e2da2e9ee63c47bb3e563e407549cd047c",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/documentsicon.d.ts": {
+        "version": "43293254f52e2ec33544f24464bc9a209e20aac2a699ae72d5a4175279147ffe",
+        "signature": "43293254f52e2ec33544f24464bc9a209e20aac2a699ae72d5a4175279147ffe",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/downloadicon.d.ts": {
+        "version": "42544086db9e2ac9e901d5a64a778dc35911cbe9d2a74b06d69aa1d44719cf20",
+        "signature": "42544086db9e2ac9e901d5a64a778dc35911cbe9d2a74b06d69aa1d44719cf20",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/draghandleicon.d.ts": {
+        "version": "f1b66dca652416f1e204c43bb0bcd15f6dec65ad9b5e8fa279f174a41c8b3dfe",
+        "signature": "f1b66dca652416f1e204c43bb0bcd15f6dec65ad9b5e8fa279f174a41c8b3dfe",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/dropicon.d.ts": {
+        "version": "ba27459c637676eaf845ea7bc20ee4e5d5ffe9277d9f6cdac7ec456510564d2c",
+        "signature": "ba27459c637676eaf845ea7bc20ee4e5d5ffe9277d9f6cdac7ec456510564d2c",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/earthamericasicon.d.ts": {
+        "version": "e1cf5e06676bb6dce11ea683ad2e49fd0d77b825beada2cd861f31cc6ffbd30f",
+        "signature": "e1cf5e06676bb6dce11ea683ad2e49fd0d77b825beada2cd861f31cc6ffbd30f",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/earthglobeicon.d.ts": {
+        "version": "5ad317a8b1546eb395e5757f9ae47bef586fe630fe604335de26fa8ae80f6f4c",
+        "signature": "5ad317a8b1546eb395e5757f9ae47bef586fe630fe604335de26fa8ae80f6f4c",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/editicon.d.ts": {
+        "version": "f036381d19bb5d8ac86cbd46e39d6a2d02013e69777dc5cb6f9b68cc7cfc6501",
+        "signature": "f036381d19bb5d8ac86cbd46e39d6a2d02013e69777dc5cb6f9b68cc7cfc6501",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/ellipsishorizontalicon.d.ts": {
+        "version": "0db53f05005ee83b04db7bc281fc468fab475fec5632225563d64f232f7db114",
+        "signature": "0db53f05005ee83b04db7bc281fc468fab475fec5632225563d64f232f7db114",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/ellipsisverticalicon.d.ts": {
+        "version": "1719c1ae67b5f18be9c99e509e21c4eb9d5bf6dacf39e5bcb5859f0d50c69bfa",
+        "signature": "1719c1ae67b5f18be9c99e509e21c4eb9d5bf6dacf39e5bcb5859f0d50c69bfa",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/envelopeicon.d.ts": {
+        "version": "eca48f08abd073d5703f0f35b5acf7a0a4b6ba07577d1624b4687a5ec2b1df61",
+        "signature": "eca48f08abd073d5703f0f35b5acf7a0a4b6ba07577d1624b4687a5ec2b1df61",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/equalicon.d.ts": {
+        "version": "accbdcb592c19b838f6daf694c3410664be5f2fbac7b428035a344a976dd25ec",
+        "signature": "accbdcb592c19b838f6daf694c3410664be5f2fbac7b428035a344a976dd25ec",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/errorfilledicon.d.ts": {
+        "version": "3020d563b214741e0e9cf1815e0001183d3a574c927ea96a008232f4260a58ba",
+        "signature": "3020d563b214741e0e9cf1815e0001183d3a574c927ea96a008232f4260a58ba",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/erroroutlineicon.d.ts": {
+        "version": "9138d0dc6290d302cddeef6c0b436f738abdcb552bb0b89809509c9f8a2d73d3",
+        "signature": "9138d0dc6290d302cddeef6c0b436f738abdcb552bb0b89809509c9f8a2d73d3",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/expandicon.d.ts": {
+        "version": "18ea62aca31da3b108a273399d89411e248ba7f0ac1986019c9fe613bfe71bf0",
+        "signature": "18ea62aca31da3b108a273399d89411e248ba7f0ac1986019c9fe613bfe71bf0",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/eyeclosedicon.d.ts": {
+        "version": "bf4b96c422b957509b36c1585bed5d33bef35b116f7b0b4035d199b7e39810ae",
+        "signature": "bf4b96c422b957509b36c1585bed5d33bef35b116f7b0b4035d199b7e39810ae",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/eyeopenicon.d.ts": {
+        "version": "5fa88b24080f605c71e593e3f6abf60539a3d035f63f0b8afb7e1d51852a25c0",
+        "signature": "5fa88b24080f605c71e593e3f6abf60539a3d035f63f0b8afb7e1d51852a25c0",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/foldericon.d.ts": {
+        "version": "2eb641160784c65dd2cea0a1a8e1168149d52b8071948acee5fd9edeebc89819",
+        "signature": "2eb641160784c65dd2cea0a1a8e1168149d52b8071948acee5fd9edeebc89819",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/generateicon.d.ts": {
+        "version": "5c90cd0920a156055dc60cecbb97eddd5ef6a0bdae92a388088bcf39bf36462a",
+        "signature": "5c90cd0920a156055dc60cecbb97eddd5ef6a0bdae92a388088bcf39bf36462a",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/hearticon.d.ts": {
+        "version": "43dbcbfbe5eafbb44021a8dacfe4dafe37d7bef257c9084e007ea985c61f1b98",
+        "signature": "43dbcbfbe5eafbb44021a8dacfe4dafe37d7bef257c9084e007ea985c61f1b98",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/helpcircleicon.d.ts": {
+        "version": "7fb8643f5942101ed1de3b3b2606d5f85ab8e104b5a7043ccdfb8e84563f6262",
+        "signature": "7fb8643f5942101ed1de3b3b2606d5f85ab8e104b5a7043ccdfb8e84563f6262",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/homeicon.d.ts": {
+        "version": "b2062b484ab2f79de504e3ce5f7b9db897d24bb0bfb7d00cbcb985333fefccdf",
+        "signature": "b2062b484ab2f79de504e3ce5f7b9db897d24bb0bfb7d00cbcb985333fefccdf",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/icecreamicon.d.ts": {
+        "version": "ba93c0f48e957d19298b04f71b2e0c80618c058b771b63b476693bdb2c460be8",
+        "signature": "ba93c0f48e957d19298b04f71b2e0c80618c058b771b63b476693bdb2c460be8",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/imageicon.d.ts": {
+        "version": "3941f6906aee0c8be5797309b5e217c8a70a5bf758338550f010bca0309e177a",
+        "signature": "3941f6906aee0c8be5797309b5e217c8a70a5bf758338550f010bca0309e177a",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/imageremoveicon.d.ts": {
+        "version": "abe87256e91f0b53f7ee0638eb0e5fbc852e1e9ce998b85bafb24e23c2f2e6d2",
+        "signature": "abe87256e91f0b53f7ee0638eb0e5fbc852e1e9ce998b85bafb24e23c2f2e6d2",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/imagesicon.d.ts": {
+        "version": "3d29f4fede481a4762686c993d677e92d5f7a4edba1c99008884e03c56400c06",
+        "signature": "3d29f4fede481a4762686c993d677e92d5f7a4edba1c99008884e03c56400c06",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/infofilledicon.d.ts": {
+        "version": "83340be8a448e31a4200c48bfe4b060be810ddef366a2158777b87f3fb654a4f",
+        "signature": "83340be8a448e31a4200c48bfe4b060be810ddef366a2158777b87f3fb654a4f",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/infooutlineicon.d.ts": {
+        "version": "7625ac10948ff10555c5a3f29881214e8e5a89a384218ed078ba441422a84f59",
+        "signature": "7625ac10948ff10555c5a3f29881214e8e5a89a384218ed078ba441422a84f59",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/inlineelementicon.d.ts": {
+        "version": "d3df79c76486a5f99dee3baba3abc7e5bf6738d8de9a02f6572850aaf176a7f3",
+        "signature": "d3df79c76486a5f99dee3baba3abc7e5bf6738d8de9a02f6572850aaf176a7f3",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/italicicon.d.ts": {
+        "version": "1ef160f6cdf30f867c2a8d65f78971b29e60232ee84531a629d825a8c04aaa24",
+        "signature": "1ef160f6cdf30f867c2a8d65f78971b29e60232ee84531a629d825a8c04aaa24",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/joystickicon.d.ts": {
+        "version": "5bd37e99ddb2f77d6ebc1085b33362bfb2f60e6c21102a40f530e3f491b216b7",
+        "signature": "5bd37e99ddb2f77d6ebc1085b33362bfb2f60e6c21102a40f530e3f491b216b7",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/launchicon.d.ts": {
+        "version": "a6418a77235cc059b0a5c3433038395bcb1db20f60d1ab6ceb0846e4d0fd5ffe",
+        "signature": "a6418a77235cc059b0a5c3433038395bcb1db20f60d1ab6ceb0846e4d0fd5ffe",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/leaveicon.d.ts": {
+        "version": "b3ca9041bf41b3c50ee3ad9ab31a025d50df83d39cf6398d2ad4d13a4f8c3258",
+        "signature": "b3ca9041bf41b3c50ee3ad9ab31a025d50df83d39cf6398d2ad4d13a4f8c3258",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/lemonicon.d.ts": {
+        "version": "581f031b75b900aea6ca5dccc225d6cdab0074cb4358ea47b10debb6bef5a4e7",
+        "signature": "581f031b75b900aea6ca5dccc225d6cdab0074cb4358ea47b10debb6bef5a4e7",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/linkicon.d.ts": {
+        "version": "a92cbc4342d2ecc911425fe2e6053e119b535d49a0711fd67a4b3939d1e9052a",
+        "signature": "a92cbc4342d2ecc911425fe2e6053e119b535d49a0711fd67a4b3939d1e9052a",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/linkremovedicon.d.ts": {
+        "version": "f2e6ef18148c076075e3d4c8f793d538f0bb0ee68e77d8e96b87d9c3832203e5",
+        "signature": "f2e6ef18148c076075e3d4c8f793d538f0bb0ee68e77d8e96b87d9c3832203e5",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/lockicon.d.ts": {
+        "version": "872b855de6fe26bf7545012bee4358b8258162fc8d4dcd5be1b75b4b0c4c213a",
+        "signature": "872b855de6fe26bf7545012bee4358b8258162fc8d4dcd5be1b75b4b0c4c213a",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/masterdetailicon.d.ts": {
+        "version": "15e4967ef968755633fabb7326a6457faa7810d54085caab58f3c1dc807bfd0d",
+        "signature": "15e4967ef968755633fabb7326a6457faa7810d54085caab58f3c1dc807bfd0d",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/menuicon.d.ts": {
+        "version": "db090b755ffbe7db79e68cdb7dbc55a10ab6c1715ba26ccf97bf7a472587ed42",
+        "signature": "db090b755ffbe7db79e68cdb7dbc55a10ab6c1715ba26ccf97bf7a472587ed42",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/mobiledeviceicon.d.ts": {
+        "version": "2d50dfb32011e1449b384c25715f40322ef4eeffd3d1e116bccc3eb0216cf666",
+        "signature": "2d50dfb32011e1449b384c25715f40322ef4eeffd3d1e116bccc3eb0216cf666",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/moonicon.d.ts": {
+        "version": "4a1cbac54cc7c2eb8de8d88f726de662e9e9792d6f6386c99195878201f5c0e8",
+        "signature": "4a1cbac54cc7c2eb8de8d88f726de662e9e9792d6f6386c99195878201f5c0e8",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/okhandicon.d.ts": {
+        "version": "99f72c74d29dc0d60b46c7549ff1b6bc293be1985eafdbdaa12c9fb22a83d31c",
+        "signature": "99f72c74d29dc0d60b46c7549ff1b6bc293be1985eafdbdaa12c9fb22a83d31c",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/olisticon.d.ts": {
+        "version": "b51e74cf475783e25fd46e65c8631eb27dc80564f2d5048326cba99e9a7b93c3",
+        "signature": "b51e74cf475783e25fd46e65c8631eb27dc80564f2d5048326cba99e9a7b93c3",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/overageicon.d.ts": {
+        "version": "597ab204325fb254df1df739701489fc207e90b18b6ff39eb36f89fd1844f479",
+        "signature": "597ab204325fb254df1df739701489fc207e90b18b6ff39eb36f89fd1844f479",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/packageicon.d.ts": {
+        "version": "022617bdb2adfa17c80b1c8219a384049183843622b94f59fe99db108d0b855c",
+        "signature": "022617bdb2adfa17c80b1c8219a384049183843622b94f59fe99db108d0b855c",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/pauseicon.d.ts": {
+        "version": "4597bd145c44da6277fca78989463bea36464f180d627bbd401f78f60af871f5",
+        "signature": "4597bd145c44da6277fca78989463bea36464f180d627bbd401f78f60af871f5",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/pinicon.d.ts": {
+        "version": "00b7fca492fd247efea16c09addf953e8f8f44875c86a2a13edcea87a1674388",
+        "signature": "00b7fca492fd247efea16c09addf953e8f8f44875c86a2a13edcea87a1674388",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/pinremovedicon.d.ts": {
+        "version": "4e02b67d5a0ff456598e890fde6f054e4467e5a2c8a8a1526ddeae8a1bfed4eb",
+        "signature": "4e02b67d5a0ff456598e890fde6f054e4467e5a2c8a8a1526ddeae8a1bfed4eb",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/playicon.d.ts": {
+        "version": "50060c7df79045d889515badba10b68949ae323e3863ebb82eb847b7701ac328",
+        "signature": "50060c7df79045d889515badba10b68949ae323e3863ebb82eb847b7701ac328",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/plugicon.d.ts": {
+        "version": "6bf5a82618677c39c4e10c856a0dcacf1e5fe43796da840e83ea930d75000101",
+        "signature": "6bf5a82618677c39c4e10c856a0dcacf1e5fe43796da840e83ea930d75000101",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/publishicon.d.ts": {
+        "version": "b9c66c8c47892aaaef3b4eb39cb2786e1e9275c032f0149cab6d58a5c27ef3ce",
+        "signature": "b9c66c8c47892aaaef3b4eb39cb2786e1e9275c032f0149cab6d58a5c27ef3ce",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/removecircleicon.d.ts": {
+        "version": "1e6bffd1f2387f2d9c18de96c99f67c945cb2ef4d202bd7115690ce0328b82eb",
+        "signature": "1e6bffd1f2387f2d9c18de96c99f67c945cb2ef4d202bd7115690ce0328b82eb",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/removeicon.d.ts": {
+        "version": "ee7ce1a56ced9ce9f24516ecc81de7a06b5e8e92ac2f39c7a03e1bf32a12823f",
+        "signature": "ee7ce1a56ced9ce9f24516ecc81de7a06b5e8e92ac2f39c7a03e1bf32a12823f",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/reseticon.d.ts": {
+        "version": "6165e09a5091fdde30dd36065fe76f6905c00dcc380bb924f77d666ab0394e30",
+        "signature": "6165e09a5091fdde30dd36065fe76f6905c00dcc380bb924f77d666ab0394e30",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/restoreicon.d.ts": {
+        "version": "0e9c047d2d068ce90d08208326899a4751ef8f0beb93ef8465939043fcec7a84",
+        "signature": "0e9c047d2d068ce90d08208326899a4751ef8f0beb93ef8465939043fcec7a84",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/retrieveicon.d.ts": {
+        "version": "65c007da1f82665c19878585d542f323722f47040c5e610f04e8498567419795",
+        "signature": "65c007da1f82665c19878585d542f323722f47040c5e610f04e8498567419795",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/reverticon.d.ts": {
+        "version": "73214d8f3949cc5835f967e5835e44befcf4018b61dcdc7d089cc2e55b06a7c2",
+        "signature": "73214d8f3949cc5835f967e5835e44befcf4018b61dcdc7d089cc2e55b06a7c2",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/roboticon.d.ts": {
+        "version": "74315c33c5d806366b5bd21fe672ffbcfc12c50f028697a2932af8ea6d55109d",
+        "signature": "74315c33c5d806366b5bd21fe672ffbcfc12c50f028697a2932af8ea6d55109d",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/rocketicon.d.ts": {
+        "version": "f98755eccec8733defc5eb8d0a9bfa62c5e6b307544c4553b3a2032022076f5b",
+        "signature": "f98755eccec8733defc5eb8d0a9bfa62c5e6b307544c4553b3a2032022076f5b",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/searchicon.d.ts": {
+        "version": "81bce31e08437b70cd8e0420f17b39e481b3de328d39ae23957c4d7d2144c1f2",
+        "signature": "81bce31e08437b70cd8e0420f17b39e481b3de328d39ae23957c4d7d2144c1f2",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/selecticon.d.ts": {
+        "version": "cf04c52e3cbbe10ca46d0f87b181c9f598421d75467401c1564428bd3fe7b867",
+        "signature": "cf04c52e3cbbe10ca46d0f87b181c9f598421d75467401c1564428bd3fe7b867",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/sorticon.d.ts": {
+        "version": "ceb9228ba84351ea96cb19a3babd9fa9b75963a56eb0a8c0fd18ffb6b013193d",
+        "signature": "ceb9228ba84351ea96cb19a3babd9fa9b75963a56eb0a8c0fd18ffb6b013193d",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/spinnericon.d.ts": {
+        "version": "8d7475ac7a9c602c0a0776df16b7a563d43f02200a930d94b683d50879549010",
+        "signature": "8d7475ac7a9c602c0a0776df16b7a563d43f02200a930d94b683d50879549010",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/splithorizontalicon.d.ts": {
+        "version": "c5d66f58c305c897ded32fec0c764742ef82e51ecf3c2f338c8aa22d17e78965",
+        "signature": "c5d66f58c305c897ded32fec0c764742ef82e51ecf3c2f338c8aa22d17e78965",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/splitverticalicon.d.ts": {
+        "version": "ac1cf113900d363c0dc10c6251c2c863f5f4087dcce6b813d28bf5637db6ad42",
+        "signature": "ac1cf113900d363c0dc10c6251c2c863f5f4087dcce6b813d28bf5637db6ad42",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/squareicon.d.ts": {
+        "version": "c7703102bd3c0003bb72deb422e38b775f34a9e46384de6f46632f6a08715f81",
+        "signature": "c7703102bd3c0003bb72deb422e38b775f34a9e46384de6f46632f6a08715f81",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/stackcompacticon.d.ts": {
+        "version": "c6c977f8d2a3aae9a735b5c0d0a14aa3cd89e8d6347cd098a32b92d1b8957e0b",
+        "signature": "c6c977f8d2a3aae9a735b5c0d0a14aa3cd89e8d6347cd098a32b92d1b8957e0b",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/staricon.d.ts": {
+        "version": "97d7ed02feb3223f945d49dff2146c9b71d54282c08ae7400e4d432e9322f9f2",
+        "signature": "97d7ed02feb3223f945d49dff2146c9b71d54282c08ae7400e4d432e9322f9f2",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/strikethroughicon.d.ts": {
+        "version": "d216120d098248eb5bfc084eca84786762e6a03c86ed28fe9a5a08b9b712e539",
+        "signature": "d216120d098248eb5bfc084eca84786762e6a03c86ed28fe9a5a08b9b712e539",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/sunicon.d.ts": {
+        "version": "fec39cc8c35f36df7cfbb01c4617ba48073b2d2813df17eed9bf131aaba55586",
+        "signature": "fec39cc8c35f36df7cfbb01c4617ba48073b2d2813df17eed9bf131aaba55586",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/syncicon.d.ts": {
+        "version": "67f02a0c17c60ea38aa50a28ce7f5644cc945a41ae8babae46e1b7731db99780",
+        "signature": "67f02a0c17c60ea38aa50a28ce7f5644cc945a41ae8babae46e1b7731db99780",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/terminalicon.d.ts": {
+        "version": "e13b0443dff52ac0496b5a385c0fa0e6a9074a7ab7ccd7dcce3a6954846fd883",
+        "signature": "e13b0443dff52ac0496b5a385c0fa0e6a9074a7ab7ccd7dcce3a6954846fd883",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/thlargeicon.d.ts": {
+        "version": "19ec32e24b7d697c2a5117a61e5f4c6df92e9f74cfaa8973bd5a0f534c39e6b0",
+        "signature": "19ec32e24b7d697c2a5117a61e5f4c6df92e9f74cfaa8973bd5a0f534c39e6b0",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/thlisticon.d.ts": {
+        "version": "a8d04d1a5b475e5fd89c17dfa77d4f07baee0e921776d8c37749cb23dad79e14",
+        "signature": "a8d04d1a5b475e5fd89c17dfa77d4f07baee0e921776d8c37749cb23dad79e14",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/togglearrowrighticon.d.ts": {
+        "version": "78bc42c58502e2edf9bf06685d5a6f6ccf7a3e8b21047c08250965beb706ad77",
+        "signature": "78bc42c58502e2edf9bf06685d5a6f6ccf7a3e8b21047c08250965beb706ad77",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/tokenicon.d.ts": {
+        "version": "f33e9fc8b6c2b631da9720a1364e8679f912cb171bb428e327fd239f2a7d4e04",
+        "signature": "f33e9fc8b6c2b631da9720a1364e8679f912cb171bb428e327fd239f2a7d4e04",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/trashicon.d.ts": {
+        "version": "5ead071815742d270b1d6e50a994ba5624cd99df84e6dec734a0175e9962cf8c",
+        "signature": "5ead071815742d270b1d6e50a994ba5624cd99df84e6dec734a0175e9962cf8c",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/trendupwardicon.d.ts": {
+        "version": "8bb115558d96bac2afb724257f7614a3d86d7dc89352672b76fa74bb131aacab",
+        "signature": "8bb115558d96bac2afb724257f7614a3d86d7dc89352672b76fa74bb131aacab",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/triangleoutlineicon.d.ts": {
+        "version": "d17f73daa7a2cb7cd13bd73675efa5399f4dab9cee5409b99ee4b5d9140ecd48",
+        "signature": "d17f73daa7a2cb7cd13bd73675efa5399f4dab9cee5409b99ee4b5d9140ecd48",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/truncateicon.d.ts": {
+        "version": "603777691c145a5c44a9cb4bef6da48033af4bdf7f7995d7f51426e2e34cad0e",
+        "signature": "603777691c145a5c44a9cb4bef6da48033af4bdf7f7995d7f51426e2e34cad0e",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/ulisticon.d.ts": {
+        "version": "2bd7accfa181ba82ada78a7bf8b92b2e8f80715b4f3c8970308deefbb5a1683c",
+        "signature": "2bd7accfa181ba82ada78a7bf8b92b2e8f80715b4f3c8970308deefbb5a1683c",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/underlineicon.d.ts": {
+        "version": "91512fa1cf0ca1b66da2199915caf3ef543f843385dddbef2d3c346e4fe4b1bb",
+        "signature": "91512fa1cf0ca1b66da2199915caf3ef543f843385dddbef2d3c346e4fe4b1bb",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/undoicon.d.ts": {
+        "version": "ba62e5e2e771e9217345cf857221072c4ae7b96956afa5b2db6d0872d44b2d86",
+        "signature": "ba62e5e2e771e9217345cf857221072c4ae7b96956afa5b2db6d0872d44b2d86",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/unknownicon.d.ts": {
+        "version": "df72d55a0212f18680259243d3e3738e3fba326a57598f9bbdebbcb3e1881057",
+        "signature": "df72d55a0212f18680259243d3e3738e3fba326a57598f9bbdebbcb3e1881057",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/unlockicon.d.ts": {
+        "version": "1bc632c3070164d0a264fa7fe94c7ef67ed14c58f0e11b84ca6e62bf0063f0b7",
+        "signature": "1bc632c3070164d0a264fa7fe94c7ef67ed14c58f0e11b84ca6e62bf0063f0b7",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/unpublishicon.d.ts": {
+        "version": "098c216e8523bab3a1dc5bcac302741e80ca7e3aae198d5577965aef99c17fa5",
+        "signature": "098c216e8523bab3a1dc5bcac302741e80ca7e3aae198d5577965aef99c17fa5",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/uploadicon.d.ts": {
+        "version": "61bc5bfaf2decfcb9fb5ee137caa4192e51d86b77d5ae03229fc2a59a6001bc1",
+        "signature": "61bc5bfaf2decfcb9fb5ee137caa4192e51d86b77d5ae03229fc2a59a6001bc1",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/usericon.d.ts": {
+        "version": "f9810f8e09c1c1ed369c9f605cd7e6d3888dfed3532e3df751708328bfc7961c",
+        "signature": "f9810f8e09c1c1ed369c9f605cd7e6d3888dfed3532e3df751708328bfc7961c",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/usersicon.d.ts": {
+        "version": "922cef5c569f2519e8f148a4b3ac713d3481f115acf07acb39bcdb1bfd3cb496",
+        "signature": "922cef5c569f2519e8f148a4b3ac713d3481f115acf07acb39bcdb1bfd3cb496",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/warningfilledicon.d.ts": {
+        "version": "da934e1b6b3f966377033cc00ada386e86ea2a95838e26613d26251a320b27e7",
+        "signature": "da934e1b6b3f966377033cc00ada386e86ea2a95838e26613d26251a320b27e7",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/warningoutlineicon.d.ts": {
+        "version": "ec7b47d17986bf29ee14d3f67469d64f657c8dc1ea80a6e9f4ff512826dafb55",
+        "signature": "ec7b47d17986bf29ee14d3f67469d64f657c8dc1ea80a6e9f4ff512826dafb55",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icons/index.d.ts": {
+        "version": "bdf01c6441962e0a1a8fd3b59510772f9a76d0bbaa37c6b3cb265cdcfc38d752",
+        "signature": "bdf01c6441962e0a1a8fd3b59510772f9a76d0bbaa37c6b3cb265cdcfc38d752",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/icon.d.ts": {
+        "version": "1dec67356ce76b9b0629cdfa181c704b9061382b28065a7c8a1729a7df556b12",
+        "signature": "1dec67356ce76b9b0629cdfa181c704b9061382b28065a7c8a1729a7df556b12",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@sanity/icons/dist/cjs/index.d.ts": {
+        "version": "4bc28697af003e489a4108a25cf35057020f9ad1a78099ea302830aa3716f80a",
+        "signature": "4bc28697af003e489a4108a25cf35057020f9ad1a78099ea302830aa3716f80a",
         "affectsGlobalScope": false
       },
       "../../packages/react-pte/dist/cjs/types.d.ts": {
@@ -1387,8 +2087,8 @@
         "affectsGlobalScope": false
       },
       "../../packages/react-pte/dist/cjs/editor.d.ts": {
-        "version": "9c129bae6ea12c408e5af15c9bfb3311108282552f327f4d7822d7f7ff27f8db",
-        "signature": "9c129bae6ea12c408e5af15c9bfb3311108282552f327f4d7822d7f7ff27f8db",
+        "version": "5e5ac8592f5a3bb5db073bc82eda9b7ad6f7d31da0f66635cfd00fd59a378955",
+        "signature": "5e5ac8592f5a3bb5db073bc82eda9b7ad6f7d31da0f66635cfd00fd59a378955",
         "affectsGlobalScope": false
       },
       "../../packages/react-pte/dist/cjs/index.d.ts": {
@@ -1396,13 +2096,18 @@
         "signature": "ee129438db3b3f7a2d5c46120e22a7890001db36509c329014de11ac058bf2c8",
         "affectsGlobalScope": false
       },
+      "./src/app/styles.ts": {
+        "version": "403b2921db38ca5dd1541b12b8a8e3e112c1d447df4f313200193982405d1739",
+        "signature": "c95a70b8a1627532efec1e710e78a08301a6e093bc82f5c56eccd8f6ce096cab",
+        "affectsGlobalScope": false
+      },
       "./src/app/editor.tsx": {
-        "version": "53f12773e731b637e7c1942ef97fbbab9a56febbfdb2e24d05747288553e153a",
-        "signature": "a1283169c4e3d76573e6537bde157d83f04238859ee9c1728bad184ac08d992a",
+        "version": "8351ce17af34dfcae2c6806b80580daed284ba41f2ac6deef1f688784b2a6443",
+        "signature": "618085502f3fb480d70f02e3d5c1c25fc984ce2b15352a26e04ca7c41e7e7072",
         "affectsGlobalScope": false
       },
       "./src/app/app.tsx": {
-        "version": "c57f26f3b745ea36b2967b8e4d2ab05daff87336fc981273fad914fe35e1c8d3",
+        "version": "729e445e474991b152516c6a0cba924d4f4b02ff6553e4f4290016e75c88fc2e",
         "signature": "c8c743d8321c281358944ab4a3431d895dcfdf6d0d70abc4ea1ef1c1f301436d",
         "affectsGlobalScope": false
       },
@@ -1419,11 +2124,6 @@
       "./src/main.tsx": {
         "version": "513af6d9b2befe8bf78328a38308bb788ce5d12ac009aa7e99cc0c418146fd46",
         "signature": "a9190fb43abc43193e152369c49f856ec6ba0e4f55d8ed9ae205ccaba9d505ef",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/@types/anymatch/index.d.ts": {
-        "version": "48b52264fa193879a074197839dbb4796fa07e86350ff888e5361e06aa46df76",
-        "signature": "48b52264fa193879a074197839dbb4796fa07e86350ff888e5361e06aa46df76",
         "affectsGlobalScope": false
       },
       "../../node_modules/@babel/types/lib/index.d.ts": {
@@ -1454,36 +2154,6 @@
       "../../node_modules/@types/babel__core/index.d.ts": {
         "version": "6f1d39d26959517da3bd105c552eded4c34702705c64d75b03f54d864b6e41c2",
         "signature": "6f1d39d26959517da3bd105c552eded4c34702705c64d75b03f54d864b6e41c2",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/@types/eslint/helpers.d.ts": {
-        "version": "f345b0888d003fd69cb32bad3a0aa04c615ccafc572019e4bd86a52bd5e49e46",
-        "signature": "f345b0888d003fd69cb32bad3a0aa04c615ccafc572019e4bd86a52bd5e49e46",
-        "affectsGlobalScope": true
-      },
-      "../../node_modules/@types/eslint/lib/rules/index.d.ts": {
-        "version": "0133ebdd17a823ae56861948870cde4dac18dd8818ab641039c85bbb720429e0",
-        "signature": "0133ebdd17a823ae56861948870cde4dac18dd8818ab641039c85bbb720429e0",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/@types/json-schema/index.d.ts": {
-        "version": "3a1e165b22a1cb8df82c44c9a09502fd2b33f160cd277de2cd3a055d8e5c6b27",
-        "signature": "3a1e165b22a1cb8df82c44c9a09502fd2b33f160cd277de2cd3a055d8e5c6b27",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/@types/estree/index.d.ts": {
-        "version": "f1e8ecd1d960d12e57316fd2889b0a57635f38f8c4c976d8deafa29650bbf320",
-        "signature": "f1e8ecd1d960d12e57316fd2889b0a57635f38f8c4c976d8deafa29650bbf320",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/@types/eslint/index.d.ts": {
-        "version": "649fbcb16a4a7e1d9f32a49db7381150ef5b2e472a0c52a1543d4c35a2aefa3c",
-        "signature": "649fbcb16a4a7e1d9f32a49db7381150ef5b2e472a0c52a1543d4c35a2aefa3c",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/@types/eslint-scope/index.d.ts": {
-        "version": "274bda283ef15f4205603ca9967313fc013aa77ae89f2cbeab5fbd51439e96ed",
-        "signature": "274bda283ef15f4205603ca9967313fc013aa77ae89f2cbeab5fbd51439e96ed",
         "affectsGlobalScope": false
       },
       "../../node_modules/@types/node/globals.d.ts": {
@@ -1716,16 +2386,6 @@
         "signature": "9c4c395e927045b324877acdc4bfb95f128f36bc9f073266a2f0342495075a4f",
         "affectsGlobalScope": false
       },
-      "../../node_modules/@types/minimatch/index.d.ts": {
-        "version": "95c22bc19835e28e2e524a4bb8898eb5f2107b640d7279a6d3aade261916bbf2",
-        "signature": "95c22bc19835e28e2e524a4bb8898eb5f2107b640d7279a6d3aade261916bbf2",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/@types/glob/index.d.ts": {
-        "version": "393137c76bd922ba70a2f8bf1ade4f59a16171a02fb25918c168d48875b0cfb0",
-        "signature": "393137c76bd922ba70a2f8bf1ade4f59a16171a02fb25918c168d48875b0cfb0",
-        "affectsGlobalScope": false
-      },
       "../../node_modules/@types/graceful-fs/index.d.ts": {
         "version": "3ebae8c00411116a66fca65b08228ea0cf0b72724701f9b854442100aab55aba",
         "signature": "3ebae8c00411116a66fca65b08228ea0cf0b72724701f9b854442100aab55aba",
@@ -1739,11 +2399,6 @@
       "../../node_modules/@types/hast/index.d.ts": {
         "version": "b6e83cdeca61289e5ffd770e55ed035babdffadd87d1ffa42b03e9fe8411333f",
         "signature": "b6e83cdeca61289e5ffd770e55ed035babdffadd87d1ffa42b03e9fe8411333f",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/@types/html-minifier-terser/index.d.ts": {
-        "version": "6767cce098e1e6369c26258b7a1f9e569c5467d501a47a090136d5ea6e80ae6d",
-        "signature": "6767cce098e1e6369c26258b7a1f9e569c5467d501a47a090136d5ea6e80ae6d",
         "affectsGlobalScope": false
       },
       "../../node_modules/@types/istanbul-lib-coverage/index.d.ts": {
@@ -1801,9 +2456,19 @@
         "signature": "ce2169125f42515a26fa60977b6d56ae407f3462e28832fbf6a9013f6a828bab",
         "affectsGlobalScope": true
       },
+      "../../node_modules/@types/json-schema/index.d.ts": {
+        "version": "3a1e165b22a1cb8df82c44c9a09502fd2b33f160cd277de2cd3a055d8e5c6b27",
+        "signature": "3a1e165b22a1cb8df82c44c9a09502fd2b33f160cd277de2cd3a055d8e5c6b27",
+        "affectsGlobalScope": false
+      },
       "../../node_modules/@types/json5/index.d.ts": {
         "version": "96d14f21b7652903852eef49379d04dbda28c16ed36468f8c9fa08f7c14c9538",
         "signature": "96d14f21b7652903852eef49379d04dbda28c16ed36468f8c9fa08f7c14c9538",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@types/minimatch/index.d.ts": {
+        "version": "95c22bc19835e28e2e524a4bb8898eb5f2107b640d7279a6d3aade261916bbf2",
+        "signature": "95c22bc19835e28e2e524a4bb8898eb5f2107b640d7279a6d3aade261916bbf2",
         "affectsGlobalScope": false
       },
       "../../node_modules/@types/minimist/index.d.ts": {
@@ -1831,115 +2496,15 @@
         "signature": "3169db033165677f1d414baf0c82ba27801089ca1b66d97af464512a47df31b5",
         "affectsGlobalScope": false
       },
-      "../../node_modules/@types/source-list-map/index.d.ts": {
-        "version": "67fc055eb86a0632e2e072838f889ffe1754083cb13c8c80a06a7d895d877aae",
-        "signature": "67fc055eb86a0632e2e072838f889ffe1754083cb13c8c80a06a7d895d877aae",
-        "affectsGlobalScope": false
-      },
       "../../node_modules/@types/stack-utils/index.d.ts": {
         "version": "c6c4fea9acc55d5e38ff2b70d57ab0b5cdbd08f8bc5d7a226e322cea128c5b57",
         "signature": "c6c4fea9acc55d5e38ff2b70d57ab0b5cdbd08f8bc5d7a226e322cea128c5b57",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/@types/tapable/index.d.ts": {
-        "version": "d558a0fe921ebcc88d3212c2c42108abf9f0d694d67ebdeba37d7728c044f579",
-        "signature": "d558a0fe921ebcc88d3212c2c42108abf9f0d694d67ebdeba37d7728c044f579",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/source-map/source-map.d.ts": {
-        "version": "2887592574fcdfd087647c539dcb0fbe5af2521270dad4a37f9d17c16190d579",
-        "signature": "2887592574fcdfd087647c539dcb0fbe5af2521270dad4a37f9d17c16190d579",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/@types/uglify-js/index.d.ts": {
-        "version": "bee79f5862fe1278d2ba275298862bce3f7abf1e59d9c669c4b9a4b2bba96956",
-        "signature": "bee79f5862fe1278d2ba275298862bce3f7abf1e59d9c669c4b9a4b2bba96956",
         "affectsGlobalScope": false
       },
       "../../node_modules/@types/warning/index.d.ts": {
         "version": "abd79d61be476addd783d0e0bace2e3c02bb3e38ec23bdfd236adc421b038939",
         "signature": "abd79d61be476addd783d0e0bace2e3c02bb3e38ec23bdfd236adc421b038939",
         "affectsGlobalScope": false
-      },
-      "../../node_modules/tapable/tapable.d.ts": {
-        "version": "b395ec0779c66de885f97974534e95ee2c8bbf9acaf5857a6782ddc32972b6d8",
-        "signature": "b395ec0779c66de885f97974534e95ee2c8bbf9acaf5857a6782ddc32972b6d8",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/@types/webpack-sources/node_modules/source-map/source-map.d.ts": {
-        "version": "b90c59ac4682368a01c83881b814738eb151de8a58f52eb7edadea2bcffb11b9",
-        "signature": "b90c59ac4682368a01c83881b814738eb151de8a58f52eb7edadea2bcffb11b9",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/@types/webpack-sources/lib/source.d.ts": {
-        "version": "8560a87b2e9f8e2c3808c8f6172c9b7eb6c9b08cb9f937db71c285ecf292c81d",
-        "signature": "8560a87b2e9f8e2c3808c8f6172c9b7eb6c9b08cb9f937db71c285ecf292c81d",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/@types/webpack-sources/lib/compatsource.d.ts": {
-        "version": "ffe3931ff864f28d80ae2f33bd11123ad3d7bad9896b910a1e61504cc093e1f5",
-        "signature": "ffe3931ff864f28d80ae2f33bd11123ad3d7bad9896b910a1e61504cc093e1f5",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/@types/webpack-sources/lib/concatsource.d.ts": {
-        "version": "083c1bd82f8dc3a1ed6fc9e8eaddf141f7c05df418eca386598821e045253af9",
-        "signature": "083c1bd82f8dc3a1ed6fc9e8eaddf141f7c05df418eca386598821e045253af9",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/@types/webpack-sources/lib/originalsource.d.ts": {
-        "version": "274ebe605bd7f71ce161f9f5328febc7d547a2929f803f04b44ec4a7d8729517",
-        "signature": "274ebe605bd7f71ce161f9f5328febc7d547a2929f803f04b44ec4a7d8729517",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/@types/webpack-sources/lib/prefixsource.d.ts": {
-        "version": "6ca0207e70d985a24396583f55836b10dc181063ab6069733561bfde404d1bad",
-        "signature": "6ca0207e70d985a24396583f55836b10dc181063ab6069733561bfde404d1bad",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/@types/webpack-sources/lib/rawsource.d.ts": {
-        "version": "5908142efeaab38ffdf43927ee0af681ae77e0d7672b956dfb8b6c705dbfe106",
-        "signature": "5908142efeaab38ffdf43927ee0af681ae77e0d7672b956dfb8b6c705dbfe106",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/@types/webpack-sources/lib/replacesource.d.ts": {
-        "version": "f772b188b943549b5c5eb803133314b8aa7689eced80eed0b70e2f30ca07ab9c",
-        "signature": "f772b188b943549b5c5eb803133314b8aa7689eced80eed0b70e2f30ca07ab9c",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/@types/webpack-sources/lib/sizeonlysource.d.ts": {
-        "version": "0026b816ef05cfbf290e8585820eef0f13250438669107dfc44482bac007b14f",
-        "signature": "0026b816ef05cfbf290e8585820eef0f13250438669107dfc44482bac007b14f",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/@types/webpack-sources/lib/sourcemapsource.d.ts": {
-        "version": "8ef5aad624890acfe0fa48230edce255f00934016d16acb8de0edac0ea5b21bb",
-        "signature": "8ef5aad624890acfe0fa48230edce255f00934016d16acb8de0edac0ea5b21bb",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/@types/webpack-sources/lib/index.d.ts": {
-        "version": "9af6248ff4baf0c1ddc62bb0bc43197437bd5fb2c95ff8e10e4cf2e699ea45c1",
-        "signature": "9af6248ff4baf0c1ddc62bb0bc43197437bd5fb2c95ff8e10e4cf2e699ea45c1",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/@types/webpack-sources/lib/cachedsource.d.ts": {
-        "version": "d84398556ba4595ee6be554671da142cfe964cbdebb2f0c517a10f76f2b016c0",
-        "signature": "d84398556ba4595ee6be554671da142cfe964cbdebb2f0c517a10f76f2b016c0",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/@types/webpack-sources/index.d.ts": {
-        "version": "89b42f8ee5d387a39db85ee2c7123a391c3ede266a2bcd502c85ad55626c3b2b",
-        "signature": "89b42f8ee5d387a39db85ee2c7123a391c3ede266a2bcd502c85ad55626c3b2b",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/@types/webpack/index.d.ts": {
-        "version": "ef0b707624f7d984f07db02e61589a6e2f2474a55d6b666ab04d2b0722708a83",
-        "signature": "ef0b707624f7d984f07db02e61589a6e2f2474a55d6b666ab04d2b0722708a83",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/@types/webpack-env/index.d.ts": {
-        "version": "5b3e6ce357a7a1a07c858432a3d2002750058725874db09a03a0a9e899d861f5",
-        "signature": "5b3e6ce357a7a1a07c858432a3d2002750058725874db09a03a0a9e899d861f5",
-        "affectsGlobalScope": true
       },
       "../../node_modules/@types/yargs-parser/index.d.ts": {
         "version": "3bdd93ec24853e61bfa4c63ebaa425ff3e474156e87a47d90122e1d8cc717c1f",
@@ -1988,23 +2553,21 @@
         "../../node_modules/@sanity/ui/dist/cjs/index.d.ts",
         "../../node_modules/@types/react/index.d.ts",
         "../../packages/pte/dist/cjs/index.d.ts",
-        "./src/app/components/dummy.tsx",
         "./src/app/constants.ts",
         "./src/app/editor.tsx"
-      ],
-      "./src/app/components/dummy.tsx": [
-        "../../node_modules/@sanity/color/dist/cjs/index.d.ts",
-        "../../node_modules/@types/react/index.d.ts",
-        "../../node_modules/@types/styled-components/index.d.ts"
       ],
       "./src/app/constants.ts": [
         "./src/app/helpers.ts"
       ],
       "./src/app/editor.tsx": [
         "../../node_modules/@sanity/color/dist/cjs/index.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/index.d.ts",
+        "../../node_modules/@sanity/ui/dist/cjs/index.d.ts",
+        "../../node_modules/@types/react/index.d.ts",
         "../../node_modules/@types/styled-components/index.d.ts",
         "../../packages/react-pte/dist/cjs/index.d.ts",
-        "./src/app/helpers.ts"
+        "./src/app/helpers.ts",
+        "./src/app/styles.ts"
       ],
       "./src/app/helpers.ts": [
         "../../node_modules/@sanity/ui/dist/cjs/index.d.ts",
@@ -2141,6 +2704,569 @@
         "../../node_modules/@sanity/color/dist/cjs/hues.d.ts",
         "../../node_modules/@sanity/color/dist/cjs/types.d.ts"
       ],
+      "../../node_modules/@sanity/icons/dist/cjs/icon.d.ts": [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/index.d.ts",
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/activityicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/addcircleicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/addicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/apiicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/archiveicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/arrowdownicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/arrowlefticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/arrowrighticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/arrowtoprighticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/arrowupicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/bellicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/billicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/binarydocumenticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/blockelementicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/blockquoteicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/boldicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/bookicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/bottleicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/bulbfilledicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/bulboutlineicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/calendaricon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/chartupwardicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/checkmarkcircleicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/checkmarkicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/chevrondownicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/chevronlefticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/chevronrighticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/chevronupicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/circleicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/clipboardicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/clipboardimageicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/clockicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/closecircleicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/closeicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/codeblockicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/codeicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/cogicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/collapseicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/commenticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/componenticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/composeicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/controlsicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/copyicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/dashboardicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/databaseicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/documenticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/documentremoveicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/documentsicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/downloadicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/draghandleicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/dropicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/earthamericasicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/earthglobeicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/editicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/ellipsishorizontalicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/ellipsisverticalicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/envelopeicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/equalicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/errorfilledicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/erroroutlineicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/expandicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/eyeclosedicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/eyeopenicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/foldericon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/generateicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/hearticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/helpcircleicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/homeicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/icecreamicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/imageicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/imageremoveicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/imagesicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/index.d.ts": [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/activityicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/addcircleicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/addicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/apiicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/archiveicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/arrowdownicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/arrowlefticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/arrowrighticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/arrowtoprighticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/arrowupicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/bellicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/billicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/binarydocumenticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/blockelementicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/blockquoteicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/boldicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/bookicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/bottleicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/bulbfilledicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/bulboutlineicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/calendaricon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/chartupwardicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/checkmarkcircleicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/checkmarkicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/chevrondownicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/chevronlefticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/chevronrighticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/chevronupicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/circleicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/clipboardicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/clipboardimageicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/clockicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/closecircleicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/closeicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/codeblockicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/codeicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/cogicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/collapseicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/commenticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/componenticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/composeicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/controlsicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/copyicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/dashboardicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/databaseicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/documenticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/documentremoveicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/documentsicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/downloadicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/draghandleicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/dropicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/earthamericasicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/earthglobeicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/editicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/ellipsishorizontalicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/ellipsisverticalicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/envelopeicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/equalicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/errorfilledicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/erroroutlineicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/expandicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/eyeclosedicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/eyeopenicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/foldericon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/generateicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/hearticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/helpcircleicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/homeicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/icecreamicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/imageicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/imageremoveicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/imagesicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/infofilledicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/infooutlineicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/inlineelementicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/italicicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/joystickicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/launchicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/leaveicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/lemonicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/linkicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/linkremovedicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/lockicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/masterdetailicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/menuicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/mobiledeviceicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/moonicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/okhandicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/olisticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/overageicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/packageicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/pauseicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/pinicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/pinremovedicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/playicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/plugicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/publishicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/removecircleicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/removeicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/reseticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/restoreicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/retrieveicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/reverticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/roboticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/rocketicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/searchicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/selecticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/sorticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/spinnericon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/splithorizontalicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/splitverticalicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/squareicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/stackcompacticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/staricon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/strikethroughicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/sunicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/syncicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/terminalicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/thlargeicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/thlisticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/togglearrowrighticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/tokenicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/trashicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/trendupwardicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/triangleoutlineicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/truncateicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/ulisticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/underlineicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/undoicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/unknownicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/unlockicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/unpublishicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/uploadicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/usericon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/usersicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/warningfilledicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/warningoutlineicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/types.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/infofilledicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/infooutlineicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/inlineelementicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/italicicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/joystickicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/launchicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/leaveicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/lemonicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/linkicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/linkremovedicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/lockicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/masterdetailicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/menuicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/mobiledeviceicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/moonicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/okhandicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/olisticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/overageicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/packageicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/pauseicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/pinicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/pinremovedicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/playicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/plugicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/publishicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/removecircleicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/removeicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/reseticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/restoreicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/retrieveicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/reverticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/roboticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/rocketicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/searchicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/selecticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/sorticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/spinnericon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/splithorizontalicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/splitverticalicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/squareicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/stackcompacticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/staricon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/strikethroughicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/sunicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/syncicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/terminalicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/thlargeicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/thlisticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/togglearrowrighticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/tokenicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/trashicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/trendupwardicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/triangleoutlineicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/truncateicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/ulisticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/underlineicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/undoicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/unknownicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/unlockicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/unpublishicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/uploadicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/usericon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/usersicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/warningfilledicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/warningoutlineicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/index.d.ts": [
+        "../../node_modules/@sanity/icons/dist/cjs/icon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/index.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/types.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/types.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
       "../../node_modules/@sanity/ui/dist/cjs/components/autocomplete/autocomplete.d.ts": [
         "../../node_modules/@sanity/ui/dist/cjs/primitives/index.d.ts",
         "../../node_modules/@types/react/index.d.ts"
@@ -2844,24 +3970,6 @@
       "../../node_modules/@types/babel__traverse/index.d.ts": [
         "../../node_modules/@babel/types/lib/index.d.ts"
       ],
-      "../../node_modules/@types/eslint-scope/index.d.ts": [
-        "../../node_modules/@types/eslint/index.d.ts",
-        "../../node_modules/@types/estree/index.d.ts"
-      ],
-      "../../node_modules/@types/eslint/index.d.ts": [
-        "../../node_modules/@types/eslint/helpers.d.ts",
-        "../../node_modules/@types/eslint/lib/rules/index.d.ts",
-        "../../node_modules/@types/estree/index.d.ts",
-        "../../node_modules/@types/json-schema/index.d.ts"
-      ],
-      "../../node_modules/@types/eslint/lib/rules/index.d.ts": [
-        "../../node_modules/@types/eslint/index.d.ts"
-      ],
-      "../../node_modules/@types/glob/index.d.ts": [
-        "../../node_modules/@types/minimatch/index.d.ts",
-        "../../node_modules/@types/node/events.d.ts",
-        "../../node_modules/@types/node/index.d.ts"
-      ],
       "../../node_modules/@types/graceful-fs/index.d.ts": [
         "../../node_modules/@types/node/fs.d.ts",
         "../../node_modules/@types/node/index.d.ts"
@@ -3145,91 +4253,6 @@
         "../../node_modules/@types/react/index.d.ts",
         "../../node_modules/csstype/index.d.ts"
       ],
-      "../../node_modules/@types/uglify-js/index.d.ts": [
-        "../../node_modules/source-map/source-map.d.ts"
-      ],
-      "../../node_modules/@types/webpack-sources/index.d.ts": [
-        "../../node_modules/@types/node/index.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/cachedsource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/compatsource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/concatsource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/index.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/originalsource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/prefixsource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/rawsource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/replacesource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/sizeonlysource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/source.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/sourcemapsource.d.ts"
-      ],
-      "../../node_modules/@types/webpack-sources/lib/cachedsource.d.ts": [
-        "../../node_modules/@types/webpack-sources/lib/index.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/source.d.ts",
-        "../../node_modules/@types/webpack-sources/node_modules/source-map/source-map.d.ts"
-      ],
-      "../../node_modules/@types/webpack-sources/lib/compatsource.d.ts": [
-        "../../node_modules/@types/webpack-sources/lib/index.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/source.d.ts"
-      ],
-      "../../node_modules/@types/webpack-sources/lib/concatsource.d.ts": [
-        "../../node_modules/@types/source-list-map/index.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/index.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/source.d.ts",
-        "../../node_modules/@types/webpack-sources/node_modules/source-map/source-map.d.ts"
-      ],
-      "../../node_modules/@types/webpack-sources/lib/index.d.ts": [
-        "../../node_modules/@types/webpack-sources/lib/cachedsource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/compatsource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/concatsource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/originalsource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/prefixsource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/rawsource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/replacesource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/sizeonlysource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/source.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/sourcemapsource.d.ts",
-        "../../node_modules/@types/webpack-sources/node_modules/source-map/source-map.d.ts"
-      ],
-      "../../node_modules/@types/webpack-sources/lib/originalsource.d.ts": [
-        "../../node_modules/@types/source-list-map/index.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/index.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/source.d.ts",
-        "../../node_modules/@types/webpack-sources/node_modules/source-map/source-map.d.ts"
-      ],
-      "../../node_modules/@types/webpack-sources/lib/prefixsource.d.ts": [
-        "../../node_modules/@types/webpack-sources/lib/index.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/source.d.ts"
-      ],
-      "../../node_modules/@types/webpack-sources/lib/rawsource.d.ts": [
-        "../../node_modules/@types/webpack-sources/lib/index.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/source.d.ts"
-      ],
-      "../../node_modules/@types/webpack-sources/lib/replacesource.d.ts": [
-        "../../node_modules/@types/webpack-sources/lib/index.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/source.d.ts"
-      ],
-      "../../node_modules/@types/webpack-sources/lib/sizeonlysource.d.ts": [
-        "../../node_modules/@types/webpack-sources/lib/source.d.ts"
-      ],
-      "../../node_modules/@types/webpack-sources/lib/source.d.ts": [
-        "../../node_modules/@types/node/crypto.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/index.d.ts",
-        "../../node_modules/@types/webpack-sources/node_modules/source-map/source-map.d.ts"
-      ],
-      "../../node_modules/@types/webpack-sources/lib/sourcemapsource.d.ts": [
-        "../../node_modules/@types/webpack-sources/lib/index.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/source.d.ts",
-        "../../node_modules/@types/webpack-sources/node_modules/source-map/source-map.d.ts"
-      ],
-      "../../node_modules/@types/webpack/index.d.ts": [
-        "../../node_modules/@types/anymatch/index.d.ts",
-        "../../node_modules/@types/node/crypto.d.ts",
-        "../../node_modules/@types/node/index.d.ts",
-        "../../node_modules/@types/uglify-js/index.d.ts",
-        "../../node_modules/@types/webpack-sources/index.d.ts",
-        "../../node_modules/source-map/source-map.d.ts",
-        "../../node_modules/tapable/tapable.d.ts"
-      ],
       "../../node_modules/@types/yargs/index.d.ts": [
         "../../node_modules/@types/yargs-parser/index.d.ts"
       ],
@@ -3284,6 +4307,7 @@
         "../../packages/pte/dist/cjs/index.d.ts"
       ],
       "./src/app/editor.tsx": [
+        "../../node_modules/@sanity/ui/dist/cjs/index.d.ts",
         "../../node_modules/@types/react/index.d.ts",
         "../../node_modules/@types/styled-components/index.d.ts",
         "../../packages/react-pte/dist/cjs/index.d.ts"
@@ -3409,6 +4433,569 @@
         "../../node_modules/@sanity/color/dist/cjs/hues.d.ts",
         "../../node_modules/@sanity/color/dist/cjs/types.d.ts"
       ],
+      "../../node_modules/@sanity/icons/dist/cjs/icon.d.ts": [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/index.d.ts",
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/activityicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/addcircleicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/addicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/apiicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/archiveicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/arrowdownicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/arrowlefticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/arrowrighticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/arrowtoprighticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/arrowupicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/bellicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/billicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/binarydocumenticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/blockelementicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/blockquoteicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/boldicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/bookicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/bottleicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/bulbfilledicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/bulboutlineicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/calendaricon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/chartupwardicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/checkmarkcircleicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/checkmarkicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/chevrondownicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/chevronlefticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/chevronrighticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/chevronupicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/circleicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/clipboardicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/clipboardimageicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/clockicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/closecircleicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/closeicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/codeblockicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/codeicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/cogicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/collapseicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/commenticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/componenticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/composeicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/controlsicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/copyicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/dashboardicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/databaseicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/documenticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/documentremoveicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/documentsicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/downloadicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/draghandleicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/dropicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/earthamericasicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/earthglobeicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/editicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/ellipsishorizontalicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/ellipsisverticalicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/envelopeicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/equalicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/errorfilledicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/erroroutlineicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/expandicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/eyeclosedicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/eyeopenicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/foldericon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/generateicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/hearticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/helpcircleicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/homeicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/icecreamicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/imageicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/imageremoveicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/imagesicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/index.d.ts": [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/activityicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/addcircleicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/addicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/apiicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/archiveicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/arrowdownicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/arrowlefticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/arrowrighticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/arrowtoprighticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/arrowupicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/bellicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/billicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/binarydocumenticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/blockelementicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/blockquoteicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/boldicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/bookicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/bottleicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/bulbfilledicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/bulboutlineicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/calendaricon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/chartupwardicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/checkmarkcircleicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/checkmarkicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/chevrondownicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/chevronlefticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/chevronrighticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/chevronupicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/circleicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/clipboardicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/clipboardimageicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/clockicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/closecircleicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/closeicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/codeblockicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/codeicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/cogicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/collapseicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/commenticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/componenticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/composeicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/controlsicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/copyicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/dashboardicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/databaseicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/documenticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/documentremoveicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/documentsicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/downloadicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/draghandleicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/dropicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/earthamericasicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/earthglobeicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/editicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/ellipsishorizontalicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/ellipsisverticalicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/envelopeicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/equalicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/errorfilledicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/erroroutlineicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/expandicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/eyeclosedicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/eyeopenicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/foldericon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/generateicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/hearticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/helpcircleicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/homeicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/icecreamicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/imageicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/imageremoveicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/imagesicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/infofilledicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/infooutlineicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/inlineelementicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/italicicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/joystickicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/launchicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/leaveicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/lemonicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/linkicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/linkremovedicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/lockicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/masterdetailicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/menuicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/mobiledeviceicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/moonicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/okhandicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/olisticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/overageicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/packageicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/pauseicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/pinicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/pinremovedicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/playicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/plugicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/publishicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/removecircleicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/removeicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/reseticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/restoreicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/retrieveicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/reverticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/roboticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/rocketicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/searchicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/selecticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/sorticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/spinnericon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/splithorizontalicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/splitverticalicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/squareicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/stackcompacticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/staricon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/strikethroughicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/sunicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/syncicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/terminalicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/thlargeicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/thlisticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/togglearrowrighticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/tokenicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/trashicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/trendupwardicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/triangleoutlineicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/truncateicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/ulisticon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/underlineicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/undoicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/unknownicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/unlockicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/unpublishicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/uploadicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/usericon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/usersicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/warningfilledicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/warningoutlineicon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/types.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/infofilledicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/infooutlineicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/inlineelementicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/italicicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/joystickicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/launchicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/leaveicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/lemonicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/linkicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/linkremovedicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/lockicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/masterdetailicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/menuicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/mobiledeviceicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/moonicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/okhandicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/olisticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/overageicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/packageicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/pauseicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/pinicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/pinremovedicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/playicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/plugicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/publishicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/removecircleicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/removeicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/reseticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/restoreicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/retrieveicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/reverticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/roboticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/rocketicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/searchicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/selecticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/sorticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/spinnericon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/splithorizontalicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/splitverticalicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/squareicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/stackcompacticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/staricon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/strikethroughicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/sunicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/syncicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/terminalicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/thlargeicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/thlisticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/togglearrowrighticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/tokenicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/trashicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/trendupwardicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/triangleoutlineicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/truncateicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/ulisticon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/underlineicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/undoicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/unknownicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/unlockicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/unpublishicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/uploadicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/usericon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/usersicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/warningfilledicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/icons/warningoutlineicon.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/index.d.ts": [
+        "../../node_modules/@sanity/icons/dist/cjs/icon.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/icons/index.d.ts",
+        "../../node_modules/@sanity/icons/dist/cjs/types.d.ts"
+      ],
+      "../../node_modules/@sanity/icons/dist/cjs/types.d.ts": [
+        "../../node_modules/@types/react/index.d.ts"
+      ],
       "../../node_modules/@sanity/ui/dist/cjs/components/autocomplete/autocomplete.d.ts": [
         "../../node_modules/@sanity/ui/dist/cjs/primitives/index.d.ts",
         "../../node_modules/@types/react/index.d.ts"
@@ -4112,24 +5699,6 @@
       "../../node_modules/@types/babel__traverse/index.d.ts": [
         "../../node_modules/@babel/types/lib/index.d.ts"
       ],
-      "../../node_modules/@types/eslint-scope/index.d.ts": [
-        "../../node_modules/@types/eslint/index.d.ts",
-        "../../node_modules/@types/estree/index.d.ts"
-      ],
-      "../../node_modules/@types/eslint/index.d.ts": [
-        "../../node_modules/@types/eslint/helpers.d.ts",
-        "../../node_modules/@types/eslint/lib/rules/index.d.ts",
-        "../../node_modules/@types/estree/index.d.ts",
-        "../../node_modules/@types/json-schema/index.d.ts"
-      ],
-      "../../node_modules/@types/eslint/lib/rules/index.d.ts": [
-        "../../node_modules/@types/eslint/index.d.ts"
-      ],
-      "../../node_modules/@types/glob/index.d.ts": [
-        "../../node_modules/@types/minimatch/index.d.ts",
-        "../../node_modules/@types/node/events.d.ts",
-        "../../node_modules/@types/node/index.d.ts"
-      ],
       "../../node_modules/@types/graceful-fs/index.d.ts": [
         "../../node_modules/@types/node/fs.d.ts",
         "../../node_modules/@types/node/index.d.ts"
@@ -4413,91 +5982,6 @@
         "../../node_modules/@types/react/index.d.ts",
         "../../node_modules/csstype/index.d.ts"
       ],
-      "../../node_modules/@types/uglify-js/index.d.ts": [
-        "../../node_modules/source-map/source-map.d.ts"
-      ],
-      "../../node_modules/@types/webpack-sources/index.d.ts": [
-        "../../node_modules/@types/node/index.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/cachedsource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/compatsource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/concatsource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/index.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/originalsource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/prefixsource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/rawsource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/replacesource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/sizeonlysource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/source.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/sourcemapsource.d.ts"
-      ],
-      "../../node_modules/@types/webpack-sources/lib/cachedsource.d.ts": [
-        "../../node_modules/@types/webpack-sources/lib/index.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/source.d.ts",
-        "../../node_modules/@types/webpack-sources/node_modules/source-map/source-map.d.ts"
-      ],
-      "../../node_modules/@types/webpack-sources/lib/compatsource.d.ts": [
-        "../../node_modules/@types/webpack-sources/lib/index.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/source.d.ts"
-      ],
-      "../../node_modules/@types/webpack-sources/lib/concatsource.d.ts": [
-        "../../node_modules/@types/source-list-map/index.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/index.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/source.d.ts",
-        "../../node_modules/@types/webpack-sources/node_modules/source-map/source-map.d.ts"
-      ],
-      "../../node_modules/@types/webpack-sources/lib/index.d.ts": [
-        "../../node_modules/@types/webpack-sources/lib/cachedsource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/compatsource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/concatsource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/originalsource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/prefixsource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/rawsource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/replacesource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/sizeonlysource.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/source.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/sourcemapsource.d.ts",
-        "../../node_modules/@types/webpack-sources/node_modules/source-map/source-map.d.ts"
-      ],
-      "../../node_modules/@types/webpack-sources/lib/originalsource.d.ts": [
-        "../../node_modules/@types/source-list-map/index.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/index.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/source.d.ts",
-        "../../node_modules/@types/webpack-sources/node_modules/source-map/source-map.d.ts"
-      ],
-      "../../node_modules/@types/webpack-sources/lib/prefixsource.d.ts": [
-        "../../node_modules/@types/webpack-sources/lib/index.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/source.d.ts"
-      ],
-      "../../node_modules/@types/webpack-sources/lib/rawsource.d.ts": [
-        "../../node_modules/@types/webpack-sources/lib/index.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/source.d.ts"
-      ],
-      "../../node_modules/@types/webpack-sources/lib/replacesource.d.ts": [
-        "../../node_modules/@types/webpack-sources/lib/index.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/source.d.ts"
-      ],
-      "../../node_modules/@types/webpack-sources/lib/sizeonlysource.d.ts": [
-        "../../node_modules/@types/webpack-sources/lib/source.d.ts"
-      ],
-      "../../node_modules/@types/webpack-sources/lib/source.d.ts": [
-        "../../node_modules/@types/node/crypto.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/index.d.ts",
-        "../../node_modules/@types/webpack-sources/node_modules/source-map/source-map.d.ts"
-      ],
-      "../../node_modules/@types/webpack-sources/lib/sourcemapsource.d.ts": [
-        "../../node_modules/@types/webpack-sources/lib/index.d.ts",
-        "../../node_modules/@types/webpack-sources/lib/source.d.ts",
-        "../../node_modules/@types/webpack-sources/node_modules/source-map/source-map.d.ts"
-      ],
-      "../../node_modules/@types/webpack/index.d.ts": [
-        "../../node_modules/@types/anymatch/index.d.ts",
-        "../../node_modules/@types/node/crypto.d.ts",
-        "../../node_modules/@types/node/index.d.ts",
-        "../../node_modules/@types/uglify-js/index.d.ts",
-        "../../node_modules/@types/webpack-sources/index.d.ts",
-        "../../node_modules/source-map/source-map.d.ts",
-        "../../node_modules/tapable/tapable.d.ts"
-      ],
       "../../node_modules/@types/yargs/index.d.ts": [
         "../../node_modules/@types/yargs-parser/index.d.ts"
       ],
@@ -4549,11 +6033,11 @@
     },
     "semanticDiagnosticsPerFile": [
       "./src/app/app.tsx",
-      "./src/app/components/dummy.tsx",
       "./src/app/constants.ts",
       "./src/app/editor.tsx",
       "./src/app/helpers.ts",
       "./src/app/index.ts",
+      "./src/app/styles.ts",
       "./src/main.tsx",
       "./src/root.tsx",
       "../../node_modules/@babel/parser/typings/babel-parser.d.ts",
@@ -4580,6 +6064,147 @@
       "../../node_modules/@sanity/color/dist/cjs/hues.d.ts",
       "../../node_modules/@sanity/color/dist/cjs/index.d.ts",
       "../../node_modules/@sanity/color/dist/cjs/types.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/activityicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/addcircleicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/addicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/apiicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/archiveicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/arrowdownicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/arrowlefticon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/arrowrighticon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/arrowtoprighticon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/arrowupicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/bellicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/billicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/binarydocumenticon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/blockelementicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/blockquoteicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/boldicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/bookicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/bottleicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/bulbfilledicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/bulboutlineicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/calendaricon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/chartupwardicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/checkmarkcircleicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/checkmarkicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/chevrondownicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/chevronlefticon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/chevronrighticon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/chevronupicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/circleicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/clipboardicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/clipboardimageicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/clockicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/closecircleicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/closeicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/codeblockicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/codeicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/cogicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/collapseicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/commenticon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/componenticon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/composeicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/controlsicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/copyicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/dashboardicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/databaseicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/documenticon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/documentremoveicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/documentsicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/downloadicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/draghandleicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/dropicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/earthamericasicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/earthglobeicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/editicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/ellipsishorizontalicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/ellipsisverticalicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/envelopeicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/equalicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/errorfilledicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/erroroutlineicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/expandicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/eyeclosedicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/eyeopenicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/foldericon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/generateicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/hearticon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/helpcircleicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/homeicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/icecreamicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/imageicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/imageremoveicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/imagesicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/index.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/infofilledicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/infooutlineicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/inlineelementicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/italicicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/joystickicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/launchicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/leaveicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/lemonicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/linkicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/linkremovedicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/lockicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/masterdetailicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/menuicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/mobiledeviceicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/moonicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/okhandicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/olisticon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/overageicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/packageicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/pauseicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/pinicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/pinremovedicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/playicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/plugicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/publishicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/removecircleicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/removeicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/reseticon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/restoreicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/retrieveicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/reverticon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/roboticon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/rocketicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/searchicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/selecticon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/sorticon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/spinnericon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/splithorizontalicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/splitverticalicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/squareicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/stackcompacticon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/staricon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/strikethroughicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/sunicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/syncicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/terminalicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/thlargeicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/thlisticon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/togglearrowrighticon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/tokenicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/trashicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/trendupwardicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/triangleoutlineicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/truncateicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/ulisticon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/underlineicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/undoicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/unknownicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/unlockicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/unpublishicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/uploadicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/usericon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/usersicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/warningfilledicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/icons/warningoutlineicon.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/index.d.ts",
+      "../../node_modules/@sanity/icons/dist/cjs/types.d.ts",
       "../../node_modules/@sanity/ui/dist/cjs/components/autocomplete/autocomplete.d.ts",
       "../../node_modules/@sanity/ui/dist/cjs/components/autocomplete/index.d.ts",
       "../../node_modules/@sanity/ui/dist/cjs/components/dialog/dialog.d.ts",
@@ -4767,21 +6392,13 @@
       "../../node_modules/@sanity/ui/dist/cjs/utils/resizeobserver.d.ts",
       "../../node_modules/@sanity/ui/dist/cjs/utils/sronly/index.d.ts",
       "../../node_modules/@sanity/ui/dist/cjs/utils/sronly/sronly.d.ts",
-      "../../node_modules/@types/anymatch/index.d.ts",
       "../../node_modules/@types/babel__core/index.d.ts",
       "../../node_modules/@types/babel__generator/index.d.ts",
       "../../node_modules/@types/babel__template/index.d.ts",
       "../../node_modules/@types/babel__traverse/index.d.ts",
-      "../../node_modules/@types/eslint-scope/index.d.ts",
-      "../../node_modules/@types/eslint/helpers.d.ts",
-      "../../node_modules/@types/eslint/index.d.ts",
-      "../../node_modules/@types/eslint/lib/rules/index.d.ts",
-      "../../node_modules/@types/estree/index.d.ts",
-      "../../node_modules/@types/glob/index.d.ts",
       "../../node_modules/@types/graceful-fs/index.d.ts",
       "../../node_modules/@types/hast/index.d.ts",
       "../../node_modules/@types/hoist-non-react-statics/index.d.ts",
-      "../../node_modules/@types/html-minifier-terser/index.d.ts",
       "../../node_modules/@types/istanbul-lib-coverage/index.d.ts",
       "../../node_modules/@types/istanbul-lib-report/index.d.ts",
       "../../node_modules/@types/istanbul-reports/index.d.ts",
@@ -4853,28 +6470,10 @@
       "../../node_modules/@types/refractor/lang/typescript.d.ts",
       "../../node_modules/@types/scheduler/index.d.ts",
       "../../node_modules/@types/scheduler/tracing.d.ts",
-      "../../node_modules/@types/source-list-map/index.d.ts",
       "../../node_modules/@types/stack-utils/index.d.ts",
       "../../node_modules/@types/styled-components/index.d.ts",
-      "../../node_modules/@types/tapable/index.d.ts",
-      "../../node_modules/@types/uglify-js/index.d.ts",
       "../../node_modules/@types/unist/index.d.ts",
       "../../node_modules/@types/warning/index.d.ts",
-      "../../node_modules/@types/webpack-env/index.d.ts",
-      "../../node_modules/@types/webpack-sources/index.d.ts",
-      "../../node_modules/@types/webpack-sources/lib/cachedsource.d.ts",
-      "../../node_modules/@types/webpack-sources/lib/compatsource.d.ts",
-      "../../node_modules/@types/webpack-sources/lib/concatsource.d.ts",
-      "../../node_modules/@types/webpack-sources/lib/index.d.ts",
-      "../../node_modules/@types/webpack-sources/lib/originalsource.d.ts",
-      "../../node_modules/@types/webpack-sources/lib/prefixsource.d.ts",
-      "../../node_modules/@types/webpack-sources/lib/rawsource.d.ts",
-      "../../node_modules/@types/webpack-sources/lib/replacesource.d.ts",
-      "../../node_modules/@types/webpack-sources/lib/sizeonlysource.d.ts",
-      "../../node_modules/@types/webpack-sources/lib/source.d.ts",
-      "../../node_modules/@types/webpack-sources/lib/sourcemapsource.d.ts",
-      "../../node_modules/@types/webpack-sources/node_modules/source-map/source-map.d.ts",
-      "../../node_modules/@types/webpack/index.d.ts",
       "../../node_modules/@types/yargs-parser/index.d.ts",
       "../../node_modules/@types/yargs/index.d.ts",
       "../../node_modules/@types/yauzl/index.d.ts",
@@ -4887,8 +6486,6 @@
       "../../node_modules/pretty-format/build/index.d.ts",
       "../../node_modules/pretty-format/build/types.d.ts",
       "../../node_modules/react-refractor/index.d.ts",
-      "../../node_modules/source-map/source-map.d.ts",
-      "../../node_modules/tapable/tapable.d.ts",
       "../../node_modules/typescript/lib/lib.dom.d.ts",
       "../../node_modules/typescript/lib/lib.dom.iterable.d.ts",
       "../../node_modules/typescript/lib/lib.es2015.collection.d.ts",
@@ -4971,6 +6568,10 @@
       ],
       [
         "./src/app/index.ts",
+        1
+      ],
+      [
+        "./src/app/styles.ts",
         1
       ],
       [
@@ -5075,6 +6676,570 @@
       ],
       [
         "../../node_modules/@sanity/color/dist/cjs/types.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/activityicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/addcircleicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/addicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/apiicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/archiveicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/arrowdownicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/arrowlefticon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/arrowrighticon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/arrowtoprighticon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/arrowupicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/bellicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/billicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/binarydocumenticon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/blockelementicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/blockquoteicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/boldicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/bookicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/bottleicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/bulbfilledicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/bulboutlineicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/calendaricon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/chartupwardicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/checkmarkcircleicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/checkmarkicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/chevrondownicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/chevronlefticon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/chevronrighticon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/chevronupicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/circleicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/clipboardicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/clipboardimageicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/clockicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/closecircleicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/closeicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/codeblockicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/codeicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/cogicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/collapseicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/commenticon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/componenticon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/composeicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/controlsicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/copyicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/dashboardicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/databaseicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/documenticon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/documentremoveicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/documentsicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/downloadicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/draghandleicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/dropicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/earthamericasicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/earthglobeicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/editicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/ellipsishorizontalicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/ellipsisverticalicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/envelopeicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/equalicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/errorfilledicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/erroroutlineicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/expandicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/eyeclosedicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/eyeopenicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/foldericon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/generateicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/hearticon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/helpcircleicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/homeicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/icecreamicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/imageicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/imageremoveicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/imagesicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/index.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/infofilledicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/infooutlineicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/inlineelementicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/italicicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/joystickicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/launchicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/leaveicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/lemonicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/linkicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/linkremovedicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/lockicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/masterdetailicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/menuicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/mobiledeviceicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/moonicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/okhandicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/olisticon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/overageicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/packageicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/pauseicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/pinicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/pinremovedicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/playicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/plugicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/publishicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/removecircleicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/removeicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/reseticon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/restoreicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/retrieveicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/reverticon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/roboticon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/rocketicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/searchicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/selecticon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/sorticon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/spinnericon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/splithorizontalicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/splitverticalicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/squareicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/stackcompacticon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/staricon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/strikethroughicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/sunicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/syncicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/terminalicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/thlargeicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/thlisticon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/togglearrowrighticon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/tokenicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/trashicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/trendupwardicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/triangleoutlineicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/truncateicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/ulisticon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/underlineicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/undoicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/unknownicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/unlockicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/unpublishicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/uploadicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/usericon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/usersicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/warningfilledicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/icons/warningoutlineicon.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/index.d.ts",
+        1
+      ],
+      [
+        "../../node_modules/@sanity/icons/dist/cjs/types.d.ts",
         1
       ],
       [
