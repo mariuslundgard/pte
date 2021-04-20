@@ -25,6 +25,7 @@ export function buildTree(nodes: NodeMetadata[], depth = 0): PTNode[] {
               ...node.data,
               type: 'span',
               key: node.key || '',
+              marks: node.marks,
               text: node.text,
             }
           : {
@@ -55,9 +56,9 @@ export function getNodeSize(node: PTNode): number {
 export function getTreeMetadata(treeNodes: PTNode[], depth = 0): NodeMetadata[] {
   return treeNodes.reduce((acc: NodeMetadata[], node) => {
     if (node.type === 'span') {
-      const {type, key, text, ...data} = node
+      const {type, key, marks, text, ...data} = node
 
-      return acc.concat([{type, key, data, depth, size: getNodeSize(node), text}])
+      return acc.concat([{type, key, data, marks, depth, size: getNodeSize(node), text}])
     } else {
       const {type, key, name, children, ...data} = node
 

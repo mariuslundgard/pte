@@ -4,6 +4,7 @@ import {insertBlock} from './insertBlock'
 import {insertText} from './insertText'
 import {select} from './select'
 import {setValue} from './setValue'
+import {toggleMark} from './toggleMark'
 import {unsetSelection} from './unsetSelection'
 import {updateBlock} from './updateBlock'
 
@@ -34,6 +35,10 @@ export function reducer(state: State, op: PTOp): State {
 
   if (op.type === 'updateBlock') {
     return updateBlock(state, op)
+  }
+
+  if (op.type === 'toggleMark') {
+    return toggleMark(state, op)
   }
 
   return state

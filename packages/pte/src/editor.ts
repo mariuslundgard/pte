@@ -90,6 +90,10 @@ export function createEditor(opts: EditorOpts = {}): PTEditor {
     apply({type: 'setValue', value: newValue, userId})
   }
 
+  function toggleMark(markName: string) {
+    apply({type: 'toggleMark', name: markName, userId})
+  }
+
   function updateBlock(data: Record<string, unknown>) {
     // console.log('update block', data, userId)
     apply({type: 'updateBlock', data, userId})
@@ -97,7 +101,7 @@ export function createEditor(opts: EditorOpts = {}): PTEditor {
 
   __init()
 
-  const editor = {apply, destroy, getState, setValue, updateBlock, updateDOMSelection}
+  const editor = {apply, destroy, getState, setValue, toggleMark, updateBlock, updateDOMSelection}
 
   return editor
 

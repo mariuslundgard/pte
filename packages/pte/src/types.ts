@@ -12,6 +12,7 @@ export interface PTSpan {
   type: 'span'
   key: PTNodeKey
   text: string
+  marks?: string[]
   [key: string]: unknown
 }
 
@@ -30,6 +31,7 @@ export interface SpanNodeMetadata {
   type: 'span'
   data: Record<string, unknown>
   depth: number
+  marks?: string[]
   size: number
   text: string
   key: string
@@ -93,6 +95,12 @@ export interface InsertBlockOp {
   blockKey: string
 }
 
+export interface ToggleMarkOp {
+  type: 'toggleMark'
+  name: string
+  userId: string
+}
+
 export interface UpdateBlockOp {
   type: 'updateBlock'
   data: Record<string, unknown>
@@ -107,6 +115,7 @@ export type PTOp =
   | InsertTextOp
   | InsertBlockOp
   | UpdateBlockOp
+  | ToggleMarkOp
 
 export type Subscriber = (state: State) => void
 
@@ -115,6 +124,7 @@ export interface PTEditor {
   destroy: () => void
   getState: () => State
   setValue: (value: PTNode[]) => void
+  toggleMark: (markName: string) => void
   updateDOMSelection: () => void
   updateBlock: (data: Record<string, unknown>) => void
 }

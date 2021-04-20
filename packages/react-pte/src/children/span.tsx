@@ -15,11 +15,11 @@ export const Span = memo(function Span(props: SpanProps) {
   const {features, keys, node, nodeOffset, selections} = props
   const text = node.text
   const currTextLength = text.length
+  const marks = useMemo(() => node.marks || [], [node])
 
   const userChunks = useMemo(() => getUserChunks(keys, selections, node.key, node.text), [
     keys,
     node,
-    // nodeOffset,
     selections,
   ])
 
@@ -59,6 +59,7 @@ export const Span = memo(function Span(props: SpanProps) {
               data-key={node.key}
               data-offset={nodeOffset}
               data-users={chunk.userIds.join(',')}
+              data-marks={marks.join(',')}
               data-chunk-offset={currChunkOffset}
               data-chunk-length={currChunkLength}
               key={chunkIndex}
@@ -67,5 +68,5 @@ export const Span = memo(function Span(props: SpanProps) {
         })}
       </>
     )
-  }, [currTextLength, features, node, nodeOffset, userChunks])
+  }, [currTextLength, features, marks, node, nodeOffset, userChunks])
 })

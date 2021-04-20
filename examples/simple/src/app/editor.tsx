@@ -1,11 +1,12 @@
 import {hues} from '@sanity/color'
 import {BoldIcon, ItalicIcon} from '@sanity/icons'
-import {Box, Button, Card, Inline, Select} from '@sanity/ui'
+import {Box, Button, Card, Code, Inline, Select} from '@sanity/ui'
 import {BlockNodeMetadata, PTEditor, State} from 'packages/pte/dist/cjs'
 import React, {useCallback, useMemo, useRef, useState} from 'react'
 import {Editor as PTE, EditorProps} from 'react-pte'
 import styled, {css, keyframes} from 'styled-components'
 import {multiply, screen} from './helpers'
+import {renderBlock} from './renderBlock'
 import {focusRingBorderStyle, focusRingStyle} from './styles'
 
 interface PTEProps
@@ -39,6 +40,14 @@ export const Root = styled(Card)(({theme}) => {
     })};
 
     box-shadow: var(--pte-box-shadow);
+
+    & [data-text][data-marks~='strong'] {
+      font-weight: 700;
+    }
+
+    & [data-text][data-marks~='italic'] {
+      font-style: italic;
+    }
 
     &:focus-within {
       /* border-color: ${hues.blue[500].hex}; */
@@ -179,37 +188,62 @@ export function Editor(props: PTEProps) {
     (editor: PTEditor | null) => {
       editorRef.current = editor
 
-      if (editorRefProp) {
-        editorRefProp.current = editor
+      if (typeof editorRefProp === 'function') {
+        editorRefProp(editor)
+      } else if (editorRefProp) {
+        // eslint-disable-next-line @typescript-eslint/no-extra-semi
+        ;(editorRefProp.current as any) = editor
       }
     },
     [editorRefProp]
   )
 
+  const toggleMark = useCallback((markName: string) => {
+    if (editorRef.current) {
+      editorRef.current.toggleMark(markName)
+    }
+  }, [])
+
   return (
-    <Root radius={3}>
-      <Box padding={1} style={{borderBottom: '1px solid var(--card-border-color)'}}>
-        <Inline space={1}>
-          <Select
-            disabled={!selectedBlock}
-            onChange={handleChangeBlockName}
-            padding={2}
-            radius={2}
-            value={selectedBlock?.name || 'p'}
-          >
-            <option value="p">Paragraph</option>
-            <option value="h1">Heading 1</option>
-            <option value="h2">Heading 2</option>
-            <option value="h3">Heading 3</option>
-            <option value="h4">Heading 4</option>
-            <option value="h5">Heading 5</option>
-            <option value="h6">Heading 6</option>
-          </Select>
-          <Button icon={BoldIcon} mode="bleed" padding={2} />
-          <Button icon={ItalicIcon} mode="bleed" padding={2} />
-        </Inline>
-      </Box>
-      <PTE {...restProps} editorRef={setEditor} onState={handleState} userId={userId} />
-    </Root>
+    <>
+      <Root radius={3}>
+        <Box padding={1} style={{borderBottom: '1px solid var(--card-border-color)'}}>
+          <Inline space={1}>
+            <Select
+              disabled={!selectedBlock}
+              onChange={handleChangeBlockName}
+              padding={2}
+              radius={2}
+              value={selectedBlock?.name || 'p'}
+            >
+              <option value="p">Paragraph</option>
+              <option value="h1">Heading 1</option>
+              <option value="h2">Heading 2</option>
+              <option value="h3">Heading 3</option>
+              <option value="h4">Heading 4</option>
+              <option value="h5">Heading 5</option>
+              <option value="h6">Heading 6</option>
+            </Select>
+            <Button icon={BoldIcon} mode="bleed" onClick={() => toggleMark('strong')} padding={2} />
+            <Button
+              icon={ItalicIcon}
+              mode="bleed"
+              onClick={() => toggleMark('italic')}
+              padding={2}
+            />
+          </Inline>
+        </Box>
+        <PTE
+          {...restProps}
+          editorRef={setEditor}
+          onState={handleState}
+          renderBlock={renderBlock}
+          userId={userId}
+        />
+      </Root>
+      <Card marginTop={3} padding={4} radius={2} tone="transparent">
+        <Code language="json">{JSON.stringify({selections: state?.selections}, null, 2)}</Code>
+      </Card>
+    </>
   )
 }
