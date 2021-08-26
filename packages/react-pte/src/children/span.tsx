@@ -2,6 +2,7 @@ import {SelectionMap, PTSpan} from 'pte'
 import React, {memo, useMemo} from 'react'
 import {getUserChunks} from '../getUserChunks'
 import {Features} from '../types'
+import {Cursor} from './cursor'
 
 export interface SpanProps {
   features: Features
@@ -43,7 +44,7 @@ export const Span = memo(function Span(props: SpanProps) {
       <>
         {userChunks.map((chunk, chunkIndex) => {
           if (chunk.type === 'cursor') {
-            return <span data-cursor="" data-users={chunk.userIds.join(',')} key={chunkIndex} />
+            return <Cursor chunk={chunk} key={chunkIndex} />
           }
 
           const currChunkOffset = chunkOffset

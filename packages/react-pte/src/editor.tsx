@@ -101,14 +101,19 @@ export const Editor = forwardRef(function Editor(
         userId,
       })
 
-      if (editorRefProp) setRef<PTEditor>(editorRefProp, editorRef.current)
+      if (editorRefProp) {
+        setRef<PTEditor>(editorRefProp, editorRef.current)
+      }
     }
 
     return () => {
       if (editorRef.current) {
         editorRef.current.destroy()
         editorRef.current = null
-        if (editorRefProp) setRef<PTEditor>(editorRefProp, editorRef.current)
+
+        if (editorRefProp) {
+          setRef<PTEditor>(editorRefProp, editorRef.current)
+        }
       }
     }
   }, [editorRefProp, handleSelections, onChange, onOperation, onState, readOnly, userId])

@@ -1,5 +1,5 @@
 import {hues} from '@sanity/color'
-import {Box, Card, Code, studioTheme, Text, Theme, ThemeProvider} from '@sanity/ui'
+import {Box, Card, Code, Flex, studioTheme, Text, Theme, ThemeProvider} from '@sanity/ui'
 import {createId, PTBlock, PTEditor, PTNode, SelectionMap} from 'pte'
 import React, {createElement, useCallback, useRef, useState} from 'react'
 import {Editor} from 'react-pte'
@@ -142,22 +142,36 @@ export function App() {
   return (
     <ThemeProvider theme={studioTheme}>
       <GlobalStyle />
-      <Root padding={4}>
-        <Editor
-          editorRef={editor1Ref}
-          features={features}
-          id="editor"
-          onChange={setValue}
-          onSelections={setSelections}
-          renderBlock={renderBlock}
-          value={value}
-          userId="foo"
-        />
 
-        <Card border marginTop={4} overflow="auto" padding={4}>
-          <Code>{JSON.stringify({selections, value}, null, 2)}</Code>
-        </Card>
-      </Root>
+      <Card height="fill">
+        <Flex height="fill">
+          <Root flex={1} padding={4} sizing="border">
+            <Editor
+              editorRef={editor1Ref}
+              features={features}
+              id="editor"
+              onChange={setValue}
+              onSelections={setSelections}
+              renderBlock={renderBlock}
+              style={{height: '100%', boxSizing: 'border-box'}}
+              value={value}
+              userId="foo"
+            />
+          </Root>
+
+          <Card borderLeft flex={1} overflow="auto" padding={4}>
+            <Code language="json" size={1}>
+              {JSON.stringify(value, null, 2)}
+            </Code>
+          </Card>
+
+          <Card borderLeft flex={1} overflow="auto" padding={4}>
+            <Code language="json" size={1}>
+              {JSON.stringify(selections, null, 2)}
+            </Code>
+          </Card>
+        </Flex>
+      </Card>
     </ThemeProvider>
   )
 }
